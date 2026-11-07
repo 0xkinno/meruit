@@ -61,7 +61,8 @@ class UpstashKV implements KV {
 let kv: KV | null = null;
 export function backendName(): "upstash" | "memory" | "unconfigured" {
   if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) return "upstash";
-  return process.env.NODE_ENV === "test" ? "memory" : "unconfigured";
+  // Explicit opt-in for local development and tests only. /api/status reports it. Never set in production.
+  return process.env.NODE_ENV === "test" || process.env.MERUIT_STORE === "memory" ? "memory" : "unconfigured";
 }
 export function getKV(): KV {
   if (kv) return kv;
