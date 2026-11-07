@@ -1,0 +1,31 @@
+# Wild set sources
+
+Seed: `meruit-2026-11-wild`. Selection: seeded shuffle of the first 400 English LibriVox audio items on archive.org sorted by identifier; the first 20 whose metadata carries a public domain licence URL and an original mp3 longer than 150 s.
+Each job uses the first 120 seconds of the file. Nobody chose these clips by hand.
+
+| # | Item | File | Source length (s) | Licence |
+|---|---|---|---|---|
+| 1 | [Aesop's Fables - new translation](https://archive.org/details/aesops_fables_-_new_translation_1407_librivox) | `aesops_fables_-_new_translation_00_aesop_128kb.mp3` | 701 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 2 | [Bible (KJV) Apocrypha/Deuterocanon: 2 Maccabees](https://archive.org/details/2maccabees_2005_librivox) | `maccabees2_01_kjv_128kb.mp3` | 1885 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 3 | [The Adventure Club With The Fleet](https://archive.org/details/adventureclub_2610_librivox) | `adventureclubwithefleet_01_barber_128kb.mp3` | 898 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 4 | [Adaptation](https://archive.org/details/adaptation_2106_librivox) | `adaptation_01_reynolds_128kb.mp3` | 721 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 5 | [A Ballad of Dreamland](https://archive.org/details/aballadofdreamland_2605.poem_librivox) | `balladofdreamland_swinburne_ha_128kb.mp3` | 155 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 6 | [The 116th Battalion in France](https://archive.org/details/116thinfrance_2605_librivox) | `116thinfrance_00_allen_128kb.mp3` | 460 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 7 | [Aces Up](https://archive.org/details/aces_up_1805_librivox) | `acesup_01_clarke_128kb.mp3` | 826 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 8 | [A Christmas Miscellany 2018](https://archive.org/details/a_christmas_miscellany_2018_1807_librivox) | `christmasmiscellany2018_01_various_128kb.mp3` | 438 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 9 | [The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar](https://archive.org/details/adventures_arsene_lupin_gentleman-burglar_cb_1507_librivox) | `arsenelupingentlemanburglar_01_leblanc_128kb.mp3` | 1714 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 10 | [After Dark](https://archive.org/details/after_dark_1706_librivox) | `afterdark_01_collins_128kb.mp3` | 241 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 11 | [A Thanksgiving Dream](https://archive.org/details/a_thanksgiving_dream_1912.poem_librivox) | `dream_lincoln_asm_128kb.mp3` | 186 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 12 | [The Afghan Wars 1839-42 and 1878-80, Part 2](https://archive.org/details/afghanwars2_2007_librivox) | `afghanwarspart2_01_forbes_128kb.mp3` | 2352 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 13 | [4 SF Stories by Mack Reynolds](https://archive.org/details/4sfstoriesbymackreynolds_2105_librivox) | `4sfstoriesbymackreynolds_01_reynolds_128kb.mp3` | 2047 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 14 | [Chronicles of Canada Volume 20 - Adventurers of the Far North](https://archive.org/details/adventurersofthefarnorth_tg_librivox) | `adventurersofthefarnorth_1_leacock.mp3` | 2686 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 15 | [The A to Zed Collection](https://archive.org/details/a_to_zed_1910_librivox) | `atozed_01_various_128kb.mp3` | 262 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 16 | [Abraham Lincoln Walks at Midnight](https://archive.org/details/abraham_lincoln_walks_librivox) | `abraham_lincoln_walks_lindsay_add.mp3` | 162 | http://creativecommons.org/licenses/publicdomain/ |
+| 17 | [The Adventures of Billy Topsail](https://archive.org/details/adventuresofbillytopsail_2505_librivox) | `adventuresofbillytopsail_00_duncan_128kb.mp3` | 167 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 18 | [Absolute Evil](https://archive.org/details/absoluteevil_2608_librivox) | `absoluteevil_01_hawthorne_128kb.mp3` | 944 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 19 | [30 Ghost Stories](https://archive.org/details/30ghoststories_1909_librivox) | `30ghoststories_01_various_128kb.mp3` | 816 | http://creativecommons.org/publicdomain/mark/1.0/ |
+| 20 | [A Pin](https://archive.org/details/a_pin_1612.poem_librivox) | `pin_wilcox_bk_128kb.mp3` | 175 | http://creativecommons.org/publicdomain/mark/1.0/ |
+
+```json
+{"seed":"meruit-2026-11-wild","clipSeconds":120,"items":[{"id":"aesops_fables_-_new_translation_1407_librivox","file":"aesops_fables_-_new_translation_00_aesop_128kb.mp3"},{"id":"2maccabees_2005_librivox","file":"maccabees2_01_kjv_128kb.mp3"},{"id":"adventureclub_2610_librivox","file":"adventureclubwithefleet_01_barber_128kb.mp3"},{"id":"adaptation_2106_librivox","file":"adaptation_01_reynolds_128kb.mp3"},{"id":"aballadofdreamland_2605.poem_librivox","file":"balladofdreamland_swinburne_ha_128kb.mp3"},{"id":"116thinfrance_2605_librivox","file":"116thinfrance_00_allen_128kb.mp3"},{"id":"aces_up_1805_librivox","file":"acesup_01_clarke_128kb.mp3"},{"id":"a_christmas_miscellany_2018_1807_librivox","file":"christmasmiscellany2018_01_various_128kb.mp3"},{"id":"adventures_arsene_lupin_gentleman-burglar_cb_1507_librivox","file":"arsenelupingentlemanburglar_01_leblanc_128kb.mp3"},{"id":"after_dark_1706_librivox","file":"afterdark_01_collins_128kb.mp3"},{"id":"a_thanksgiving_dream_1912.poem_librivox","file":"dream_lincoln_asm_128kb.mp3"},{"id":"afghanwars2_2007_librivox","file":"afghanwarspart2_01_forbes_128kb.mp3"},{"id":"4sfstoriesbymackreynolds_2105_librivox","file":"4sfstoriesbymackreynolds_01_reynolds_128kb.mp3"},{"id":"adventurersofthefarnorth_tg_librivox","file":"adventurersofthefarnorth_1_leacock.mp3"},{"id":"a_to_zed_1910_librivox","file":"atozed_01_various_128kb.mp3"},{"id":"abraham_lincoln_walks_librivox","file":"abraham_lincoln_walks_lindsay_add.mp3"},{"id":"adventuresofbillytopsail_2505_librivox","file":"adventuresofbillytopsail_00_duncan_128kb.mp3"},{"id":"absoluteevil_2608_librivox","file":"absoluteevil_01_hawthorne_128kb.mp3"},{"id":"30ghoststories_1909_librivox","file":"30ghoststories_01_various_128kb.mp3"},{"id":"a_pin_1612.poem_librivox","file":"pin_wilcox_bk_128kb.mp3"}]}
+```

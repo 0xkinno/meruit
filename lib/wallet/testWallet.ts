@@ -5,7 +5,11 @@ import { base58 } from "@scure/base";
 import { createKeyPairSignerFromBytes, createKeyPairFromBytes, getTransactionDecoder, getTransactionEncoder, signTransaction } from "@solana/kit";
 import type { Wallet, WalletAccount } from "@wallet-standard/base";
 
+let registered = false;
+
 export async function registerTestWallet(secretB58: string, opts: { rejectNext?: () => boolean } = {}): Promise<void> {
+  if (registered) return;
+  registered = true;
   const bytes = base58.decode(secretB58);
   const signer = await createKeyPairSignerFromBytes(bytes);
   const keyPair = await createKeyPairFromBytes(bytes);

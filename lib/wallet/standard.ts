@@ -9,7 +9,8 @@ const needs = ["standard:connect", "solana:signTransaction"];
 export const supportsMeruit = (w: Wallet) => needs.every((f) => f in w.features) && w.chains.some((c) => c.startsWith("solana:"));
 
 export function listWallets(): Wallet[] {
-  return getWallets().get().filter(supportsMeruit);
+  const seen = new Set<string>();
+  return getWallets().get().filter(supportsMeruit).filter((w) => (seen.has(w.name) ? false : (seen.add(w.name), true)));
 }
 export function onWalletsChange(cb: () => void): () => void {
   const { on } = getWallets();

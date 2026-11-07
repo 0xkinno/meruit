@@ -41,7 +41,9 @@ async function handler(req: NextRequest) {
   if (chunks.length === 0 || sum > declared) return json({ error: "chunks_exceed_declared_length" }, 400);
 
   await jobs.transition(jobId, "delivering", { actor: "seller" });
-  const results = await transcribeChunks(chunks, { failIndexes: dropIndexes(chunks.length, sab.drop) });
+  // Local development only: scripts may serve chunks from 127.0.0.1. Never honoured in production.
+  const devAudio = process.env.NODE_ENV !== "production" && process.env.MERUIT_DEV_AUDIO === "1";
+  const results = await transcribeChunks(chunks, { failIndexes: dropIndexes(chunks.length, sab.drop), allowAnyUrl: devAudio });
   const deliveredSeconds = results.filter((r) => r.ok).reduce((s, r) => s + r.seconds, 0);
   const failedChunks = results.filter((r) => !r.ok).map((r) => r.index);
   let charge = settleAmount(deliveredSeconds, cap);
