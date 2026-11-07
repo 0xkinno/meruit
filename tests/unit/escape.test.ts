@@ -36,3 +36,21 @@ describe("salt grinding", () => {
   }, 60000);
   it("savings model", () => { expect(savedComputeUnits(255, 255)).toBe(0); expect(savedComputeUnits(254, 253)).toBe(4500); });
 });
+
+import { getChannelEncoder } from "@/lib/channels/generated/accounts/channel";
+import { PAYER_OFFSET } from "@/lib/channels/discover";
+import { address, getAddressEncoder } from "@solana/kit";
+
+describe("channel discovery layout", () => {
+  it("payer sits at the memcmp offset in the encoded account", () => {
+    const payer = address("2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF");
+    const other = address("DX1FrBZqdbMJbSdDivXFcjkwpLySjzEieKGVwjwxWuHH");
+    const bytes = getChannelEncoder().encode({
+      discriminator: 1, version: 1, bump: 255, status: 0, salt: 1n, deposit: 5n, settlement: { settled: 0n, payoutWatermark: 0n },
+      closureStartedAt: 0n, payerWithdrawnAt: 0n, gracePeriod: 900, distributionHash: new Array(32).fill(7),
+      payer, payee: other, authorizedSigner: other, mint: other, rentPayer: other, openSlot: 9n,
+    });
+    expect(bytes.length).toBeLessThanOrEqual(256);
+    expect(Array.from(bytes.slice(PAYER_OFFSET, PAYER_OFFSET + 32))).toEqual(Array.from(getAddressEncoder().encode(payer)));
+  });
+});

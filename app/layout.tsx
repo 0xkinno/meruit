@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Shell } from "@/components/Shell";
 
 const zodiak = localFont({
   src: [
@@ -40,7 +41,7 @@ export const viewport: Viewport = { themeColor: "#FBF9FF", width: "device-width"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${zodiak.variable} ${switzer.variable} ${martian.variable}`}>
-      <body className="grain">{children}</body>
+      <body className="grain"><Shell>{children}</Shell></body>
     </html>
   );
 }
