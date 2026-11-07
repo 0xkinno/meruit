@@ -2,6 +2,7 @@
 import { WalletProvider } from "./WalletProvider";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import { Tour } from "./Tour";
 
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <Navbar />
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">{children}</div>
       <Footer />
+      <Tour />
     </WalletProvider>
   );
 }

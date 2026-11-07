@@ -89,6 +89,14 @@ export async function withdrawPayerIx(payer: TransactionSigner, v: Pick<ChannelV
   });
 }
 
+/** The single instruction for an escape step. */
+export async function escapeInstruction(step: EscapeStep, payer: TransactionSigner, view: ChannelView): Promise<Instruction> {
+  if (step.kind === "request_close") return requestCloseIx(payer, view.id);
+  if (step.kind === "seal") return sealIx(view.id);
+  if (step.kind === "withdraw") return withdrawPayerIx(payer, view);
+  throw new Error(`no_transaction_for_step_${step.kind}`);
+}
+
 /**
  * Build the unsigned transaction message for one escape step. `feePayer` defaults to the buyer, so a
  * buyer with SOL needs nobody. Pass Meruit's fee payer signer to sponsor a buyer with zero SOL (labelled in the UI).
@@ -96,16 +104,11 @@ export async function withdrawPayerIx(payer: TransactionSigner, v: Pick<ChannelV
 export async function buildEscapeMessage(args: {
   rpc: Rpc<SolanaRpcApi>; step: EscapeStep; payer: TransactionSigner; view: ChannelView; feePayer?: TransactionSigner;
 }) {
-  const { rpc, step, payer, view } = args;
-  let ix: Instruction;
-  if (step.kind === "request_close") ix = requestCloseIx(payer, view.id);
-  else if (step.kind === "seal") ix = sealIx(view.id);
-  else if (step.kind === "withdraw") ix = await withdrawPayerIx(payer, view);
-  else throw new Error(`no_transaction_for_step_${step.kind}`);
-  const { value: blockhash } = await rpc.getLatestBlockhash().send();
+  const ix = await escapeInstruction(args.step, args.payer, args.view);
+  const { value: blockhash } = await args.rpc.getLatestBlockhash().send();
   return pipe(
     createTransactionMessage({ version: 0 }),
-    (m) => setTransactionMessageFeePayerSigner(args.feePayer ?? payer, m),
+    (m) => setTransactionMessageFeePayerSigner(args.feePayer ?? args.payer, m),
     (m) => setTransactionMessageLifetimeUsingBlockhash(blockhash, m),
     (m) => appendTransactionMessageInstructions([ix], m),
   );

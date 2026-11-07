@@ -62,8 +62,7 @@ export function Studio() {
       setStage("preparing");
       const blob = file ?? (await (await fetch(sample.file)).blob());
       const { chunks, totalSeconds } = await decodeToChunks(blob, setProgress);
-      let cap: bigint;
-      try { cap = capForSeconds(totalSeconds); } catch { setStage("failed"); setMessage("That clip is longer than the public limit of 25 minutes ($0.25 per job)."); return; }
+      try { capForSeconds(totalSeconds); } catch { setStage("failed"); setMessage("That clip is longer than the public limit of 25 minutes ($0.25 per job)."); return; }
       const jobId = newJobId();
 
       setStage("uploading");
@@ -95,6 +94,7 @@ export function Studio() {
           if (pr.transaction) await fetch(`/api/jobs/${jobId}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ state: "settled", signature: pr.transaction, payer: address, paymentResponse: pr }) });
         }
       } catch { /* the receipt still shows server-side state */ }
+      try { const ids: string[] = JSON.parse(window.localStorage.getItem("meruit:jobs") ?? "[]"); window.localStorage.setItem("meruit:jobs", JSON.stringify([jobId, ...ids].slice(0, 50))); } catch { /* storage unavailable */ }
       setResult(data); setCues(cuesFromChunks(data.results)); setStage("done");
     } catch (e) {
       const m = (e as Error).message ?? "";
@@ -105,7 +105,7 @@ export function Studio() {
   }, [signer, address, file, sample]);
 
   const seek = (c: Cue, play = false) => { const m = media.current; if (!m) return; m.currentTime = c.start; if (play) m.play().catch(() => undefined); };
-  const edit = (id: number, text: string) => setCues((cs) => cs.map((c) => (c.id === id ? { ...c, text, edited: true, check: c.check && false } : c)));
+  const edit = (id: number, text: string) => setCues((cs) => cs.map((c) => (c.id === id ? { ...c, text, edited: true, check: false } : c)));
   const checks = cues.filter((c) => c.check).length;
 
   return (
