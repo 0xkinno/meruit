@@ -1,0 +1,9 @@
+name: Sweep abandoned channels
+on:
+  schedule: [{ cron: "*/10 * * * *" }]
+  workflow_dispatch: {}
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS -X POST -H "authorization: Bearer ${{ secrets.CRON_SECRET }}" https://meruit.vercel.app/api/cron/sweep
