@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if grep -Eiq '^(co-authored-by:.*(claude|anthropic)|claude-session:)|generated with .*claude code' "$1"; then
+  echo "Commit blocked: Claude attribution found. Remove it." >&2
+  exit 1
+fi

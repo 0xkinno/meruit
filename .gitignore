@@ -1,0 +1,12 @@
+reference/
+.secrets/
+.env*
+!.env.example
+node_modules/
+.next/
+runs/raw/
+*.tsbuildinfo
+next-env.d.ts
+test-results/
+playwright-report/
+.vercel/
