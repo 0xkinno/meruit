@@ -54,7 +54,7 @@ export default function Proof() {
       <GlowCard className="mt-10 p-6">
         <h2 className="font-display text-2xl font-semibold">Same clip, three ways to pay</h2>
         <p className="mt-2 text-sm text-graphite">A 12 minute clip where 3 of 12 parts fail upstream. Computed from the meter code, not typed.</p>
-        <div className="mt-4 overflow-x-auto">
+        <div className="mt-4 overflow-x-auto" tabIndex={0} role="region" aria-label="Comparison table">
           <table className="w-full min-w-[520px] text-left text-sm" data-testid="counterfactual">
             <thead className="label-mono"><tr><th className="py-2">Way to pay</th><th>Paid</th><th>For</th></tr></thead>
             <tbody>
@@ -75,7 +75,7 @@ export default function Proof() {
 
       <GlowCard className="mt-6 p-6">
         <h2 className="font-display text-2xl font-semibold">When something fails</h2>
-        <div className="mt-4 overflow-x-auto">
+        <div className="mt-4 overflow-x-auto" tabIndex={0} role="region" aria-label="Failure handling table">
           <table className="w-full min-w-[620px] text-left text-sm" data-testid="failure-table">
             <thead className="label-mono"><tr><th className="py-2">What fails</th><th>What happens</th><th>Where</th></tr></thead>
             <tbody>{FAILURES.map(([a, b, c]) => (<tr key={a} className="border-t hairline align-top"><td className="py-2 pr-3 font-medium">{a}</td><td className="pr-3 text-graphite">{b}</td><td className="font-mono text-xs">{c}</td></tr>))}</tbody>

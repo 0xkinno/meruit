@@ -11,3 +11,4 @@ test-results/
 playwright-report/
 .vercel/
 AGENTS.md
+tests/e2e/__screens__/

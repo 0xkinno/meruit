@@ -174,7 +174,7 @@ export function Tab() {
       <GlowCard className="mt-6 p-6">
         <h2 className="font-display text-2xl font-semibold">Jobs</h2>
         {jobs.length === 0 ? <p className="mt-2 text-graphite">No jobs yet from this browser.</p> : (
-          <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[480px] text-left text-sm"><thead className="label-mono"><tr><th className="py-2">Job</th><th>Cap</th><th>Charged</th><th>Returned</th><th /></tr></thead>
+          <div className="mt-3 overflow-x-auto" tabIndex={0} role="region" aria-label="Jobs table"><table className="w-full min-w-[480px] text-left text-sm"><thead className="label-mono"><tr><th className="py-2">Job</th><th>Cap</th><th>Charged</th><th>Returned</th><th /></tr></thead>
             <tbody>{jobs.map((j) => (<tr key={j.id} className="border-t hairline"><td className="py-2 font-mono text-xs">{j.id.slice(0, 12)}</td><td>${formatUsdc(BigInt(j.cap))}</td><td>{j.charge ? `$${formatUsdc(BigInt(j.charge))}` : "..."}</td><td>{j.refund ? `$${formatUsdc(BigInt(j.refund))}` : "..."}</td><td><Link className="inline-flex h-11 items-center text-amethyst-deep underline" href={`/receipt/${j.id}`}>Receipt</Link></td></tr>))}</tbody></table></div>
         )}
       </GlowCard>
