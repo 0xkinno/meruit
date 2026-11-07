@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-11-07T19:25:50.039Z",
+  "network": null,
+  "jobs": 0,
+  "overcharges": null,
+  "returnedUsd": null,
+  "forcedExits": 0,
+  "wild": {
+    "jobs": 0,
+    "overchargeCount": null,
+    "undercharges": null,
+    "checkCueRate": null
+  },
+  "deposits": {
+    "count": 0,
+    "medianMinutes": null,
+    "fractionAbove1500Slots": null
+  },
+  "costPerMinuteUsd": null
+}
