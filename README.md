@@ -10,13 +10,13 @@
 
 Ifeoma Nwosu, a freelance subtitler in Enugu, has a 12 minute interview due at 08:00 and a card that foreign billing rejects. She approves one ceiling per job in her own wallet, gets captions over her video, and is charged only for the minutes delivered. The rest returns in the same settlement, and she can take it back from her wallet alone if Meruit disappears.
 
-> **Status, plainly.** The paid flow has run for real on Solana mainnet and devnet, with signatures in [FINDINGS.md](FINDINGS.md): a 12 minute job, the partial-delivery refund, and the buyer taking money back alone after the seller process was killed. The deployed site cannot run jobs yet because its server secrets and Redis are not set on Vercel. See [PROGRESS.md](PROGRESS.md).
+> **Status, plainly.** The paid flow has run for real on Solana mainnet and devnet, with signatures in [FINDINGS.md](FINDINGS.md): a 12 minute job, the partial-delivery refund, and the buyer taking money back alone after the seller process was killed. The deployed site runs live jobs on mainnet with caps (a $0.01 job closed with a chain-verified receipt). See [PROGRESS.md](PROGRESS.md).
 
 | | |
 |---|---|
-| Live app | https://meruit-delta.vercel.app (pages live; paid jobs need the Vercel secrets, see ENV_SETUP.md) |
+| Live app | https://meruit-delta.vercel.app |
 | For judges | [/judge](app/judge/page.tsx), [JUDGE.md](JUDGE.md) |
-| Demo video | not recorded yet |
+| Demo video | recorded (2:50, synthetic voice-over); link added after upload |
 | Slides | [DECK.md](DECK.md), not rendered yet |
 | Repo | https://github.com/0xkinno/meruit |
 | Tracks | Best Consumer App on Solana; Best Use of x402 on Solana; Aurora Intents: Bring any-chain liquidity to Solana |
