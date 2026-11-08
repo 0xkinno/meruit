@@ -1,0 +1,26 @@
+{
+  "id": "B1",
+  "network": "mainnet",
+  "at": "2026-11-08T13:51:35.811Z",
+  "title": "drop 3 of 12 chunks",
+  "result": "charged 9 minutes, refunded 3 minutes",
+  "cap": "120000",
+  "charge": "90000",
+  "refund": "30000",
+  "failedChunks": [
+    3,
+    6,
+    9
+  ],
+  "paymentResponse": {
+    "success": true,
+    "transaction": "hoTcdYTpRLn81z89f94UNMjeMm5K4hz8FTa2s7RirAYZsstGMj8WpA1nBmvPyUUfAVGFJCnBonHdMnghWScGEDN",
+    "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+    "amount": "90000",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "expected": {
+    "charge": "90000",
+    "refund": "30000"
+  }
+}

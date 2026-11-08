@@ -1,0 +1,30 @@
+{
+  "id": "job_9efd9ea332ba44a7ad60",
+  "kind": "B1",
+  "wild": false,
+  "network": "devnet",
+  "status": 200,
+  "clip": "hero",
+  "declaredSeconds": 720,
+  "cap": "120000",
+  "charge": "90000",
+  "refund": "30000",
+  "deliveredSeconds": 540,
+  "failedChunks": [
+    3,
+    6,
+    9
+  ],
+  "cues": 133,
+  "checkCues": 0,
+  "sabotage": "drop:3",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "62QL9p9MCB1m2WXZVf1p1bx5fcooix1F9LBDaWZrEe1aN8hirtT5qHQFCkwwXT9FT9AJKZURLeV3GpgaioQHVkFQ",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "90000",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 4576,
+  "at": "2026-11-08T13:49:10.379Z"
+}

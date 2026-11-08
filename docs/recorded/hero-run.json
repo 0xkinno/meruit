@@ -1,0 +1,1126 @@
+{
+ "recordedAt": "2026-11-08T13:49:51.807Z",
+ "network": "devnet",
+ "video": "/samples/hero-12min.mp4",
+ "cues": [
+  {
+   "id": 1,
+   "start": 0,
+   "end": 6.7599998,
+   "text": "This is a LibriVox recording. All LibriVox recordings are in the public domain.",
+   "check": false
+  },
+  {
+   "id": 2,
+   "start": 7.6,
+   "end": 11.9,
+   "text": "For more information, or to volunteer, please visit LibriVox.org.",
+   "check": false
+  },
+  {
+   "id": 3,
+   "start": 13.179999,
+   "end": 18.72,
+   "text": "Recording by Meredith Hughes. Peter Pan by J. M. Barry.",
+   "check": false
+  },
+  {
+   "id": 4,
+   "start": 20.24,
+   "end": 22.96,
+   "text": "Chapter 1. Peter Breaks Through.",
+   "check": false
+  },
+  {
+   "id": 5,
+   "start": 22.96,
+   "end": 27.839998,
+   "text": "All children, except one, grow up.",
+   "check": false
+  },
+  {
+   "id": 6,
+   "start": 28.8,
+   "end": 32.42,
+   "text": "They soon know that they will grow up, and the way Wendy knew was this.",
+   "check": false
+  },
+  {
+   "id": 7,
+   "start": 33.34,
+   "end": 36.739998,
+   "text": "One day, when she was two years old, she was playing in a garden,",
+   "check": false
+  },
+  {
+   "id": 8,
+   "start": 37.16,
+   "end": 39.699997,
+   "text": "and she plucked another flower and ran with it to her mother.",
+   "check": false
+  },
+  {
+   "id": 9,
+   "start": 40.859997,
+   "end": 42.899998,
+   "text": "I suppose she must have looked rather delightful,",
+   "check": false
+  },
+  {
+   "id": 10,
+   "start": 43.359997,
+   "end": 45.98,
+   "text": "for Mrs. Darling put her hand to her heart and cried,",
+   "check": false
+  },
+  {
+   "id": 11,
+   "start": 46.219997,
+   "end": 48.48,
+   "text": "Oh, why can't you remain like this forever?",
+   "check": false
+  },
+  {
+   "id": 12,
+   "start": 50.019997,
+   "end": 52.46,
+   "text": "This was all that passed between them on the subject,",
+   "check": false
+  },
+  {
+   "id": 13,
+   "start": 52.46,
+   "end": 56.32,
+   "text": "but henceforth Wendy knew that she must grow up.",
+   "check": false
+  },
+  {
+   "id": 14,
+   "start": 57.079998,
+   "end": 59.079998,
+   "text": "You always know after you are two.",
+   "check": false
+  },
+  {
+   "id": 15,
+   "start": 59.379997,
+   "end": 60,
+   "text": "Two.",
+   "check": false
+  },
+  {
+   "id": 16,
+   "start": 60,
+   "end": 62.24,
+   "text": "Two is the beginning of the end.",
+   "check": false
+  },
+  {
+   "id": 17,
+   "start": 63.6599998,
+   "end": 65.64,
+   "text": "Of course, they lived at fourteen,",
+   "check": false
+  },
+  {
+   "id": 18,
+   "start": 66.04,
+   "end": 68.76,
+   "text": "and until Wendy came, her mother was the chief one.",
+   "check": false
+  },
+  {
+   "id": 19,
+   "start": 69.7,
+   "end": 72.3,
+   "text": "She was a lovely lady with a romantic mind",
+   "check": false
+  },
+  {
+   "id": 20,
+   "start": 72.3,
+   "end": 74.32,
+   "text": "and such a sweet, mocking mouth.",
+   "check": false
+  },
+  {
+   "id": 21,
+   "start": 75.099999,
+   "end": 77.779999,
+   "text": "Her romantic mind was like the tiny boxes,",
+   "check": false
+  },
+  {
+   "id": 22,
+   "start": 78.359999,
+   "end": 81.14,
+   "text": "one within the other, that come from the puzzling east.",
+   "check": false
+  },
+  {
+   "id": 23,
+   "start": 81.84,
+   "end": 84.14,
+   "text": "However many you discover, there is always one more,",
+   "check": false
+  },
+  {
+   "id": 24,
+   "start": 84.74,
+   "end": 87.8,
+   "text": "and her sweet, mocking mouth had one kiss on it",
+   "check": false
+  },
+  {
+   "id": 25,
+   "start": 87.8,
+   "end": 89.3,
+   "text": "that Wendy could never get,",
+   "check": false
+  },
+  {
+   "id": 26,
+   "start": 89.3,
+   "end": 93,
+   "text": "though there it was, perfectly conspicuous in the right-hand corner.",
+   "check": false
+  },
+  {
+   "id": 27,
+   "start": 94.8,
+   "end": 97.02000000000001,
+   "text": "The way Mr. Darling won her was this.",
+   "check": false
+  },
+  {
+   "id": 28,
+   "start": 97.899998,
+   "end": 100.68,
+   "text": "The many gentlemen who had been boys when she was a girl",
+   "check": false
+  },
+  {
+   "id": 29,
+   "start": 100.68,
+   "end": 103.34,
+   "text": "discovered simultaneously that they loved her,",
+   "check": false
+  },
+  {
+   "id": 30,
+   "start": 103.78,
+   "end": 105.879997,
+   "text": "and they all ran to her house to propose to her,",
+   "check": false
+  },
+  {
+   "id": 31,
+   "start": 106.239998,
+   "end": 109.039997,
+   "text": "except Mr. Darling, who took a cab and nipped in first,",
+   "check": false
+  },
+  {
+   "id": 32,
+   "start": 109.42,
+   "end": 110.28,
+   "text": "and so he got her.",
+   "check": false
+  },
+  {
+   "id": 33,
+   "start": 111.05999800000001,
+   "end": 115.05999800000001,
+   "text": "He got all of her, except the innermost box and the kiss.",
+   "check": false
+  },
+  {
+   "id": 34,
+   "start": 115.85999699999999,
+   "end": 117.64,
+   "text": "He never knew about the box,",
+   "check": false
+  },
+  {
+   "id": 35,
+   "start": 117.64,
+   "end": 120,
+   "text": "and in time he gave up trying for the kids.",
+   "check": false
+  },
+  {
+   "id": 36,
+   "start": 120,
+   "end": 126.08,
+   "text": "kiss. Wendy thought Napoleon could have got it, but I can picture him trying, and then going off",
+   "check": false
+  },
+  {
+   "id": 37,
+   "start": 126.08,
+   "end": 132.92,
+   "text": "in a passion slamming the door. Mr. Darling used to boast to Wendy that her mother not only loved",
+   "check": false
+  },
+  {
+   "id": 38,
+   "start": 132.92,
+   "end": 138.98,
+   "text": "him, but respected him. He was one of those deep ones who know about stocks and shares.",
+   "check": false
+  },
+  {
+   "id": 39,
+   "start": 140.199999,
+   "end": 145.46,
+   "text": "Of course, no one really knows, but he quite seemed to know, and he often said stocks were",
+   "check": false
+  },
+  {
+   "id": 40,
+   "start": 145.46,
+   "end": 149.279999,
+   "text": "up and shares were down, in a way that would have made any woman respect him.",
+   "check": false
+  },
+  {
+   "id": 41,
+   "start": 150.96,
+   "end": 156.239998,
+   "text": "Mrs. Darling was married in white, and at first she kept the books perfectly, almost gleefully,",
+   "check": false
+  },
+  {
+   "id": 42,
+   "start": 156.239998,
+   "end": 162.39999799999998,
+   "text": "as if it were a game, not so much as a Brussels sprout was missing. But by and by whole cauliflowers",
+   "check": false
+  },
+  {
+   "id": 43,
+   "start": 162.39999799999998,
+   "end": 168.52,
+   "text": "dropped out, and instead of them there were pictures of babies without faces. She drew",
+   "check": false
+  },
+  {
+   "id": 44,
+   "start": 168.52,
+   "end": 172.699997,
+   "text": "them when she should have been totting up. They were Mrs. Darling's guesses.",
+   "check": false
+  },
+  {
+   "id": 45,
+   "start": 172.699997,
+   "end": 179.999996,
+   "text": "Wendy came first, then John, then Michael. For a",
+   "check": false
+  },
+  {
+   "id": 46,
+   "start": 180,
+   "end": 184.48,
+   "text": "week or two after Wendy came, it was doubtful whether they would be able to keep her, as",
+   "check": false
+  },
+  {
+   "id": 47,
+   "start": 184.48,
+   "end": 189.96,
+   "text": "she was another mouth to feed. Mr. Darling was frightfully proud of her, but he was very",
+   "check": false
+  },
+  {
+   "id": 48,
+   "start": 189.96,
+   "end": 194.36,
+   "text": "honorable, and he sat on the edge of Mrs. Darling's bed, holding her hand in calculating",
+   "check": false
+  },
+  {
+   "id": 49,
+   "start": 194.36,
+   "end": 200.5,
+   "text": "expenses, while she looked at him imploringly. She wanted to risk it, come what might, but",
+   "check": false
+  },
+  {
+   "id": 50,
+   "start": 200.5,
+   "end": 205.96,
+   "text": "that was not his way. His way was with a pencil and a piece of paper, and if she confused",
+   "check": false
+  },
+  {
+   "id": 51,
+   "start": 205.96,
+   "end": 212.7,
+   "text": "him with suggestions he had to begin at the beginning again now don't interrupt he would beg",
+   "check": false
+  },
+  {
+   "id": 52,
+   "start": 212.7,
+   "end": 218.78,
+   "text": "of her i have one pound seventeen here and two and six at the office i can cut off my coffee at",
+   "check": false
+  },
+  {
+   "id": 53,
+   "start": 218.78,
+   "end": 224.079998,
+   "text": "the office say ten shillings making two nine and six with your eighteen and three makes three nine",
+   "check": false
+  },
+  {
+   "id": 54,
+   "start": 224.079998,
+   "end": 230.019997,
+   "text": "seven with five not not in my checkbook makes eight nine seven who is that moving eight nine",
+   "check": false
+  },
+  {
+   "id": 55,
+   "start": 230.019997,
+   "end": 235.62,
+   "text": "seven dot and carry seven don't speak my own and and the pound you lent to that man who came to the",
+   "check": false
+  },
+  {
+   "id": 56,
+   "start": 235.62,
+   "end": 235.82,
+   "text": "door.",
+   "check": false
+  },
+  {
+   "id": 57,
+   "start": 236.3,
+   "end": 237.079998,
+   "text": "Quiet child.",
+   "check": false
+  },
+  {
+   "id": 58,
+   "start": 237.539997,
+   "end": 238.719997,
+   "text": "Dot and carry child.",
+   "check": false
+  },
+  {
+   "id": 59,
+   "start": 239.12,
+   "end": 240,
+   "text": "There, you've done it.",
+   "check": false
+  },
+  {
+   "id": 60,
+   "start": 240,
+   "end": 246.7999997,
+   "text": "Did I say 997? Yes, I said 997. The question is, can we try it for a year on 997?",
+   "check": false
+  },
+  {
+   "id": 61,
+   "start": 247.7,
+   "end": 252.9,
+   "text": "Of course we can, George, she cried. But she was prejudiced in Wendy's favor,",
+   "check": false
+  },
+  {
+   "id": 62,
+   "start": 253.2,
+   "end": 255.38,
+   "text": "and he was really the grander character of the two.",
+   "check": false
+  },
+  {
+   "id": 63,
+   "start": 257.02,
+   "end": 260.64,
+   "text": "Remember mumps, he warned her, almost threateningly, and off he went again.",
+   "check": false
+  },
+  {
+   "id": 64,
+   "start": 261.279999,
+   "end": 265.539999,
+   "text": "Mumps one pound, that is what I have put down, but I dare say it will be more like thirty shillings.",
+   "check": false
+  },
+  {
+   "id": 65,
+   "start": 265.539999,
+   "end": 272.26,
+   "text": "don't speak measles one five german measles half a guinea makes two fifteen six don't waggle your",
+   "check": false
+  },
+  {
+   "id": 66,
+   "start": 272.26,
+   "end": 278.36,
+   "text": "finger whooping cough say fifteen shillings and so on it went and it added up differently each time",
+   "check": false
+  },
+  {
+   "id": 67,
+   "start": 278.36,
+   "end": 283.82,
+   "text": "but at last wendy just got through with mumps reduced to twelve six and the two kinds of measles",
+   "check": false
+  },
+  {
+   "id": 68,
+   "start": 283.82,
+   "end": 289.879997,
+   "text": "treated as one there was the same excitement over john and michael had even a narrower squeak",
+   "check": false
+  },
+  {
+   "id": 69,
+   "start": 289.879997,
+   "end": 295.219997,
+   "text": "but both were kept, and soon you might have seen the three of them going in a row to Miss",
+   "check": false
+  },
+  {
+   "id": 70,
+   "start": 295.219997,
+   "end": 298.479996,
+   "text": "Folson's kindergarten school, accompanied by their nurse.",
+   "check": false
+  },
+  {
+   "id": 71,
+   "start": 300,
+   "end": 308.38,
+   "text": "Mrs. Darling loved to have everything just so, and Mr. Darling had a passion for being exactly like his neighbors, so of course they had a nurse.",
+   "check": false
+  },
+  {
+   "id": 72,
+   "start": 309.26,
+   "end": 319.6,
+   "text": "As they were poor, owing to the amount of milk the children drank, this nurse was a prim Newfoundland dog called Nana, who would belong to no one in particular until the Darlings engaged her.",
+   "check": false
+  },
+  {
+   "id": 73,
+   "start": 320.6,
+   "end": 324.960001,
+   "text": "She had always thought children important, however, and the darlings had become acquainted",
+   "check": false
+  },
+  {
+   "id": 74,
+   "start": 324.960001,
+   "end": 329.16,
+   "text": "with her in Kensington Gardens, where she spent most of her spare time peeping into",
+   "check": false
+  },
+  {
+   "id": 75,
+   "start": 329.16,
+   "end": 333.84000000000003,
+   "text": "perambulators, and was much hated by careless nursemaids, whom she followed to their homes",
+   "check": false
+  },
+  {
+   "id": 76,
+   "start": 333.84000000000003,
+   "end": 335.4,
+   "text": "and complained of to their mistresses.",
+   "check": false
+  },
+  {
+   "id": 77,
+   "start": 336.46,
+   "end": 338.65999999999997,
+   "text": "She proved to be quite a treasure of a nurse.",
+   "check": false
+  },
+  {
+   "id": 78,
+   "start": 339.52,
+   "end": 343.96,
+   "text": "How thorough she was at bath time, and up at any moment of the night if one of her charges",
+   "check": false
+  },
+  {
+   "id": 79,
+   "start": 343.96,
+   "end": 345.14,
+   "text": "made the slightest cry.",
+   "check": false
+  },
+  {
+   "id": 80,
+   "start": 346.079998,
+   "end": 347.739998,
+   "text": "Of course, her kennel was in the nursery.",
+   "check": false
+  },
+  {
+   "id": 81,
+   "start": 348.719997,
+   "end": 352.46,
+   "text": "She had a genius for knowing when a cough is a thing to have no patience with",
+   "check": false
+  },
+  {
+   "id": 82,
+   "start": 352.46,
+   "end": 354.64,
+   "text": "and when it needs a stocking around your throat.",
+   "check": false
+  },
+  {
+   "id": 83,
+   "start": 355.76,
+   "end": 359.999996,
+   "text": "She believed to her last day in old-fashioned remedies like rhubarb leaf—",
+   "check": false
+  },
+  {
+   "id": 84,
+   "start": 360,
+   "end": 364.08,
+   "text": "and made sounds of contempt over all this newfangled talk about germs and so on.",
+   "check": false
+  },
+  {
+   "id": 85,
+   "start": 365.04,
+   "end": 368.46,
+   "text": "It was a lesson in propriety to see her escorting the children to school,",
+   "check": false
+  },
+  {
+   "id": 86,
+   "start": 369.0199995,
+   "end": 371.58,
+   "text": "walking sedately by their side when they were well-behaved,",
+   "check": false
+  },
+  {
+   "id": 87,
+   "start": 371.88,
+   "end": 373.94,
+   "text": "and butting them back into line if they strayed.",
+   "check": false
+  },
+  {
+   "id": 88,
+   "start": 374.799999,
+   "end": 377.74,
+   "text": "On John's soccer days, she never once forgot his sweater,",
+   "check": false
+  },
+  {
+   "id": 89,
+   "start": 377.74,
+   "end": 381.359999,
+   "text": "and she usually carried an umbrella in her mouth in case of rain.",
+   "check": false
+  },
+  {
+   "id": 90,
+   "start": 382.88,
+   "end": 386.4,
+   "text": "There is a room in the basement of Miss Folsom's school where the nurses wait.",
+   "check": false
+  },
+  {
+   "id": 91,
+   "start": 387.019999,
+   "end": 389.46,
+   "text": "They sat on forms while Nana lay on the floor,",
+   "check": false
+  },
+  {
+   "id": 92,
+   "start": 390,
+   "end": 391.18,
+   "text": "but that was the only difference.",
+   "check": false
+  },
+  {
+   "id": 93,
+   "start": 392.24,
+   "end": 393.72,
+   "text": "They affected to ignore her",
+   "check": false
+  },
+  {
+   "id": 94,
+   "start": 393.72,
+   "end": 396.4,
+   "text": "as of an inferior social status to themselves,",
+   "check": false
+  },
+  {
+   "id": 95,
+   "start": 396.72,
+   "end": 398.65999999999997,
+   "text": "and she despised their light talk.",
+   "check": false
+  },
+  {
+   "id": 96,
+   "start": 399.56,
+   "end": 402.52,
+   "text": "She resented visits to the nursery from Mrs. Darling's friends,",
+   "check": false
+  },
+  {
+   "id": 97,
+   "start": 403.06,
+   "end": 404.06,
+   "text": "but if they did come,",
+   "check": false
+  },
+  {
+   "id": 98,
+   "start": 404.28,
+   "end": 406.04,
+   "text": "she first whipped off Michael's pinafore",
+   "check": false
+  },
+  {
+   "id": 99,
+   "start": 406.04,
+   "end": 408.02,
+   "text": "and put him into the one with blue braiding",
+   "check": false
+  },
+  {
+   "id": 100,
+   "start": 408.02,
+   "end": 411.06,
+   "text": "and smoothed out Wendy and made a dash at John's hair.",
+   "check": false
+  },
+  {
+   "id": 101,
+   "start": 412.3,
+   "end": 415.72,
+   "text": "No nursery could possibly have been conducted more correctly,",
+   "check": false
+  },
+  {
+   "id": 102,
+   "start": 416.42,
+   "end": 417.579998,
+   "text": "and Mr. Darling knew it.",
+   "check": false
+  },
+  {
+   "id": 103,
+   "start": 418.3,
+   "end": 419.98,
+   "text": "Yet he sometimes wondered uneasily",
+   "check": false
+  },
+  {
+   "id": 104,
+   "start": 419.98,
+   "end": 420.18,
+   "text": "Okay.",
+   "check": false
+  },
+  {
+   "id": 105,
+   "start": 420,
+   "end": 424.5,
+   "text": "whether the neighbors talked. He had his position in the city to consider.",
+   "check": false
+  },
+  {
+   "id": 106,
+   "start": 426.04,
+   "end": 431.86,
+   "text": "Nana also troubled him in another way. He had sometimes a feeling that she did not admire him.",
+   "check": false
+  },
+  {
+   "id": 107,
+   "start": 432.74,
+   "end": 436.9,
+   "text": "I know she admires you tremendously, George, Mrs. Darling would assure him,",
+   "check": false
+  },
+  {
+   "id": 108,
+   "start": 437.4,
+   "end": 440.46,
+   "text": "and then she would sign to the children to be specially nice to father.",
+   "check": false
+  },
+  {
+   "id": 109,
+   "start": 441.96,
+   "end": 447.519999,
+   "text": "Lovely dances followed, in which the only other servant, Liza, was sometimes allowed to join.",
+   "check": false
+  },
+  {
+   "id": 110,
+   "start": 448.499998,
+   "end": 451.3,
+   "text": "Such a midget she looked in her long skirt and maid's cap,",
+   "check": false
+  },
+  {
+   "id": 111,
+   "start": 451.72,
+   "end": 455,
+   "text": "though she had sworn, when engaged, that she would never see ten again.",
+   "check": false
+  },
+  {
+   "id": 112,
+   "start": 455.96,
+   "end": 457.579998,
+   "text": "The gayety of these romps!",
+   "check": false
+  },
+  {
+   "id": 113,
+   "start": 458.199997,
+   "end": 459.879997,
+   "text": "The gayest of all was Mrs. Darling,",
+   "check": false
+  },
+  {
+   "id": 114,
+   "start": 459.879997,
+   "end": 463.399998,
+   "text": "who would pirouette so wildly that all you could see of her was the kiss.",
+   "check": false
+  },
+  {
+   "id": 115,
+   "start": 464,
+   "end": 466.32,
+   "text": "And then, if you had dashed at her, you might have got it.",
+   "check": false
+  },
+  {
+   "id": 116,
+   "start": 467.28,
+   "end": 471.8,
+   "text": "There never was a simpler, happier family until the coming of Peter Pan.",
+   "check": false
+  },
+  {
+   "id": 117,
+   "start": 473.98,
+   "end": 475.94,
+   "text": "Mrs. Darling first heard of Peter",
+   "check": false
+  },
+  {
+   "id": 118,
+   "start": 475.94,
+   "end": 477.899998,
+   "text": "when she was tidying up her children's",
+   "check": false
+  },
+  {
+   "id": 119,
+   "start": 477.899998,
+   "end": 480,
+   "text": "mines. It is the night",
+   "check": false
+  },
+  {
+   "id": 120,
+   "start": 480,
+   "end": 484.92,
+   "text": "custom of every good mother, after her children are asleep, to rummage in their minds and put",
+   "check": false
+  },
+  {
+   "id": 121,
+   "start": 484.92,
+   "end": 489.9,
+   "text": "things straight for the next morning, repacking into their proper places the many articles that",
+   "check": false
+  },
+  {
+   "id": 122,
+   "start": 489.9,
+   "end": 496.3,
+   "text": "have wandered during the day. If you could keep awake, but of course you can't, you would see your",
+   "check": false
+  },
+  {
+   "id": 123,
+   "start": 496.3,
+   "end": 502.1,
+   "text": "own mother doing this, and you would find it very interesting to watch her. It is quite like tidying",
+   "check": false
+  },
+  {
+   "id": 124,
+   "start": 502.1,
+   "end": 507.8,
+   "text": "up drawers. You would see her on her knees, I expect, lingering humorously over some of your",
+   "check": false
+  },
+  {
+   "id": 125,
+   "start": 507.8,
+   "end": 513.879997,
+   "text": "contents, wondering where on earth you had picked this thing up, making discoveries sweet and not so",
+   "check": false
+  },
+  {
+   "id": 126,
+   "start": 513.879997,
+   "end": 519.2,
+   "text": "sweet, pressing this to her cheek as if it were as nice as a kitten, and hurriedly stowing that",
+   "check": false
+  },
+  {
+   "id": 127,
+   "start": 519.2,
+   "end": 524.26,
+   "text": "out of sight. When you wake in the morning, the naughtiness and evil passions with which you went",
+   "check": false
+  },
+  {
+   "id": 128,
+   "start": 524.26,
+   "end": 529.78,
+   "text": "to bed have been folded up small and placed at the bottom of your mind, and on the top, beautifully",
+   "check": false
+  },
+  {
+   "id": 129,
+   "start": 529.78,
+   "end": 536.78,
+   "text": "aired, are spread out your prettier thoughts, ready for you to put on. I don't know whether you have",
+   "check": false
+  },
+  {
+   "id": 130,
+   "start": 536.78,
+   "end": 538.62,
+   "text": "ever seen a map of a person's mind.",
+   "check": false
+  },
+  {
+   "id": 131,
+   "start": 539.66,
+   "end": 540,
+   "text": "Doctor",
+   "check": false
+  },
+  {
+   "id": 132,
+   "start": 540,
+   "end": 545.06,
+   "text": "sometimes draw maps of other parts of you, and your own map can become intensely interesting.",
+   "check": false
+  },
+  {
+   "id": 133,
+   "start": 546.02,
+   "end": 550.2,
+   "text": "But catch them trying to draw a map of a child's mind, which is not only confused,",
+   "check": false
+  },
+  {
+   "id": 134,
+   "start": 550.58,
+   "end": 556,
+   "text": "but keeps going round all the time. There are zigzag lines on it, just like your temperature",
+   "check": false
+  },
+  {
+   "id": 135,
+   "start": 556,
+   "end": 561.72,
+   "text": "on a card, and these are probably roads in the island. For the Neverland is always more or less",
+   "check": false
+  },
+  {
+   "id": 136,
+   "start": 561.72,
+   "end": 567.42,
+   "text": "an island, with astonishing splashes of color here and there, and coral reefs, and rakish-looking",
+   "check": false
+  },
+  {
+   "id": 137,
+   "start": 567.42,
+   "end": 574.48,
+   "text": "craft in the offing, and savages, and lonely lairs, and gnomes who are mostly tailors, and caves",
+   "check": false
+  },
+  {
+   "id": 138,
+   "start": 574.48,
+   "end": 579.48,
+   "text": "through which a river runs, and princes with six elder brothers, and a hut fast going to decay,",
+   "check": false
+  },
+  {
+   "id": 139,
+   "start": 580.2,
+   "end": 586.04,
+   "text": "and one very small old lady with a hooked nose. It would be an easy map if that were all,",
+   "check": false
+  },
+  {
+   "id": 140,
+   "start": 586.48,
+   "end": 592.88,
+   "text": "but there is also first day at school, religion, fathers, the round pond, needlework, murders,",
+   "check": false
+  },
+  {
+   "id": 141,
+   "start": 592.88,
+   "end": 599.999996,
+   "text": "hangings, verbs that take the dative, chocolate pudding day, getting into braces, say 99.3",
+   "check": false
+  },
+  {
+   "id": 142,
+   "start": 600,
+   "end": 605.6,
+   "text": "tooth yourself, and so on. And either these are part of the island, or they are another map showing",
+   "check": false
+  },
+  {
+   "id": 143,
+   "start": 605.6,
+   "end": 612.46,
+   "text": "through, and it is all rather confusing, especially as nothing will stand still. Of course, the",
+   "check": false
+  },
+  {
+   "id": 144,
+   "start": 612.46,
+   "end": 618.619999,
+   "text": "Neverlands vary a good deal. John's, for instance, had a lagoon with flamingos flying over it at which",
+   "check": false
+  },
+  {
+   "id": 145,
+   "start": 618.619999,
+   "end": 624,
+   "text": "John was shooting, while Michael, who was very small, had a flamingo with lagoons flying over it.",
+   "check": false
+  },
+  {
+   "id": 146,
+   "start": 624.82,
+   "end": 627.32,
+   "text": "John lived in a boat turned upside down on the sands,",
+   "check": false
+  },
+  {
+   "id": 147,
+   "start": 628.039999,
+   "end": 628.94,
+   "text": "Michael in a wigwam,",
+   "check": false
+  },
+  {
+   "id": 148,
+   "start": 629.5,
+   "end": 631.7,
+   "text": "Wendy in a house of leaves deftly sewn together.",
+   "check": false
+  },
+  {
+   "id": 149,
+   "start": 632.7,
+   "end": 633.94,
+   "text": "John had no friends,",
+   "check": false
+  },
+  {
+   "id": 150,
+   "start": 634.52,
+   "end": 635.64,
+   "text": "Michael had friends at night,",
+   "check": false
+  },
+  {
+   "id": 151,
+   "start": 636.3,
+   "end": 638.68,
+   "text": "Wendy had a pet wolf forsaken by its parents.",
+   "check": false
+  },
+  {
+   "id": 152,
+   "start": 639.36,
+   "end": 641.899998,
+   "text": "But on the whole, the Neverlands have a family resemblance,",
+   "check": false
+  },
+  {
+   "id": 153,
+   "start": 642.26,
+   "end": 643.38,
+   "text": "and if they stood in a row,",
+   "check": false
+  },
+  {
+   "id": 154,
+   "start": 643.579998,
+   "end": 646.26,
+   "text": "you could say of them that they have each other's nose and so forth.",
+   "check": false
+  },
+  {
+   "id": 155,
+   "start": 647.22,
+   "end": 650.84,
+   "text": "On these magic shores, children at play are forever beaching their coracles.",
+   "check": false
+  },
+  {
+   "id": 156,
+   "start": 651.64,
+   "end": 652.94,
+   "text": "We too have been there.",
+   "check": false
+  },
+  {
+   "id": 157,
+   "start": 652.94,
+   "end": 655.219997,
+   "text": "\"'we can still hear the sound of the surf,",
+   "check": false
+  },
+  {
+   "id": 158,
+   "start": 655.379997,
+   "end": 656.48,
+   "text": "\"'though we shall land no more.",
+   "check": false
+  },
+  {
+   "id": 159,
+   "start": 658.239998,
+   "end": 660,
+   "text": "\"'Of all delectable islands,'",
+   "check": false
+  }
+ ],
+ "cap": "120000",
+ "charge": "110000",
+ "refund": "10000",
+ "signatures": {
+  "settle": "4662jfdhFfd7b5mi6kKVtj51Z2yyYZQiMwykNYA4bR3653tC2Pdpu8ZPeLKeAA1NgBNDgLUZSEA1ro6oALp6gyhK"
+ }
+}

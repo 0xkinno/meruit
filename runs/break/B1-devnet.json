@@ -1,0 +1,17 @@
+{
+  "id": "B1",
+  "network": "devnet",
+  "at": "2026-11-08T13:49:10.379Z",
+  "title": "drop 3 of 12 chunks",
+  "result": "charged 9 minutes, refunded 3 minutes",
+  "cap": "120000",
+  "charge": "90000",
+  "refund": "30000",
+  "failedChunks": [
+    3,
+    6,
+    9
+  ],
+  "signature": "62QL9p9MCB1m2WXZVf1p1bx5fcooix1F9LBDaWZrEe1aN8hirtT5qHQFCkwwXT9FT9AJKZURLeV3GpgaioQHVkFQ",
+  "note": "reconstructed from the run output of 2026-11-08; the raw run file is runs/break/raw"
+}

@@ -4,6 +4,7 @@ import facts from "../docs/FACTS.json";
 export type Facts = {
   generatedAt: string | null;
   network: string | null;
+  byNetwork: Record<string, number>;
   jobs: number;
   overcharges: number | null;
   returnedUsd: string | null;
@@ -18,5 +19,6 @@ export const FACTS = facts as Facts;
 /** The hero line. Returns null until real runs exist; the UI then says so instead of showing a number. */
 export function headline(f: Facts = FACTS): string | null {
   if (!f.jobs || f.overcharges === null || f.returnedUsd === null) return null;
-  return `${f.jobs} jobs, ${f.overcharges} overcharges, $${f.returnedUsd} returned`;
+  const split = Object.entries(f.byNetwork ?? {}).map(([n, c]) => `${c} ${n}`).join(", ");
+  return `${f.jobs} jobs${split ? ` (${split})` : ""}, ${f.overcharges} overcharges, $${f.returnedUsd} returned`;
 }

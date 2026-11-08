@@ -26,8 +26,14 @@ async function run(req: NextRequest) {
   const { cleanup, storage } = await getX402();
   const before = (await storage.list(NETWORK())).length;
   const events: { action: string; channelId?: string; transaction?: string }[] = [];
-  const mgr = cleanup as unknown as { cleanup(o?: object): Promise<void> };
-  await mgr.cleanup({ abandonGraceSecs: 120, maxTxsPerRun: 5, maxTxsPerSigner: 5 });
+  const mgr = cleanup as unknown as { cleanup(o?: object): Promise<void>; discover(o?: object): Promise<void> };
+  // Discovery is a getProgramAccounts scan, so it is opt-in (?discover=1): the recovery path for a lost work index.
+  if (req.nextUrl.searchParams.get("discover") === "1") await mgr.discover({});
+  await mgr.cleanup({
+    abandonGraceSecs: 120, maxTxsPerRun: 5, maxTxsPerSigner: 5,
+    onClose: (r: { action: string; channelId: string; transaction: string }) => events.push({ action: r.action, channelId: r.channelId, transaction: r.transaction }),
+    onReclaim: (r: { channelIds: string[]; transaction: string }) => events.push({ action: "reclaim", channelId: r.channelIds.join(","), transaction: r.transaction }),
+  });
   const after = (await storage.list(NETWORK())).length;
   const swept = await sweepStuckJobs();
   const result = { at: new Date().toISOString(), channelsBefore: before, channelsAfter: after, closed: Math.max(0, before - after), staleJobsMarked: swept, ms: Date.now() - started, events };

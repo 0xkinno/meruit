@@ -24,7 +24,7 @@ import { deriveChannel } from "../lib/channels/salt";
 import { usdcMint } from "../lib/channels/constants";
 
 const arg = (n: string) => { const i = process.argv.indexOf(`--${n}`); return i > -1 ? process.argv[i + 1] : undefined; };
-const save = (id: string, rec: object) => { mkdirSync("runs/break", { recursive: true }); writeFileSync(`runs/break/${id}.json`, JSON.stringify({ id, network: network(), at: new Date().toISOString(), ...rec }, null, 2) + "\n"); console.log(JSON.stringify(rec, null, 2)); };
+const save = (id: string, rec: object) => { mkdirSync("runs/break", { recursive: true }); writeFileSync(`runs/break/${id}-${network()}.json`, JSON.stringify({ id, network: network(), at: new Date().toISOString(), ...rec }, null, 2) + "\n"); console.log(JSON.stringify(rec, null, 2)); };
 
 async function b1(base: string) {
   const r = await runJob({ clip: "hero", base, out: "runs/break/raw", sabotage: "drop:3", label: "B1" });

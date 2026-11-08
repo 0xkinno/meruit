@@ -53,13 +53,13 @@ export async function runJob(opts: { clip: string; base: string; dry?: boolean; 
     const run = {
       id: jobId, kind: opts.label ?? "job", wild: !!opts.wild, network: network(), status: res.status, clip: opts.clip, declaredSeconds: totalSeconds,
       cap: String(data.cap ?? cap), charge: data.charge as string | undefined, refund: data.refund as string | undefined,
-      deliveredSeconds: data.deliveredSeconds, failedChunks: data.failedChunks, cues: cues.length, checkCues: cues.filter((c) => c.check).length,
+      deliveredSeconds: data.deliveredSeconds, failedChunks: data.failedChunks, cueList: cues, cues: cues.length, checkCues: cues.filter((c) => c.check).length,
       sabotage: opts.sabotage ?? "off", paymentResponse, error: res.ok ? undefined : data, latencyMs: Date.now() - started, at: new Date().toISOString(),
     };
     const dir = opts.out ?? "runs/live";
     mkdirSync(dir, { recursive: true });
     writeFileSync(`${dir}/${jobId}.json`, JSON.stringify(run, null, 2) + "\n");
-    console.log(JSON.stringify({ ...run, paymentResponse: paymentResponse ? "recorded" : null }, null, 2));
+    console.log(JSON.stringify({ ...run, cueList: undefined, paymentResponse: paymentResponse ? "recorded" : null }, null, 2));
     return run;
   } finally { hosted.close(); }
 }

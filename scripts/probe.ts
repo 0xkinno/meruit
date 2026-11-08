@@ -67,7 +67,7 @@ async function main() {
     const sample = "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF";
     const { buildQuoteBody } = await import("../lib/aurora/swap");
     for (const [label, dest, conf] of [["Solana USDC to Base USDC (dry)", ASSETS.baseUsdc, undefined], ["Solana USDC to Tron USDT (dry)", ASSETS.tronUsdt, undefined], ["confidentiality basic (dry)", ASSETS.baseUsdc, "basic"]] as const) {
-      const q = await json(`${base}/api/quote/${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(buildQuoteBody({ dry: true, originAsset: ASSETS.solUsdc, destinationAsset: dest, amount: "1000000", recipient: dest === ASSETS.tronUsdt ? "TQn9Y2khEsLJW1ChVWFMSMeRDow5KcbLSE" : "0x000000000000000000000000000000000000dEaD", refundTo: sample, confidentiality: conf as never })) });
+      const q = await json(`${base}/api/quote/${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(buildQuoteBody({ dry: true, originAsset: ASSETS.solUsdc, destinationAsset: dest, amount: "3000000", recipient: dest === ASSETS.tronUsdt ? "TQn9Y2khEsLJW1ChVWFMSMeRDow5KcbLSE" : "0x" + (await import("node:crypto")).randomBytes(20).toString("hex"), refundTo: sample, confidentiality: conf as never })) });
       add(`Aurora quote: ${label}`, q.status === 200 ? "yes" : "no", q.status === 200 ? `amountOut ${q.body?.quote?.amountOutFormatted}` : `HTTP ${q.status} ${JSON.stringify(q.body).slice(0, 160)}`);
     }
     for (const chain of ["tron", "evm"]) {

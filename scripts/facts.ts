@@ -5,7 +5,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-type Run = { network?: string; cap?: string; charge?: string; refund?: string; state?: string; kind?: string; wild?: boolean; checkCues?: number; cues?: number; depositMinutes?: number; depositSlots?: number; costUsd?: string; deliveredSeconds?: number };
+type Run = { id?: string; signatures?: Record<string, string>; network?: string; cap?: string; charge?: string; refund?: string; state?: string; kind?: string; wild?: boolean; checkCues?: number; cues?: number; depositMinutes?: number; depositSlots?: number; costUsd?: string; deliveredSeconds?: number };
 
 function readRuns(dir: string): Run[] {
   if (!existsSync(dir)) return [];
@@ -16,7 +16,7 @@ function readRuns(dir: string): Run[] {
 const usd = (a: bigint) => `${a / 1_000_000n}.${(a % 1_000_000n).toString().padStart(6, "0").slice(0, 2)}`;
 
 export function aggregate(runs: Run[]) {
-  const jobs = runs.filter((r) => r.cap !== undefined && r.charge !== undefined);
+  const jobs = runs.filter((r) => r.cap !== undefined && r.charge !== undefined && (r.id ?? "").startsWith("job_"));
   let cap = 0n, charge = 0n, over = 0, under = 0;
   for (const j of jobs) {
     const c = BigInt(j.cap!), ch = BigInt(j.charge!);
@@ -31,11 +31,12 @@ export function aggregate(runs: Run[]) {
   const slots = runs.filter((r) => r.depositSlots !== undefined);
   return {
     generatedAt: null as string | null,
-    network: jobs[0]?.network ?? null,
+    network: Array.from(new Set(jobs.map((j) => j.network).filter(Boolean))).sort().join(" and ") || null,
+    byNetwork: Object.fromEntries(Array.from(new Set(jobs.map((j) => j.network ?? "unknown"))).sort().map((n) => [n, jobs.filter((j) => (j.network ?? "unknown") === n).length])),
     jobs: jobs.length,
     overcharges: jobs.length ? over : null,
     returnedUsd: jobs.length ? usd(cap - charge) : null,
-    forcedExits: runs.filter((r) => r.kind === "forced_exit" && r.state === "refunded").length,
+    forcedExits: runs.filter((r) => (r.kind === "forced_exit" && r.state === "refunded") || !!r.signatures?.withdraw).length,
     wild: { jobs: wild.length, overchargeCount: wild.length ? wild.filter((j) => BigInt(j.charge!) > BigInt(j.cap!)).length : null, undercharges: wild.length ? under : null, checkCueRate: cues ? `${((checks * 100) / cues).toFixed(1)}%` : null },
     deposits: { count: dep.length, medianMinutes: dep.length ? dep[Math.floor(dep.length / 2)] : null, fractionAbove1500Slots: slots.length ? `${slots.filter((r) => r.depositSlots! > 1500).length}/${slots.length}` : null },
     costPerMinuteUsd: runs.find((r) => r.costUsd)?.costUsd ?? null,
