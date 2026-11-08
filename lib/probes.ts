@@ -54,7 +54,9 @@ export async function runProbes(): Promise<Probe[]> {
       ? Promise.resolve(skip("sweeper_last_run", "store"))
       : timed("sweeper_last_run", async () => {
           const last = await getKV().get<{ at: string; closed: number }>("meruit:sweeper:last");
-          return last ? { ok: Date.now() - Date.parse(last.at) < 30 * 60_000, detail: `last run ${last.at}` } : { ok: false, detail: "never run" };
+          // Vercel Cron runs the sweeper daily, so a run in the last 26 hours is healthy.
+          const ageH = last ? (Date.now() - Date.parse(last.at)) / 3_600_000 : null;
+          return last ? { ok: ageH! < 26, detail: `last run ${last.at} (${ageH!.toFixed(1)} h ago, expected at least daily)` } : { ok: false, detail: "never run" };
         }),
   ];
   const out = await Promise.all(probes);
