@@ -18,5 +18,6 @@
 | Single-use address fallback | Aurora Swap API quote | `lib/aurora/deposits.ts:27` | yes | not needed (persistent addresses worked) |
 | Aurora Swap API quote, submit, status (exit) | REST `/api/quote`, `/api/deposit/submit`, `/api/status` | `lib/aurora/swap.ts:36`, `:55` | yes, body shape unit-tested | yes: live exit and B6 on mainnet |
 | Confidential Intents | quote `confidentiality` field | `lib/aurora/swap.ts:36` | yes, toggle hidden unless `NEXT_PUBLIC_CONFIDENTIAL=on` | dry quote accepted; no live confidential top-up |
-| Intents Connect (SDK recipe and Tron steps-only) | `@aurora-is-near/intents-connect` 7.29.0 installed | `app/api/aurora/connect/[[...path]]/route.ts` (proxy only) | proxy only | no access, so designed, not live |
+| Intents Connect (bridge-in, Solana steps) | REST `intents-connect-api.aurora.dev` (open; `x-api-key` for bridge-in) | `lib/aurora/connectRest.ts`, `lib/aurora/connectSteps.ts`, `components/ConnectCard.tsx`, `app/api/aurora/connect/[[...path]]/route.ts` | yes | yes: mainnet, Base to the buyer's Solana wallet, one signature (`runs/break/connect-bridge-in-mainnet.json`) |
+| Intents Connect (`@aurora-is-near/intents-connect` SDK recipe, Tron steps-only) | npm 7.29.0 installed, used as the reference for signing | not used directly | the REST client is used instead | Tron origin returns an intermediary (probe); no Tron steps-only run |
 | `batch-settlement` | `@x402/svm` | n/a | not used | not used, so not claimed |

@@ -20,13 +20,13 @@ Ifeoma Nwosu (a fictional freelance subtitler in Enugu) has a 12 minute intervie
 | Slides | [DECK.md](DECK.md), not rendered yet |
 | Repo | https://github.com/0xkinno/meruit |
 | Tracks | Best Consumer App on Solana; Best Use of x402 on Solana; Aurora Intents: Bring any-chain liquidity to Solana |
-| Reality rung | mainnet with capped funds, by script and by a local server. Through the deployed UI: not yet |
+| Reality rung | mainnet with capped funds, including a job through the deployed site. Through Phantom in the browser: not yet |
 
-| Studio | Tab | Proof | Get my money back |
+| Studio with captions | Receipt | Tab with a deposit address | Get my money back |
 |---|---|---|---|
-| ![Studio](docs/screens/studio-desktop.png) | ![Tab](docs/screens/tab-desktop.png) | ![Proof](docs/screens/proof-desktop.png) | ![Rescue](docs/screens/rescue-desktop.png) |
+| ![Studio](docs/screens/studio-captions.png) | ![Receipt](docs/screens/receipt.png) | ![Tab](docs/screens/tab-deposit.png) | ![Rescue](docs/screens/rescue.png) |
 
-These are page layouts. The Studio, receipt and deposit screens show captured data only once a job is run through the deployed UI, which has not happened yet.
+The Studio and receipt are from a real devnet job; the Tab shows a real Tron deposit address issued by Aurora for the test wallet.
 
 ## The problem
 It is 22:10 in Enugu. A client in Berlin sent an interview due at 08:00. The transcription tool wants a monthly card subscription for a job she does twice a month. Her naira card is declined for international web payments. She holds USDT on Tron.
@@ -121,7 +121,11 @@ payment-channels (`CHNLx...`, live on mainnet and devnet per [PLATFORM_PROBE.md]
 Scheme `upto` on Solana, self-facilitated, because the hosted x402.org facilitator lists Solana `exact` only. Headers: `PAYMENT-REQUIRED`, `PAYMENT-SIGNATURE`, `PAYMENT-RESPONSE`. The ceiling comes from the declared job length through a per-request `price` function. Failure handling: see the table below.
 
 ## Aurora Intents specifically
-Deposits (persistent address, with a labelled single-use fallback because persistent creation is limited to approved organisations), Swap API for the exit, a `confidentiality` toggle hidden until probed, and Intents Connect labelled **designed, not live**. Every Aurora status has its own screen ([lib/aurora/status.ts](lib/aurora/status.ts)). None of this has run against the live API yet.
+- **Deposits:** persistent deposit addresses for Tron and EVM to Solana USDC are issued on our key (shown on the Tab page). No live deposit through that address has been made yet.
+- **Swap API:** live on mainnet. Exit Solana USDC to Base USDC in 1.6 minutes; a short deposit ended `INCOMPLETE_DEPOSIT` then `REFUNDED` after 8.0 minutes (B6).
+- **Intents Connect:** live on mainnet. One signature on Base moved 0.497448 USDC and, 1.77 minutes later, 0.11755 USDC arrived in the buyer's Solana wallet through a Solana transaction that Aurora's intermediary ran (create the buyer's account if missing, then a checked USDC transfer). Origin `0xbaae0e95...`, Solana `3DGAaHQr...`. The API is open (no access request needed); bridge-in only needs the Aurora key in `x-api-key`, which the server adds. The Tab page has a card for it. About 0.38 USDC of the 0.497 went to fees, including a one-time charge for creating the wallet's intermediary token account; later runs skip that.
+- **Confidential Intents:** a `confidentiality: basic` quote is accepted on our key; the Tab toggle stays hidden until a live confidential top-up has been recorded.
+- Every Aurora status has its own screen ([lib/aurora/status.ts](lib/aurora/status.ts)).
 
 ## What it will not do
 - Charge above the ceiling ([lib/billing/meter.ts](lib/billing/meter.ts)).
@@ -141,8 +145,8 @@ Deposits (persistent address, with a labelled single-use fallback because persis
 | Short deposit | own screen, returned to sender | `lib/aurora/status.ts` |
 
 ## Measured
-From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `runs/` (26 jobs: 23 devnet, 3 mainnet).
-- Overcharges: **0** of 26. Undercharges in the wild set: **0**.
+From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `runs/` (27 jobs: 23 devnet, 4 mainnet).
+- Overcharges: **0** of 27. Undercharges in the wild set: **0**.
 - Wild set: 19 of 20 pre-listed clips completed, on devnet only; one clip could not be decoded and is reported as a miss. Clips are about 93 seconds, not the 120 the list says (addendum in [`data/wild/SOURCES.md`](data/wild/SOURCES.md)).
 - Cues marked "check": 0.0%. The threshold never fired on clean audiobook speech, so it is untested on hard audio.
 - Both error directions: money taken for undelivered seconds is 0 in every run. Delivered seconds not charged: none observed.
@@ -152,7 +156,8 @@ From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `r
 - B3: the same signed payment sent twice was refused the second time with `invalid_upto_svm_channel_already_open`, under a different job id so our own job guard was not the cause.
 - B9: the same `open` instruction costs **31,565** compute units with a ground salt and **55,565** without (devnet, one pair), more than the 13,500 the docs' model predicts.
 - Browser run on devnet with a test wallet: approval dialog, signature, captions, `.srt`, receipt, and both reject paths. The signature header carried the same amount the dialog showed.
-- Not measured: deposit latency from Tron and Base (B7), cost per transcribed minute.
+- B7: one Base to Solana point so far (1.77 minutes, about 266 slots, none above the 1,500-slot window). One point is not a distribution; Tron is unmeasured.
+- Not measured: cost per transcribed minute.
 
 ## What we learned
 Two findings about the payment layer: a handler error is refunded automatically by the x402 server, but a refused settlement override leaves the deposit escrowed until the buyer or a sweeper closes it, so the buyer's escape hatch and the sweeper both matter. And a payment-channel `open` is valid for only 1,500 slots (B4 confirms the refusal), so it must not be pre-signed inside a cross-chain execution: bridge first, open after arrival. That second point is a design rule from the documentation; the bridge latency that would break it (B7) has not been measured. Details are in [FINDINGS.md](FINDINGS.md) and [FRICTION_REPORT.md](FRICTION_REPORT.md).
@@ -163,10 +168,10 @@ See [RISK.md](RISK.md). USDC has a freeze authority on both networks (checked), 
 ## What is live, substituted, designed
 | Tier | Items |
 |---|---|
-| Live (has run against the real service) | self-facilitated `upto` on mainnet and devnet; buyer escape hatch; rent reclaim and distribute; Groq transcription; Aurora token list, persistent addresses, quotes, live exit and refund case |
-| Code written, not yet run | the paid flow through Phantom on the deployed site (it ran in a browser on devnet with a test wallet); Redis storage on Upstash; the scheduled sweeper; Aurora deposit from Tron or Base; confidential top-up |
+| Live (has run against the real service) | self-facilitated `upto` on mainnet (also through the deployed site) and devnet; buyer escape hatch; rent reclaim and distribute; the sweeper on durable Redis; Groq transcription; Aurora token list, persistent addresses, quotes, live exit, refund case and an Intents Connect bridge-in |
+| Code written, not yet run | the paid flow through Phantom (it ran in a browser on devnet with a test wallet, and by script through the deployed site on mainnet); the scheduled sweeper (run by hand once); a deposit through a persistent address from Tron or Base; the Connect card in a real MetaMask; confidential top-up |
 | Substituted | in-memory store for local runs only, reported by `/api/status`; the demo payout wallet is a test key until `MERUIT_PAY_TO` is set to a real wallet |
-| Designed | Intents Connect, judge pocket, `batch-settlement` (not used) |
+| Designed | judge pocket, `batch-settlement` (not used) |
 
 ## Judging criteria map
 | Track | Criterion | Where |

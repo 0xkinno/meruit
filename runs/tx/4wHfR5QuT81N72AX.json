@@ -1,0 +1,24 @@
+{
+  "signature": "4wHfR5QuT81N72AX1cgmqTS7XPPCWDXuersPQNTvgkaBDAtTCDUgc4yfA8uQUpWGj89dZFyseKzoF9xuV1P54Jd8",
+  "network": "mainnet",
+  "slot": 466974109,
+  "blockTime": 1794153563,
+  "err": null,
+  "instructionCount": 2,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "open"
+    },
+    {
+      "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+      "name": "MemoSq4g"
+    }
+  ],
+  "serializedBytes": 755,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 42840,
+  "feeLamports": 10001,
+  "accountCount": 14,
+  "usesLookupTables": false
+}

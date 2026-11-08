@@ -43,15 +43,26 @@ export function Tab() {
   const [preview, setPreview] = useState<{ out: string; fee?: string } | null>(null);
   const [exit, setExit] = useState<{ depositAddress: string; sig?: string; screen?: Screen } | null>(null);
 
+  const [balErr, setBalErr] = useState(false);
   const refreshBalances = useCallback(async () => {
     if (!address) return;
-    const rpc = createSolanaRpc(RPC);
+    setBalErr(false);
     try {
-      setSol((await rpc.getBalance(toAddress(address)).send()).value);
-      const [ata] = await findAssociatedTokenPda({ owner: toAddress(address), mint: toAddress(usdcMint()), tokenProgram: TOKEN_PROGRAM_ADDRESS });
-      const b = await rpc.getTokenAccountBalance(ata).send().catch(() => null);
-      setUsdc(b ? BigInt(b.value.amount) : 0n);
-    } catch { setUsdc(null); }
+      // The server route first (reliable RPC); the public RPC directly as the fallback.
+      const r = await fetch(`/api/balance?address=${address}`);
+      if (!r.ok) throw new Error("server balance unavailable");
+      const j = await r.json();
+      setSol(BigInt(j.lamports));
+      setUsdc(BigInt(j.usdcAtomic));
+    } catch {
+      try {
+        const rpc = createSolanaRpc(RPC);
+        setSol((await rpc.getBalance(toAddress(address)).send()).value);
+        const [ata] = await findAssociatedTokenPda({ owner: toAddress(address), mint: toAddress(usdcMint()), tokenProgram: TOKEN_PROGRAM_ADDRESS });
+        const b = await rpc.getTokenAccountBalance(ata).send().catch(() => null);
+        setUsdc(b ? BigInt(b.value.amount) : 0n);
+      } catch { setUsdc(null); setBalErr(true); }
+    }
   }, [address]);
   useEffect(() => { refreshBalances(); }, [refreshBalances]);
 
@@ -135,8 +146,8 @@ export function Tab() {
       <div className="mt-8 grid gap-6 lg:grid-cols-3">
         <GlowCard className="p-6 lg:col-span-1">
           <p className="label-mono">Balance</p>
-          <p className="mt-2 font-display text-5xl font-semibold" data-testid="usdc-balance">{address ? (usdc === null ? "..." : `$${formatUsdc(usdc)}`) : "Connect"}</p>
-          <p className="mt-1 text-sm text-graphite">USDC on Solana</p>
+          <p className="mt-2 font-display text-5xl font-semibold" data-testid="usdc-balance">{address ? (usdc === null ? (balErr ? "Unavailable" : "...") : `$${formatUsdc(usdc)}`) : "Connect"}</p>
+          <p className="mt-1 text-sm text-graphite">USDC on Solana{balErr && <button type="button" onClick={refreshBalances} className="ml-2 inline-flex min-h-11 items-center underline">Try again</button>}</p>
           {address && sol !== null && <p className="mt-1 font-mono text-xs text-graphite">{sol.toString()} lamports for network fees</p>}
           <Link href="/studio" className="mt-5 inline-flex h-11 items-center rounded-capsule bg-amethyst-deep px-4 text-sm text-white hover:bg-amethyst">Caption a clip</Link>
         </GlowCard>

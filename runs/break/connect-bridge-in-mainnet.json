@@ -1,0 +1,186 @@
+{
+  "id": "connect-bridge-in",
+  "network": "mainnet",
+  "at": "2026-11-08T16:13:50.309Z",
+  "title": "Intents Connect bridge-in from Base to the buyer's Solana wallet, one signature",
+  "originWallet": "0x927a59Ec0e83AEFF4988EA3A646B035cF495aA8f",
+  "intermediarySolana": "FHZTRCJD58GVD3Yifm5GzVQUUmH7LjmdeEqz2U4HrMLx",
+  "executionId": "156afa3c-e5dd-441f-ad18-a2bb28b90fdc",
+  "depositAddress": "0x9834881a8D68fE3add0F483971E11Df3D8Fb91D4",
+  "originTxHash": "0xbaae0e9510d71aa09956d2b5be8b2f901826e546caec8528e35896e04fc72bbb",
+  "depositedAtomic": "497448",
+  "buyerUsdcBefore": "150023",
+  "buyerUsdcAfter": "267573",
+  "arrivedAtomic": "117550",
+  "minutesFromDepositToArrival": 1.77,
+  "minutesTotal": 1.83,
+  "finalStatus": "arrived",
+  "timeline": [
+    {
+      "at": "2026-11-08T16:12:04.694Z",
+      "status": "DEPOSIT_PENDING"
+    },
+    {
+      "at": "2026-11-08T16:12:15.413Z",
+      "status": "DEPOSIT_PROCESSING"
+    },
+    {
+      "at": "2026-11-08T16:13:39.602Z",
+      "status": "OPERATION_PROCESSING"
+    },
+    {
+      "at": "2026-11-08T16:13:49.993Z",
+      "status": "SUCCESS"
+    }
+  ],
+  "execution": {
+    "createdAt": "2026-11-08T16:12:01Z",
+    "details": {
+      "estimatedTime": "32",
+      "intermediaryAddress": "FHZTRCJD58GVD3Yifm5GzVQUUmH7LjmdeEqz2U4HrMLx",
+      "messageSigned": true,
+      "messageToSign": "{\"deadline\":\"2026-11-15T16:12:02Z\",\"intents\":[{\"contract_id\":\"proxy-signer-dev.near\",\"intent\":\"auth_call\",\"min_gas\":\"30000000000000\",\"msg\":\"{\\\"request\\\":{\\\"domain_id\\\":1,\\\"path\\\":\\\"0x927a59ec0e83aeff4988ea3a646b035cf495aa8f\\\",\\\"payload_v2\\\":{\\\"Eddsa\\\":\\\"0302070e37587942fdf03a8c59308ee10b42870999dd0b57d7d259c262b08b54c2de854d4ea8d700bcdef587cb7148569924265f2e750812bf925f6b026cfd6efb0d1f05d4419b807675de9c3a199e3a60147d350e5148b40bba8f207cc0baedecb8a71d6710a85061b85f857c0d5d5ab13650ffde953094a5eb9e6c95caebc288b2611ba882ffa87b8f0b49dd4bff0345726bed1d03d6b6fe4f7847ffc2472d927d9ce4dcf348da890659325b9e4932ff9e7ac213b4adc50bd7b465bb0a9f161fd23016e11c04d78c86bfc755c903c98e8e5636f5e1d1ae998c15476120bd3776de13ce00000000000000000000000000000000000000000000000000000000000000000306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a4000000006a7d517192c568ee08a845f73d29788cf035c3145b21ab344d8062ea940000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a91aa436fbbee716a31ff2cf7fcccb0c94eb20b89180b21d7dbea398b1da38fbe88c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f859c6fa7af3bedbad3a3d65f36aabc97431b1bbe4c2d2f6e0e47ca60203452f5d6163b8aaf07c08aeb61088faed77ad85b1f69197e15f206e9990f460a3d70a7e6e060703040901040400000008000502400d03000800090300000000000000000c0600050b0d070a01010a04030d05020a0c2ecb010000000000060a030306020903021e020000000000\\\"}}}\"}],\"nonce\":\"AAAAAAAiMjUytjCfu+lD6BgtORC0Krmbh3MlTZdzE5w=\",\"signer_id\":\"0x927a59ec0e83aeff4988ea3a646b035cf495aa8f\",\"verifying_contract\":\"intents.near\"}",
+      "networkFee": "138754",
+      "payload": {
+        "payload_bytes_base64": "eyJkZWFkbGluZSI6IjIwMjYtMTEtMTVUMTY6MTI6MDJaIiwiaW50ZW50cyI6W3siY29udHJhY3RfaWQiOiJwcm94eS1zaWduZXItZGV2Lm5lYXIiLCJpbnRlbnQiOiJhdXRoX2NhbGwiLCJtaW5fZ2FzIjoiMzAwMDAwMDAwMDAwMDAiLCJtc2ciOiJ7XCJyZXF1ZXN0XCI6e1wiZG9tYWluX2lkXCI6MSxcInBhdGhcIjpcIjB4OTI3YTU5ZWMwZTgzYWVmZjQ5ODhlYTNhNjQ2YjAzNWNmNDk1YWE4ZlwiLFwicGF5bG9hZF92MlwiOntcIkVkZHNhXCI6XCIwMzAyMDcwZTM3NTg3OTQyZmRmMDNhOGM1OTMwOGVlMTBiNDI4NzA5OTlkZDBiNTdkN2QyNTljMjYyYjA4YjU0YzJkZTg1NGQ0ZWE4ZDcwMGJjZGVmNTg3Y2I3MTQ4NTY5OTI0MjY1ZjJlNzUwODEyYmY5MjVmNmIwMjZjZmQ2ZWZiMGQxZjA1ZDQ0MTliODA3Njc1ZGU5YzNhMTk5ZTNhNjAxNDdkMzUwZTUxNDhiNDBiYmE4ZjIwN2NjMGJhZWRlY2I4YTcxZDY3MTBhODUwNjFiODVmODU3YzBkNWQ1YWIxMzY1MGZmZGU5NTMwOTRhNWViOWU2Yzk1Y2FlYmMyODhiMjYxMWJhODgyZmZhODdiOGYwYjQ5ZGQ0YmZmMDM0NTcyNmJlZDFkMDNkNmI2ZmU0Zjc4NDdmZmMyNDcyZDkyN2Q5Y2U0ZGNmMzQ4ZGE4OTA2NTkzMjViOWU0OTMyZmY5ZTdhYzIxM2I0YWRjNTBiZDdiNDY1YmIwYTlmMTYxZmQyMzAxNmUxMWMwNGQ3OGM4NmJmYzc1NWM5MDNjOThlOGU1NjM2ZjVlMWQxYWU5OThjMTU0NzYxMjBiZDM3NzZkZTEzY2UwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMwNjQ2NmZlNTIxMTczMmZmZWNhZGJhNzJjMzliZTdiYzhjZTViYmM1ZjcxMjZiMmM0MzliM2E0MDAwMDAwMDA2YTdkNTE3MTkyYzU2OGVlMDhhODQ1ZjczZDI5Nzg4Y2YwMzVjMzE0NWIyMWFiMzQ0ZDgwNjJlYTk0MDAwMDAwNmRkZjZlMWQ3NjVhMTkzZDljYmUxNDZjZWViNzlhYzFjYjQ4NWVkNWY1YjM3OTEzYThjZjU4NTdlZmYwMGE5MWFhNDM2ZmJiZWU3MTZhMzFmZjJjZjdmY2NjYjBjOTRlYjIwYjg5MTgwYjIxZDdkYmVhMzk4YjFkYTM4ZmJlODhjOTcyNThmNGUyNDg5ZjFiYjNkMTAyOTE0OGUwZDgzMGI1YTEzOTlkYWZmMTA4NDA0OGU3YmQ4ZGJlOWY4NTljNmZhN2FmM2JlZGJhZDNhM2Q2NWYzNmFhYmM5NzQzMWIxYmJlNGMyZDJmNmUwZTQ3Y2E2MDIwMzQ1MmY1ZDYxNjNiOGFhZjA3YzA4YWViNjEwODhmYWVkNzdhZDg1YjFmNjkxOTdlMTVmMjA2ZTk5OTBmNDYwYTNkNzBhN2U2ZTA2MDcwMzA0MDkwMTA0MDQwMDAwMDAwODAwMDUwMjQwMGQwMzAwMDgwMDA5MDMwMDAwMDAwMDAwMDAwMDAwMGMwNjAwMDUwYjBkMDcwYTAxMDEwYTA0MDMwZDA1MDIwYTBjMmVjYjAxMDAwMDAwMDAwMDA2MGEwMzAzMDYwMjA5MDMwMjFlMDIwMDAwMDAwMDAwXCJ9fX0ifV0sIm5vbmNlIjoiQUFBQUFBQWlNalV5dGpDZnUrbEQ2Qmd0T1JDMEtybWJoM01sVFpkekU1dz0iLCJzaWduZXJfaWQiOiIweDkyN2E1OWVjMGU4M2FlZmY0OTg4ZWEzYTY0NmIwMzVjZjQ5NWFhOGYiLCJ2ZXJpZnlpbmdfY29udHJhY3QiOiJpbnRlbnRzLm5lYXIifQ==",
+        "payload_json": "{\"deadline\":\"2026-11-15T16:12:02Z\",\"intents\":[{\"contract_id\":\"proxy-signer-dev.near\",\"intent\":\"auth_call\",\"min_gas\":\"30000000000000\",\"msg\":\"{\\\"request\\\":{\\\"domain_id\\\":1,\\\"path\\\":\\\"0x927a59ec0e83aeff4988ea3a646b035cf495aa8f\\\",\\\"payload_v2\\\":{\\\"Eddsa\\\":\\\"0302070e37587942fdf03a8c59308ee10b42870999dd0b57d7d259c262b08b54c2de854d4ea8d700bcdef587cb7148569924265f2e750812bf925f6b026cfd6efb0d1f05d4419b807675de9c3a199e3a60147d350e5148b40bba8f207cc0baedecb8a71d6710a85061b85f857c0d5d5ab13650ffde953094a5eb9e6c95caebc288b2611ba882ffa87b8f0b49dd4bff0345726bed1d03d6b6fe4f7847ffc2472d927d9ce4dcf348da890659325b9e4932ff9e7ac213b4adc50bd7b465bb0a9f161fd23016e11c04d78c86bfc755c903c98e8e5636f5e1d1ae998c15476120bd3776de13ce00000000000000000000000000000000000000000000000000000000000000000306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a4000000006a7d517192c568ee08a845f73d29788cf035c3145b21ab344d8062ea940000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a91aa436fbbee716a31ff2cf7fcccb0c94eb20b89180b21d7dbea398b1da38fbe88c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f859c6fa7af3bedbad3a3d65f36aabc97431b1bbe4c2d2f6e0e47ca60203452f5d6163b8aaf07c08aeb61088faed77ad85b1f69197e15f206e9990f460a3d70a7e6e060703040901040400000008000502400d03000800090300000000000000000c0600050b0d070a01010a04030d05020a0c2ecb010000000000060a030306020903021e020000000000\\\"}}}\"}],\"nonce\":\"AAAAAAAiMjUytjCfu+lD6BgtORC0Krmbh3MlTZdzE5w=\",\"signer_id\":\"0x927a59ec0e83aeff4988ea3a646b035cf495aa8f\",\"verifying_contract\":\"intents.near\"}",
+        "standard": "erc191"
+      },
+      "signingStandard": "erc191"
+    },
+    "executionMode": "quote_with_steps",
+    "id": "156afa3c-e5dd-441f-ad18-a2bb28b90fdc",
+    "quote": {
+      "amount": "497448",
+      "amountIn": "497448",
+      "amountInUsd": "0.497183357664",
+      "amountOut": "258869",
+      "amountOutUsd": "0.557552",
+      "deadline": "2026-11-08T16:37:00Z",
+      "depositAddress": "0x9834881a8D68fE3add0F483971E11Df3D8Fb91D4",
+      "depositMemo": null,
+      "destinationAsset": "nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near",
+      "minAmountIn": "497448",
+      "minAmountOut": "117550",
+      "originAsset": "nep141:base-0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.omft.near",
+      "recipient": "FHZTRCJD58GVD3Yifm5GzVQUUmH7LjmdeEqz2U4HrMLx",
+      "swapType": "EXACT_INPUT"
+    },
+    "status": "SUCCESS",
+    "steps": [
+      {
+        "args": [],
+        "accounts": [
+          {
+            "pubkey": "4j3frhd96xMfM9hYjpxEHQUfpDctZdgzg861FC9Ay4NG",
+            "isSigner": true,
+            "isWritable": true
+          },
+          {
+            "pubkey": "FsVrdLAr7rCp1NTc7XUWtrrNRdtxAn6jhDiVfGow7gu3",
+            "isSigner": false,
+            "isWritable": true
+          },
+          {
+            "pubkey": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF",
+            "isSigner": false,
+            "isWritable": false
+          },
+          {
+            "pubkey": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "isSigner": false,
+            "isWritable": false
+          },
+          {
+            "pubkey": "11111111111111111111111111111111",
+            "isSigner": false,
+            "isWritable": false
+          },
+          {
+            "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "isSigner": false,
+            "isWritable": false
+          }
+        ],
+        "metadata": {
+          "name": "Prepare buyer account",
+          "description": "Create the buyer's USDC account if it does not exist"
+        },
+        "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "discriminator": "01"
+      },
+      {
+        "args": [
+          {
+            "name": "amount",
+            "type": "u64",
+            "value": "117550"
+          },
+          {
+            "name": "decimals",
+            "type": "u8",
+            "value": 6
+          }
+        ],
+        "accounts": [
+          {
+            "pubkey": "7wKj3KGabanfjG3yy3o3ZtNKaWJcQReRF8GvbXgqKbRt",
+            "isSigner": false,
+            "isWritable": true
+          },
+          {
+            "pubkey": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "isSigner": false,
+            "isWritable": false
+          },
+          {
+            "pubkey": "FsVrdLAr7rCp1NTc7XUWtrrNRdtxAn6jhDiVfGow7gu3",
+            "isSigner": false,
+            "isWritable": true
+          },
+          {
+            "pubkey": "FHZTRCJD58GVD3Yifm5GzVQUUmH7LjmdeEqz2U4HrMLx",
+            "isSigner": true,
+            "isWritable": false
+          }
+        ],
+        "metadata": {
+          "name": "Send USDC to the buyer",
+          "description": "Move the bridged USDC to the buyer's Solana wallet"
+        },
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "discriminator": "0c"
+      },
+      {
+        "args": [],
+        "accounts": [
+          {
+            "pubkey": "7wKj3KGabanfjG3yy3o3ZtNKaWJcQReRF8GvbXgqKbRt",
+            "isSigner": false,
+            "isWritable": true
+          },
+          {
+            "pubkey": "G9jWhbCRcFy9paMRU9rnXAK7y8Q6iGWBwQjkwFN1pA3X",
+            "isSigner": false,
+            "isWritable": true
+          },
+          {
+            "pubkey": "FHZTRCJD58GVD3Yifm5GzVQUUmH7LjmdeEqz2U4HrMLx",
+            "isSigner": true,
+            "isWritable": false
+          }
+        ],
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "discriminator": "03021e020000000000"
+      }
+    ],
+    "type": "solana",
+    "version": "1.0"
+  },
+  "slotsEquivalent": 266,
+  "solanaTxHash": "3DGAaHQrgWrnoVda5S3vLtbw3VKy95F3QRAn1Ntmk7HdNcTohi1ncvQYWrWE4rcKSk8o7Le4n6tkYVqZ7uFqfwfZ",
+  "depositMinutes": 1.77,
+  "depositSlots": 266,
+  "feeNote": "0.497448 USDC sent on Base, 0.117550 USDC arrived: about 0.38 USDC of bridge and one-time Solana account fees. The first run for a wallet pays for creating its intermediary token account; later runs do not.",
+  "b7": "One Base to Solana point (n=1). Not a distribution."
+}

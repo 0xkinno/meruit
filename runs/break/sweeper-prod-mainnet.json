@@ -1,0 +1,11 @@
+{
+  "id": "sweeper-prod",
+  "network": "mainnet",
+  "at": "2026-11-08T16:06:52.194Z",
+  "title": "production sweeper against durable Redis storage",
+  "result": "The deployed sweeper knew one channel from the Redis store (opened by the production job job_943a89729b7b45db9aff) and reclaimed it in one transaction. /status then reported the store as upstash and the sweeper as recently run.",
+  "channelsBefore": 1,
+  "channelsAfter": 0,
+  "signatures": { "reclaim": "3DFeXeZKsfAHKdWPZig8LTMim1yeb8mF1cw528eCPNBa5eRaR2Ctt4ityKqGhFYDu1t8GgL8c7Mc18sRQbwRrByF" },
+  "note": "triggered by hand with the bearer secret, not by the schedule. The daily Vercel Cron and the optional GitHub schedule have not fired yet."
+}

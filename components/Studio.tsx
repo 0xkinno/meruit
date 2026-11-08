@@ -139,7 +139,7 @@ export function Studio() {
                 </div>
               )}
               {active && (
-                <p aria-live="polite" data-testid="caption-overlay" className="pointer-events-none absolute inset-x-3 bottom-14 mx-auto w-fit max-w-[92%] rounded-lg bg-ink/80 px-3 py-2 text-center text-base text-white sm:text-lg">{active.text}</p>
+                <p aria-live="polite" data-testid="caption-overlay" className={`pointer-events-none absolute inset-x-3 mx-auto w-fit max-w-[92%] rounded-lg bg-ink/80 px-3 py-2 text-center text-base text-white sm:text-lg ${sample.video && !file ? "bottom-14" : "bottom-24"}`}>{active.text}</p>
               )}
             </div>
 

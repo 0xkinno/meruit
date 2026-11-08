@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T16:04:17.530Z",
+  "generatedAt": "2026-11-08T16:25:02.705Z",
   "network": "devnet and mainnet",
   "byNetwork": {
     "devnet": 23,
@@ -16,9 +16,9 @@
     "checkCueRate": "0.0%"
   },
   "deposits": {
-    "count": 0,
-    "medianMinutes": null,
-    "fractionAbove1500Slots": null
+    "count": 1,
+    "medianMinutes": 1.77,
+    "fractionAbove1500Slots": "0/1"
   },
   "costPerMinuteUsd": null
 }
