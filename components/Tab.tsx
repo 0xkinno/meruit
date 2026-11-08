@@ -6,6 +6,7 @@ import { address as toAddress, createSolanaRpc } from "@solana/kit";
 import { findAssociatedTokenPda, getTransferCheckedInstruction, getCreateAssociatedTokenIdempotentInstruction, TOKEN_PROGRAM_ADDRESS } from "@solana-program/token";
 import { useWallet } from "./WalletProvider";
 import { GlowCard } from "./GlowCard";
+import { ConnectCard } from "./ConnectCard";
 import { formatUsdc } from "@/lib/billing/meter";
 import { usdcMint } from "@/lib/channels/constants";
 import { sendInstructions } from "@/lib/solana/send";
@@ -170,6 +171,8 @@ export function Tab() {
           <p className="mt-6 text-sm text-graphite">Powered by Aurora Intents.</p>
         </GlowCard>
       </div>
+
+      {SEND_LIVE && <ConnectCard />}
 
       <GlowCard className="mt-6 p-6">
         <h2 className="font-display text-2xl font-semibold">Jobs</h2>

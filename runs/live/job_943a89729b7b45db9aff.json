@@ -1,0 +1,84 @@
+{
+  "id": "job_943a89729b7b45db9aff",
+  "kind": "job",
+  "wild": false,
+  "network": "mainnet",
+  "status": 200,
+  "clip": "short",
+  "declaredSeconds": 60,
+  "cap": "10000",
+  "charge": "10000",
+  "refund": "0",
+  "deliveredSeconds": 60,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 7.3399997,
+      "text": "This is a LibriVox recording. All LibriVox recordings are in the public domain. For more",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 7.3399997,
+      "end": 12.42,
+      "text": "information and to find out how you can volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 13.24,
+      "end": 20.56,
+      "text": "Recording by Moira Fogarty. The Art of War by Sun Tzu. Translated by Lionel Giles.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 21.48,
+      "end": 24.38,
+      "text": "Part 1. Laying Plans.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 24.38,
+      "end": 54.36,
+      "text": "Sun Tzu said,",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 54.379997,
+      "end": 55.559998,
+      "text": "the moral law",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 55.559998,
+      "end": 57.519997,
+      "text": "2. heaven",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 57.519997,
+      "end": 59.42,
+      "text": "3. earth",
+      "check": false
+    }
+  ],
+  "cues": 8,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3mTDwBo329c1b8Cq55FFKsQMP5YDQrbfMRUYd19Er9qa3MNC9qPg8j3PnmwnXMhkTSC4STLczZz9Dp1Fw26Mdwf",
+    "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+    "amount": "10000",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 10182,
+  "at": "2026-11-08T15:59:29.869Z"
+}

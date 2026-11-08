@@ -4,19 +4,20 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Proxy target for the Intents Connect SDK (`apiKeyProxyUrl`), so the key never reaches the browser.
- * Intents Connect is pre-release and needs access from the Aurora team. Without AURORA_CONNECT_BASE_URL
- * this route answers 501 and the UI labels Connect as designed, not live.
+ * Server-side proxy to the Intents Connect API (intents-connect-api.aurora.dev, open; no key needed to read).
+ * The browser calls /api/aurora/connect/api/v1/executions/...; creating a bridge-in needs the Aurora API key in
+ * `x-api-key`, which is added here so the key never reaches the browser. Only execution paths are forwarded.
  */
 async function proxy(req: NextRequest, ctx: { params: Promise<{ path?: string[] }> }) {
   void ctx;
-  const base = process.env.AURORA_CONNECT_BASE_URL;
-  if (!base || !process.env.AURORA_API_KEY) return NextResponse.json({ error: "connect_not_configured", state: "designed" }, { status: 501 });
+  const base = (process.env.AURORA_CONNECT_BASE_URL || "https://intents-connect-api.aurora.dev").replace(/\/$/, "");
   const path = req.nextUrl.pathname.replace(/^\/api\/aurora\/connect/, "");
   if (!/^\/api\/v1\/executions\//.test(path)) return NextResponse.json({ error: "path_not_allowed" }, { status: 400 });
-  const r = await fetch(`${base.replace(/\/$/, "")}${path}${req.nextUrl.search}`, {
+  const headers: Record<string, string> = { "content-type": "application/json" };
+  if (req.method === "POST" && process.env.AURORA_API_KEY) headers["x-api-key"] = process.env.AURORA_API_KEY;
+  const r = await fetch(`${base}${path}${req.nextUrl.search}`, {
     method: req.method,
-    headers: { "content-type": "application/json", authorization: `Bearer ${process.env.AURORA_API_KEY}` },
+    headers,
     body: ["GET", "HEAD"].includes(req.method) ? undefined : await req.text(),
     cache: "no-store",
   });

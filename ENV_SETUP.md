@@ -41,12 +41,12 @@ After adding or changing variables: Deployments, the latest one, the three dots,
 6. **Redeploy** the project.
 7. Check: open `https://meruit-delta.vercel.app/status`. The row `redis` should say `ok` and the line above the table should say `Store: upstash`.
 
-## D. CRON_SECRET, step by step
-This is a password that only the GitHub schedule and the Vercel route share, so nobody else can trigger the sweeper.
-1. Make a random value. On any computer with a terminal: `openssl rand -hex 32`. Without a terminal, open your browser's developer console and run `crypto.randomUUID()+crypto.randomUUID()` and use the result. Copy it.
-2. Vercel, project `meruit`, Settings, Environment Variables: add `CRON_SECRET` with that value, Production and Preview, Sensitive. Redeploy.
-3. GitHub, repository `0xkinno/meruit`, Settings, Secrets and variables, Actions, **New repository secret**: name `CRON_SECRET`, same value. Save.
-4. Test it: GitHub, Actions tab, **Sweep abandoned channels**, **Run workflow**. It should finish green. The `/status` row `sweeper_last_run` then shows a recent time.
+## D. The sweeper and CRON_SECRET (already done for you)
+`CRON_SECRET` is a password that protects `/api/cron/sweep`. It is set in Vercel (Production, Sensitive) and `vercel.json` runs the sweeper once a day with Vercel Cron, which sends that password by itself. You do nothing.
+
+Optional: an extra 10 minute schedule from GitHub Actions needs the same value as a GitHub secret. Ask for it and add it under Settings, Secrets and variables, Actions, New repository secret, name `CRON_SECRET`. Without it the workflow skips itself and stays green.
+
+To run the sweeper once by hand, in Vercel open the project, Settings, Cron Jobs, and press Run on `/api/cron/sweep`.
 
 ## E. Local `.env.local`
 Run `npm run keys` once to create `.env.local` with fresh wallets. Then set `SOLANA_RPC_MAINNET`, `SOLANA_RPC_DEVNET`, `GROQ_API_KEY`, `AURORA_API_KEY`, `MERUIT_PAY_TO` by hand. `npm run probe` tells you which ones work without printing them.

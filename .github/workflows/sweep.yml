@@ -6,9 +6,13 @@ on:
 jobs:
   sweep:
     runs-on: ubuntu-latest
+    env:
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
     steps:
       - name: Call the sweeper
-        env:
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        if: ${{ env.CRON_SECRET != '' }}
         run: |
           curl -fsS -X POST -H "authorization: Bearer ${CRON_SECRET}" https://meruit-delta.vercel.app/api/cron/sweep
+      - name: Skipped
+        if: ${{ env.CRON_SECRET == '' }}
+        run: echo "CRON_SECRET is not set as a GitHub secret, so this extra 10 minute schedule is skipped. Vercel Cron runs the sweeper daily without it."

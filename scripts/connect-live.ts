@@ -12,14 +12,12 @@ import { createWalletClient, createPublicClient, http, parseAbi } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { base } from "viem/chains";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { base58 } from "@scure/base";
 import { rpcUrl } from "./lib/env";
-import { createBridgeIn, getIntermediary, submitDepositHash, submitSignature, listExecutions, type SolanaStep } from "../lib/aurora/connectRest";
-import { ASSETS } from "../lib/aurora/assets";
+import { createBridgeIn, getIntermediary, submitDepositHash, submitSignature, listExecutions } from "../lib/aurora/connectRest";
+import { buildBridgeInBody, secp256k1Envelope } from "../lib/aurora/connectSteps";
 import { USDC_MAINNET } from "../lib/channels/constants";
 
 const BASE_USDC = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913" as const;
-const ATA_PROGRAM = "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL";
 const BUYER = "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF";
 
 async function main() {
@@ -30,31 +28,9 @@ async function main() {
   const im = await getIntermediary(account.address);
   if (!im.solana) throw new Error("Solana destinations are not enabled for this wallet");
 
+  const body = await buildBridgeInBody({ intermediarySolana: im.solana, buyer: BUYER, amountAtomic: amount });
   const mint = address(USDC_MAINNET);
-  const [srcAta] = await findAssociatedTokenPda({ owner: address(im.solana), mint, tokenProgram: TOKEN_PROGRAM_ADDRESS });
   const [buyerAta] = await findAssociatedTokenPda({ owner: address(BUYER), mint, tokenProgram: TOKEN_PROGRAM_ADDRESS });
-  const steps: SolanaStep[] = [
-    {
-      metadata: { name: "Prepare buyer account", description: "Create the buyer's USDC account if it does not exist" },
-      programId: ATA_PROGRAM, discriminator: "01", args: [],
-      accounts: [
-        { pubkey: "{INTERMEDIARY}", isSigner: true, isWritable: true }, { pubkey: buyerAta, isSigner: false, isWritable: true },
-        { pubkey: BUYER, isSigner: false, isWritable: false }, { pubkey: USDC_MAINNET, isSigner: false, isWritable: false },
-        { pubkey: "11111111111111111111111111111111", isSigner: false, isWritable: false }, { pubkey: TOKEN_PROGRAM_ADDRESS, isSigner: false, isWritable: false },
-      ],
-    },
-    {
-      metadata: { name: "Send USDC to the buyer", description: "Move the bridged USDC to the buyer's Solana wallet" },
-      programId: TOKEN_PROGRAM_ADDRESS, discriminator: "0c",
-      args: [{ name: "amount", type: "u64", value: "{MIN_AMOUNT_OUT}" }, { name: "decimals", type: "u8", value: 6 }],
-      accounts: [
-        { pubkey: srcAta, isSigner: false, isWritable: true }, { pubkey: USDC_MAINNET, isSigner: false, isWritable: false },
-        { pubkey: buyerAta, isSigner: false, isWritable: true }, { pubkey: "{INTERMEDIARY}", isSigner: true, isWritable: false },
-      ],
-    },
-  ];
-  const quote = { amount, deadline: new Date(Date.now() + 25 * 60_000).toISOString(), destinationAsset: ASSETS.solUsdc, originAsset: ASSETS.baseUsdc, slippageTolerance: 100, swapType: "EXACT_INPUT" as const };
-  const body = { version: "1.0" as const, type: "solana" as const, steps, quote };
 
   if (mode === "dry") {
     const r = await createBridgeIn(account.address, { ...body, dry: true });
@@ -71,11 +47,11 @@ async function main() {
   const depositAddress = String(created.quote?.depositAddress ?? details.depositAddress);
   // erc191: personal_sign over details.payload.payload_json verbatim, recovery byte 27/28 -> 0/1, base58, "secp256k1:" prefix.
   const toSign = String(details.payload?.payload_json ?? details.messageToSign);
+  mkdirSync(".secrets", { recursive: true });
+  writeFileSync(".secrets/connect-last.json", JSON.stringify({ executionId, depositAddress, at: new Date().toISOString() }));
   console.log(`created execution ${executionId.slice(0, 12)}..., signing standard ${details.signingStandard}, deposit address ${depositAddress.slice(0, 8)}...`);
 
-  const raw = Buffer.from((await account.signMessage({ message: toSign })).slice(2), "hex");
-  if (raw[64] >= 27) raw[64] -= 27;
-  const signature = `secp256k1:${base58.encode(raw)}`;
+  const signature = secp256k1Envelope(await account.signMessage({ message: toSign }));
   await submitSignature(account.address, { signature, executionId });
   console.log("signature submitted");
 

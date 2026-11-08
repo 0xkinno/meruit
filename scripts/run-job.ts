@@ -56,6 +56,10 @@ export async function runJob(opts: { clip: string; base: string; dry?: boolean; 
       deliveredSeconds: data.deliveredSeconds, failedChunks: data.failedChunks, cueList: cues, cues: cues.length, checkCues: cues.filter((c) => c.check).length,
       sabotage: opts.sabotage ?? "off", paymentResponse, error: res.ok ? undefined : data, latencyMs: Date.now() - started, at: new Date().toISOString(),
     };
+    // Report the settlement the way the browser does, so the receipt shows the signature and a closed job.
+    if (res.ok && paymentResponse?.transaction && !opts.base.includes("localhost")) {
+      await fetch(`${opts.base}/api/jobs/${jobId}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ state: "settled", signature: paymentResponse.transaction, payer: buyer.address, paymentResponse }) }).catch(() => undefined);
+    }
     const dir = opts.out ?? "runs/live";
     mkdirSync(dir, { recursive: true });
     writeFileSync(`${dir}/${jobId}.json`, JSON.stringify(run, null, 2) + "\n");
