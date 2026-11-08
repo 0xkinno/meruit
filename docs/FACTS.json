@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-07T19:25:50.039Z",
-  "network": null,
-  "jobs": 0,
-  "overcharges": null,
-  "returnedUsd": null,
+  "generatedAt": "2026-11-08T13:36:39.032Z",
+  "network": "devnet",
+  "jobs": 1,
+  "overcharges": 0,
+  "returnedUsd": "0.01",
   "forcedExits": 0,
   "wild": {
     "jobs": 0,
