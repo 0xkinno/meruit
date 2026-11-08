@@ -1,0 +1,182 @@
+{
+  "id": "job_4232270549174eb28471",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/4sfstoriesbymackreynolds_2105_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 4.7,
+      "text": "Story 1 of Four Science Fiction Stories by Mac Reynolds.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 5.66,
+      "end": 7.56,
+      "text": "This is a LibriVox recording.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 8.32,
+      "end": 10.82,
+      "text": "All LibriVox recordings are in the public domain.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 11.54,
+      "end": 15.58,
+      "text": "For more information or to volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 16.44,
+      "end": 18.699999,
+      "text": "Recordings by Phil Shinnevere.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 19.9,
+      "end": 22.279999,
+      "text": "Four SF Stories by Mac Reynolds.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 23.039999,
+      "end": 25.939999,
+      "text": "Story 1, Not in the Rules.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 25.939999,
+      "end": 34.84,
+      "text": "This story was first published in Imagination Stories of Science and Fantasy, April 1951.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 36.98,
+      "end": 40.539997,
+      "text": "I got the bad news as soon as we landed on Mars.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 41.399998,
+      "end": 46.6,
+      "text": "The minute I got off the spacer, the little yellow Marty was standing there with the yellow envelope.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 47.26,
+      "end": 49.66,
+      "text": "He said, Gladiator Jack Dempsey.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 50.32,
+      "end": 52.92,
+      "text": "I admitted it, and he handed me the envelope.",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 52.92,
+      "end": 55.66,
+      "text": "made me feel kind of good",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 55.66,
+      "end": 57.48,
+      "text": "as though I was somebody important",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 57.48,
+      "end": 58.379997,
+      "text": "which I'm not",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 58.379997,
+      "end": 59.999996,
+      "text": "I'd been taken",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 60,
+      "end": 66.33999969999999,
+      "text": "plenty of guff on the trip, not only from Susie, but from Alger Wild, who was also along.",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 67.48,
+      "end": 72,
+      "text": "Yeah, between them, they'd ridden me as well as the liner, all the way from Terra.",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 73.299999,
+      "end": 77.66,
+      "text": "I handed the morty a copeck and put the yellow envelope in my pocket,",
+      "check": false
+    },
+    {
+      "id": 20,
+      "start": 78.06,
+      "end": 82.039999,
+      "text": "as though I was used to getting spacegrams. I said to Susie,",
+      "check": false
+    },
+    {
+      "id": 21,
+      "start": 82.34,
+      "end": 88.84,
+      "text": "Let's hit the chow line. I don't usually talk that fancy, but I was trying to impress her with",
+      "check": false
+    },
+    {
+      "id": 22,
+      "start": 88.84,
+      "end": 93.46000000000001,
+      "text": "my knowledge of antique phrases. Both Susie and Alger Wilde are",
+      "check": false
+    }
+  ],
+  "cues": 22,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "4cJpKXuNbK9KtRrQLYFyr1uvUtgN2WaXCHHwfHVju582hBGvcfZ9bYoe2eEa9CoX7ry4z43ubVAWkDEeV1eq7gwz",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3162,
+  "at": "2026-11-08T13:59:44.448Z"
+}

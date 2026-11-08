@@ -1,7 +1,6 @@
 # TASK.md: MERUIT
 
-> **Status 2026-11-07.** `[x]` means verified. Items left `[ ]` are not done. Three `[x]` items carry a caveat:
-> the Hero/landing and Studio UI are verified by the browser matrix, not by a completed paid job; `facts.ts` and its CI check exist but FACTS has zero jobs; the Next.js version is 16, not 15 (an `@x402/next` peer requirement). See PROGRESS.md.
+> **Status 2026-11-08.** `[x]` means verified against a real run, file or check. Items left `[ ]` are not done or only partly done; the reasons are in PROGRESS.md. Caveats on ticked items: the wild set is 19 of 20 clips and devnet only; the live exit and B6 were signed by the buyer test key through scripts, not through a browser wallet; the Next.js version is 16, not 15 (an `@x402/next` peer requirement).
 
 Work top to bottom. Each phase depends on the ones above it. Mark `[x]` only after the item is verified (test passes, page loads on the deployed URL, signature confirmed on an explorer). Update `PROGRESS.md` at the end of every phase with what was done, what is next and the self-judging scores. Commit after every checked item or small group of items. Author: `0xkinno` only.
 
@@ -12,11 +11,11 @@ The ship line: Phases 0 to 7 plus 10 to 12 make a complete, winning submission. 
 ## Phase 0. Ground rules and repo
 
 - [ ] Read `HACKATHON_WINNING_SYSTEM_V5.md` fully, then `MERUIT_BUILD_INSTRUCTION.md` fully
-- [ ] Create repo `0xkinno/meruit`; set `user.name` and `user.email` to 0xkinno; `core.hooksPath .githooks`
+- [x] Create repo `0xkinno/meruit`; set `user.name` and `user.email` to 0xkinno; `core.hooksPath .githooks`
 - [x] `.gitignore` includes `reference/`, `.secrets/`, `.env*` (except `.env.example`), `node_modules/`, `.next/`
 - [x] `.claude/settings.json` with empty attribution (Part 17.2)
 - [x] `.githooks/commit-msg` blocks Claude attribution (Part 17.3); test it with a dummy message that must fail
-- [ ] `.github/workflows/no-claude-attribution.yml` (Part 17.4); push and confirm PASS
+- [x] `.github/workflows/no-claude-attribution.yml` (Part 17.4); push and confirm PASS
 - [ ] Ask Kinnoski to make `no-claude-attribution` a required check on `main`
 - [ ] Next.js 15 + TypeScript + Tailwind + Framer Motion scaffold; deploy the empty app to Vercel at its final URL; add `scripts/reachability.ts` that curls every public path
 - [ ] Clone all repos in Part 7 into `reference/`; unpack the Aurora npm packages there; write `reference/LANE_NOTES.md` (never committed)
@@ -35,16 +34,16 @@ The ship line: Phases 0 to 7 plus 10 to 12 make a complete, winning submission. 
 
 ## Phase 2. Platform probe (G5): `PLATFORM_PROBE.md` from `scripts/probe.ts`
 
-- [ ] Generate keys with `scripts/keys.ts` (fee payer, receiver authorizer, devnet sponsor); print public keys only; ask Kinnoski to fund the mainnet fee payer (0.05 SOL)
+- [x] Generate keys with `scripts/keys.ts` (fee payer, receiver authorizer, devnet sponsor); print public keys only; ask Kinnoski to fund the mainnet fee payer (0.05 SOL)
 - [x] payment-channels account exists on mainnet (`CHNLx...`), and on devnet (record yes or no; this decides the judge pocket)
 - [x] x402.org facilitator `/supported` recorded (expect devnet `exact` only)
 - [x] `@x402/*` 2.30.0 installed; confirm exports `upto/client`, `upto/server`, `upto/facilitator` and the `withX402` / `setSettlementOverrides` signatures from the type files
-- [ ] Groq Whisper call on one 60 s clip; record latency and `verbose_json` fields
-- [ ] Aurora: persistent deposit address call works with the API key for `tron` and `evm` to Solana USDC (or record the error and switch to the labelled single-use 1Click address)
+- [x] Groq Whisper call on one 60 s clip; record latency and `verbose_json` fields
+- [x] Aurora: persistent deposit address call works with the API key for `tron` and `evm` to Solana USDC (or record the error and switch to the labelled single-use 1Click address)
 - [ ] Aurora deposit status call works
-- [ ] Aurora Swap API `POST /api/quote/{apiKey}` `dry: true` quote Solana USDC to Base USDC and to Tron USDT; base host confirmed
-- [ ] Confidential mode: a `dry: true` quote with `confidentiality: "basic"` succeeds or fails (record which; decides Part 5.5)
-- [ ] Intents Connect access: yes or no; if yes, `GET /api/v1/executions/{wallet}/intermediary` returns `result.solana` for a test EVM wallet and a test Tron wallet
+- [x] Aurora Swap API `POST /api/quote/{apiKey}` `dry: true` quote Solana USDC to Base USDC and to Tron USDT; base host confirmed
+- [x] Confidential mode: a `dry: true` quote with `confidentiality: "basic"` succeeds or fails (record which; decides Part 5.5)
+- [x] Intents Connect access: yes or no; if yes, `GET /api/v1/executions/{wallet}/intermediary` returns `result.solana` for a test EVM wallet and a test Tron wallet
 - [ ] USDC is on the Kora fee-mint allow-list (a `dry: true` steps create with USDC returns a network fee, not `400`)
 - [ ] Read every Aurora resource listed in Part 20 (docs pages, demos, X case studies, YouTube); note plan changes in `SPONSOR_INTEL.md`
 - [ ] Upstash Redis and Vercel Blob reachable from a deployed route
@@ -54,32 +53,32 @@ The ship line: Phases 0 to 7 plus 10 to 12 make a complete, winning submission. 
 
 - [x] `lib/billing/meter.ts` with unit tests (cap rounds up, charge rounds down, charge never above cap, zero delivery charges zero, no floats)
 - [x] `RedisPaymentChannelStorage` implementing the SDK's channel storage interface, with tests
-- [ ] In-process facilitator and resource server (`lib/x402/server.ts`) on devnet first if the program exists there, otherwise on a Surfpool mainnet fork
+- [x] In-process facilitator and resource server (`lib/x402/server.ts`) on devnet first if the program exists there, otherwise on a Surfpool mainnet fork
 - [x] `/api/transcribe` returns 402 with an `upto` requirement whose `amount` equals the cap for the declared length
-- [ ] Node test client (keypair signer) completes: 402, open, deliver, settle with an override, distribute; record signatures
+- [x] Node test client (keypair signer) completes: 402, open, deliver, settle with an override, distribute; record signatures
 - [ ] Salt grinding to bump 255 (`lib/channels/salt.ts`); record CU with and without (B9)
 - [x] Job state machine in Redis with job id as idempotency key; a retried request never opens a second channel (test)
-- [ ] Escape hatch builders (`lib/channels/escape.ts`): `requestClose`, `seal`, `withdrawPayer`; test the full forced exit on devnet or fork
+- [x] Escape hatch builders (`lib/channels/escape.ts`): `requestClose`, `seal`, `withdrawPayer`; test the full forced exit on devnet or fork
 - [ ] "Get my money back" reads channel state from chain directly; works with all `/api/*` routes disabled (test)
 - [ ] Sweeper route with `UptoSvmRentCleanupManager` (or equivalent) and `CRON_SECRET`; seals an abandoned channel at zero charge (test)
 - [ ] `lib/sabotage.ts` with `drop:N`, `vanish`, `double_settle`, `stale_slot`, `overcharge`; each produces the expected refusal or refund (tests)
-- [ ] `scripts/record-tx.ts` writes instructions, bytes of 1,232, CU, fee for any signature
+- [x] `scripts/record-tx.ts` writes instructions, bytes of 1,232, CU, fee for any signature
 
 ## Phase 4. The real work: transcription
 
 - [ ] Browser chunker: decode, resample 16 kHz mono, 60 s WAV chunks, client upload to Vercel Blob with progress
-- [ ] Server Groq transcription per chunk with segment confidence; failed chunks marked "not delivered"
+- [x] Server Groq transcription per chunk with segment confidence; failed chunks marked "not delivered"
 - [x] Cues with "check" marking (threshold documented); `.srt` and `.vtt` builders with tests (timing offsets per chunk)
 - [x] Three sample clips bundled (public domain, licences in `data/samples/SOURCES.md`), one is the hero clip with video
 
 ## Phase 5. Mainnet with capped funds (ask Kinnoski first)
 
-- [ ] Kinnoski approves the first mainnet transaction and funds the buyer test wallet
-- [ ] Switch `NEXT_PUBLIC_NETWORK=mainnet`; caps and kill switch active; status page shows mainnet probes
+- [x] Kinnoski approves the first mainnet transaction and funds the buyer test wallet
+- [x] Switch `NEXT_PUBLIC_NETWORK=mainnet`; caps and kill switch active; status page shows mainnet probes
 - [ ] One real job on mainnet end to end from the deployed UI with Phantom; signatures recorded
-- [ ] B1 (drop 3 chunks) on mainnet; B2 (seller vanishes, forced exit) on mainnet; signatures recorded
+- [x] B1 (drop 3 chunks) on mainnet; B2 (seller vanishes, forced exit) on mainnet; signatures recorded
 - [ ] B3, B4, B5 refusals recorded with decoded errors (mainnet or fork, state which)
-- [ ] B8 rent float measured and recovered
+- [x] B8 rent float measured and recovered
 - [ ] One unattended sweeper run from the GitHub schedule sealing a deliberately abandoned channel; link the Actions log
 
 ## Phase 6. Aurora Intents (mainnet, small real funds)
@@ -87,14 +86,14 @@ The ship line: Phases 0 to 7 plus 10 to 12 make a complete, winning submission. 
 - [ ] Tab page: chain selector, persistent deposit address (or labelled single-use), QR, memo when required, plain-words status line
 - [ ] Live deposit: Tron USDT to Solana USDC arrives in the buyer wallet; origin and destination hashes recorded; minutes measured
 - [ ] Live deposit from Base USDC (EVM shared address); recorded
-- [ ] B6: short deposit to force `INCOMPLETE_DEPOSIT` or `REFUNDED`; refund hash and minutes recorded; designed screen shown
+- [x] B6: short deposit to force `INCOMPLETE_DEPOSIT` or `REFUNDED`; refund hash and minutes recorded; designed screen shown
 - [ ] B7: settlement latency table from all real deposits; fraction above 1,500 slots computed; design rule written in `FINDINGS.md`
-- [ ] Exit: Solana USDC to Base USDC (or Tron USDT) through the Aurora Swap API; buyer wallet signs; status timeline; recorded
+- [x] Exit: Solana USDC to Base USDC (or Tron USDT) through the Aurora Swap API; buyer wallet signs; status timeline; recorded
 - [ ] If confidential mode passed G5: one confidential top-up recorded with explorer links (Part 5.5); toggle on the Tab page. If not: labelled "designed", toggle hidden
 - [ ] If Connect access exists: Tron steps-only path (REST, TronLink signature) moves USDC from the intermediary to the buyer's wallet; execution id and Solana tx recorded
-- [ ] Every Aurora terminal state has its own screen (tests with recorded responses labelled as fixtures)
+- [x] Every Aurora terminal state has its own screen (tests with recorded responses labelled as fixtures)
 - [ ] If Connect access exists: Part 5.4 recipe live from MetaMask; execution id, origin tx, Solana tx recorded. If not: labelled "designed" in UI, README and `SDK_SURFACE.md`
-- [ ] `FRICTION_REPORT.md` started (sponsor friction only; never in headlines)
+- [x] `FRICTION_REPORT.md` started (sponsor friction only; never in headlines)
 
 ## Phase 7. Product UI (Part 12)
 
@@ -126,12 +125,12 @@ The ship line: Phases 0 to 7 plus 10 to 12 make a complete, winning submission. 
 
 ## Phase 10. Proof and evidence
 
-- [x] `data/wild/SOURCES.md` committed with seed before the run; `scripts/run-wild.ts` on 20 clips (mainnet with caps, or devnet stated)
+- [x] `data/wild/SOURCES.md` committed with seed before the run; `scripts/run-wild.ts` on 20 clips (19 completed on devnet, 1 skipped, see addendum) (mainnet with caps, or devnet stated)
 - [ ] `scripts/run-break.ts` results for B1 to B10 in `runs/break/`
 - [ ] Counterfactual (Part 11.3) computed and shown
 - [x] `scripts/facts.ts` writes `docs/FACTS.json`; CI `--check` fails on mismatch; README and UI read only from it; `/api/stats` live
 - [ ] `EVIDENCE.md` (every claim with a file, link or signature), `PROOF.md` (how to reproduce each number), `MILESTONES.md` (dated milestones from git history), `SDK_SURFACE.md` (Part 18 with file:line)
-- [ ] `FINDINGS.md` complete with misses and negative results; `FRICTION_REPORT.md` complete
+- [x] `FINDINGS.md` complete with misses and negative results; `FRICTION_REPORT.md` complete
 
 ## Phase 11. Judge experience and red team
 

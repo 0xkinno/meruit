@@ -1,0 +1,71 @@
+{
+  "id": "B6",
+  "network": "mainnet",
+  "at": "2026-11-08T14:13:27.910Z",
+  "title": "short deposit forces a refund",
+  "quotedAtomic": "500000",
+  "sentAtomic": "50000",
+  "recipient": "Base 0x927a59ec0e83aeff4988ea3a646b035cf495aa8f",
+  "refundTo": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF",
+  "quote": {
+    "amountIn": "0.5",
+    "amountOut": "0.497448"
+  },
+  "depositSignature": "5F3Y35sA6nDFfsMd92tGAA81Xxi3FhYKv5p4sHvXcSjMFRQHCPhxjbG6ZVeWfWdWfTZxtchf2BzGs75ay3hR2Pk7",
+  "finalStatus": "REFUNDED",
+  "minutes": 8,
+  "timeline": [
+    {
+      "at": "2026-11-08T14:05:33.692Z",
+      "status": "PENDING_DEPOSIT"
+    },
+    {
+      "at": "2026-11-08T14:06:45.812Z",
+      "status": "INCOMPLETE_DEPOSIT"
+    },
+    {
+      "at": "2026-11-08T14:12:05.093Z",
+      "status": "PROCESSING"
+    },
+    {
+      "at": "2026-11-08T14:13:27.736Z",
+      "status": "REFUNDED"
+    }
+  ],
+  "swapDetails": {
+    "intentHashes": [
+      "DpKUndTHcGyFMCPX43TUnPhUatSRjh6msv5RAuTovHwk"
+    ],
+    "nearTxHashes": [
+      "718aFAzxGXqtXa9mAia2JDpS37U3ZWfVp63MdNZ4aMMC",
+      "B8wHo59vQioorPMJNrdGHdNgTkxFK5zM63zdTeaK2yS2",
+      "CBCRxdcj5FZJYmQ1nFNtSvtMc1VJu86DkHNzxej82zSi"
+    ],
+    "amountIn": null,
+    "amountInFormatted": null,
+    "amountInUsd": null,
+    "amountOut": null,
+    "amountOutFormatted": null,
+    "amountOutUsd": null,
+    "slippage": null,
+    "originChainTxHashes": [
+      {
+        "hash": "5F3Y35sA6nDFfsMd92tGAA81Xxi3FhYKv5p4sHvXcSjMFRQHCPhxjbG6ZVeWfWdWfTZxtchf2BzGs75ay3hR2Pk7",
+        "explorerUrl": ""
+      }
+    ],
+    "destinationChainTxHashes": [
+      {
+        "hash": "2dJ7EgQkvbRohHXfKHViH1V1dD1kVSNGkD1mchgTibmUf1HRRBGX7jp9ph8mB8XRYLzjAgNJJGuHNFCGqvJWp6na",
+        "explorerUrl": ""
+      }
+    ],
+    "refundedAmount": "40023",
+    "refundedAmountFormatted": "0.040023",
+    "refundedAmountUsd": "0.040007310984",
+    "refundReason": "QUOTE_EXPIRED",
+    "depositedAmount": "50000",
+    "depositedAmountFormatted": "0.05",
+    "depositedAmountUsd": "0.049980400000"
+  }
+}

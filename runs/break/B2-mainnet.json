@@ -1,0 +1,15 @@
+{
+  "id": "B2",
+  "network": "mainnet",
+  "at": "2026-11-08T14:08:38.521Z",
+  "title": "seller vanishes after open, buyer forced exit",
+  "result": "final status sealed",
+  "elapsedSeconds": 915,
+  "channel": "G52PicTYHL5V16whbGWJSwRtmMeapgUwPWYfBwfXUK7m",
+  "depositAtomic": "120000",
+  "signatures": {
+    "request_close": "5ytoGRdu5gYTc8CdpJ1QTMKNCNefASFbBUcRLwyj9HSc6VG6bxN25uHg2HSqrAGg7K2do2hbeWpL75Vgmu3SinLq",
+    "seal": "5YQG3WJEjvwidWtdc7yVwXSwp7U7P3oBN8HZVn5QvXFBcCt3HuaFEHcb95Lyd3xSnHwre2TRkPhyz1rErSDaHsF5",
+    "withdraw": "34KBXANTvrkNQxZP78iZz6Uk9TX7W6693Ddr2ArJZ585Cz9vo6fbrkbukoAgXqzjjrD5mUXKi5NVhtLn1zkqVZv8"
+  }
+}

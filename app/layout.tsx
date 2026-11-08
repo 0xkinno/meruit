@@ -26,7 +26,7 @@ const martian = localFont({
   display: "swap",
 });
 
-const site = process.env.NEXT_PUBLIC_SITE_URL ?? "https://meruit.vercel.app";
+const site = process.env.NEXT_PUBLIC_SITE_URL ?? "https://meruit-delta.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site),

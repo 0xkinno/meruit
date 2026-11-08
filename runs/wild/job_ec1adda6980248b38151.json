@@ -1,0 +1,140 @@
+{
+  "id": "job_ec1adda6980248b38151",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/adaptation_2106_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 2.5,
+      "text": "Part 1 of Adaptation",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 2.5,
+      "end": 8.12,
+      "text": "This is a LibriVox recording. All LibriVox recordings are in the public domain.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 8.92,
+      "end": 13.86,
+      "text": "For more information or to volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 14.98,
+      "end": 17.199999,
+      "text": "Read by Phil Chenever",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 17.199999,
+      "end": 21.08,
+      "text": "Adaptation by Mac Reynolds",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 21.08,
+      "end": 28.279999,
+      "text": "This story was first published in Astounding Science Fiction, August 1960.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 28.279999,
+      "end": 31.48,
+      "text": "FORWARD AND PART ONE",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 31.48,
+      "end": 40.28,
+      "text": "Hardly had man solved his basic problems on the planet of his origin, than he began to fumble into space.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 41.5,
+      "end": 46.94,
+      "text": "Barely a century had elapsed in the exploration of the solar system, than he began to grope for the stars.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 47.62,
+      "end": 54.94,
+      "text": "And suddenly, with all but religious zeal, mankind conceived its fantasy dream of populating the galaxy.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 54.94,
+      "end": 60,
+      "text": "Never in the history of the race had Ferber reached such a peak, and his",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 60,
+      "end": 67.54,
+      "text": "so long. The question of why was seemingly ignored. Millions of Earth-type planets beckoned,",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 67.54,
+      "end": 72.44,
+      "text": "and with a lemming-like desperation humanity erupted into them.",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 73.46000000000001,
+      "end": 79.88,
+      "text": "But the obstacles were frightening in their magnitude. The planets and satellites of Sol",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 79.88,
+      "end": 85.06,
+      "text": "had proven comparatively tractable, and those that were suited to man-life were quickly brought",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 85.06,
+      "end": 93.46000000000001,
+      "text": "under his dominion. But there, of course, he had the advantage of proximity. The time involved",
+      "check": false
+    }
+  ],
+  "cues": 16,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3wYkg21u9PgsqbDYeVUjvEYgb8sDERAqtiqJjxssQekysKSN63T67EesEuZ5PN5bGAVMLJrLRJYw7abN4bz8kDoj",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3268,
+  "at": "2026-11-08T13:58:50.767Z"
+}

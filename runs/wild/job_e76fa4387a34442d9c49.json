@@ -1,0 +1,77 @@
+{
+  "id": "job_e76fa4387a34442d9c49",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/after_dark_1706_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 16.8,
+      "text": "Section 1 of After Dark. This is a LibriVox recording. All LibriVox recordings are in the public domain. For more information or to volunteer, please visit LibriVox.org. Recording by Anna Simon. After Dark by Wilkie Collins. Preface.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 16.8,
+      "end": 29.599998,
+      "text": "I have taken some pains to string together the various stories contained in this volume on a single thread of interest, which, so far as I know, has at least the merit of not having been used before.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 29.599998,
+      "end": 40.379997,
+      "text": "The pages entitled Lea's Diary are, however, intended to fulfil another purpose, besides that of serving as the framework for my collection of tales.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 40.839996,
+      "end": 59.48,
+      "text": "In this part of the book, and subsequently in the prologues to the stories, it has been my object to give the reader one more glimpse at that artist life which circumstances have afforded me peculiar opportunities of studying, and which I have already tried to represent, under another aspect, in my fiction Hide and Seek.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 59.6,
+      "end": 60,
+      "text": "Thank you.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 60,
+      "end": 75.08,
+      "text": "This time I wish to ask some sympathy for the joys and sorrows of a poor travelling portrait painter, presented from his wife's point of view in Leah's diary, and supposed to be briefly and simply narrated by himself in the prologues to the stories.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 75.08,
+      "end": 93.46000000000001,
+      "text": "I have purposely kept these two portions of the book within certain limits, only giving, in one case, as much as the wife might naturally write in her diary at intervals of household leisure, and in the other as much as a modest and sensible man would be likely to say about himself.",
+      "check": false
+    }
+  ],
+  "cues": 7,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "62VgN1WDWwz4C5hQVqDVfcYWsoYWqvF9ANTkHwNWGfCA27uNJwg4JXd2KgXce4Ay3msvgohCYsYsG9X8AVqEeF9p",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3644,
+  "at": "2026-11-08T13:59:26.079Z"
+}

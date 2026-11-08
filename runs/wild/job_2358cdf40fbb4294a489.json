@@ -1,0 +1,112 @@
+{
+  "id": "job_2358cdf40fbb4294a489",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/adventurersofthefarnorth_tg_librivox.trim.mp3",
+  "declaredSeconds": 94,
+  "cap": "15667",
+  "charge": "15666",
+  "refund": "1",
+  "deliveredSeconds": 94,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 21.64,
+      "text": "CHAPTER I. THE GREAT ELIZABETHAN NAVIGATORS.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 22.26,
+      "end": 28.4,
+      "text": "The map of Canada offers to the eye and to the imagination a vast country more than three",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 28.4,
+      "end": 34.56,
+      "text": "thousand miles in width. Its eastern face presents a broken outline to the wild surges of the",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 34.56,
+      "end": 42.02,
+      "text": "Atlantic. Its western coast commands from majestic heights the broad bosom of the Pacific. Along its",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 42.02,
+      "end": 48.559998,
+      "text": "southern boundary is a fertile country of lake and plain and woodland, loud already with the murmur",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 48.559998,
+      "end": 55.62,
+      "text": "of a rising industry, and in summer waving with the golden wealth of the harvest. But on its northern",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 55.62,
+      "end": 60,
+      "text": "side, Canada is set fast against the frozen seas of the Pole, and",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 60,
+      "end": 67.58,
+      "text": "and the desolate region of barren rock and ice-bound island that is joined to the polar ocean by a common mantle of snow.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 68.38,
+      "end": 74.599999,
+      "text": "For hundreds and hundreds of miles, the vast fortress of ice rears its battlements of shining glaciers.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 74.82,
+      "end": 79.939999,
+      "text": "The unending sunshine of the Arctic summer falls upon untrodden snow.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 80.66,
+      "end": 84.939999,
+      "text": "The cold light of the aurora illumines in winter an endless desolation.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 84.939999,
+      "end": 93.6,
+      "text": "There is no sound, save when at times the melting water falls from the glistening sides of some vast pinnacle of ice, or when the water falls out of the water.",
+      "check": false
+    }
+  ],
+  "cues": 12,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "2Ac9b1iCkBcuLTUfL2VkDeyg4QdraEnjhzpS2fCsTGhgW5vgAcGEQyBj8XDGt5svhzZLTACoxtfrFnYSPnSX7p8e",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15666",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3140,
+  "at": "2026-11-08T13:59:51.442Z"
+}

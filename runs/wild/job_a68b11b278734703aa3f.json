@@ -1,0 +1,147 @@
+{
+  "id": "job_a68b11b278734703aa3f",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/afghanwars2_2007_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 8.36,
+      "text": "Section 1 of the Afghan Wars 1839-42 and 1878-80.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 8.36,
+      "end": 15.219999,
+      "text": "Part 2. This is a LibriVox recording. All LibriVox recordings are in the public domain.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 16,
+      "end": 20.119999,
+      "text": "For more information or to volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 21.26,
+      "end": 27.039999,
+      "text": "The Afghan Wars 1839-42 and 1878-80.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 27.039999,
+      "end": 30.38,
+      "text": "Part 2 by Archibald Forbes",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 30.38,
+      "end": 32.48,
+      "text": "Section 1",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 32.48,
+      "end": 34.46,
+      "text": "The First Campaign",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 34.46,
+      "end": 43.68,
+      "text": "A brief period of peace intervened between the ratification of the Treaty of Gundamuk on May 30, 1879,",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 44.399998,
+      "end": 51.68,
+      "text": "and the renewal of hostilities consequent on the massacre at Kabul of Sir Louis Cavagnari",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 51.68,
+      "end": 55.219997,
+      "text": "and the whole entourage of the mission of which he was the head.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 55.219997,
+      "end": 59.999996,
+      "text": "There was nothing identical or even similar in the motives of the two campers.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 60,
+      "end": 66.2,
+      "text": "campaigns, and regarded purely on principle they might be regarded as two distinct wars,",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 66.44,
+      "end": 72.82,
+      "text": "rather than as successive campaigns of one and the same war. But the interval between them was",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 72.82,
+      "end": 78.58,
+      "text": "so short that the ink of the signatures to the Treaty of Gundamook may be said to have been",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 78.58,
+      "end": 84.08,
+      "text": "scarcely dry when the murder of the British envoy tore that document into bloody shreds,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 84.08,
+      "end": 89.69999899999999,
+      "text": "and it seems the simplest and most convenient method to designate the two years of hostilities",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 89.69999899999999,
+      "end": 93.46000000000001,
+      "text": "from November 1878 to September 1878.",
+      "check": false
+    }
+  ],
+  "cues": 17,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "2qTDozTbroNRHeTA9edwena5kCMnaa3RpzkUnrKQ2m4zANj3HFJ9MZWmeP3LZp3Ewnoe2uvVtsiiDbCbnd4MxXGt",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3119,
+  "at": "2026-11-08T13:59:37.533Z"
+}

@@ -1,0 +1,140 @@
+{
+  "id": "job_9f101a46ad594a09b0e6",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/aesops_fables_-_new_translation_1407_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 8.62,
+      "text": "Aesop's Fables, a new translation. Written by Aesop, translated by V. S. Vernon-Jones,",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 9.04,
+      "end": 12.0199995,
+      "text": "with an introduction by G. K. Chesterton.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 13.099999,
+      "end": 18.42,
+      "text": "This is a LibriVox recording. All LibriVox recordings are in the public domain.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 19.039999,
+      "end": 23.56,
+      "text": "For more information or to volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 23.56,
+      "end": 27.42,
+      "text": "This book has been read by Roslyn Curlough.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 27.42,
+      "end": 32.08,
+      "text": "Introduction by G. K. Chesterton",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 32.08,
+      "end": 38.54,
+      "text": "Aesop embodies an epigram not uncommon in human history.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 39.64,
+      "end": 43.46,
+      "text": "His fame is all the more deserved because he never deserved it.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 43.46,
+      "end": 54.96,
+      "text": "The firm foundations of common sense, the shrewd shots at uncommon sense that characterise all the fables, belong not to him but to humanity.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 54.96,
+      "end": 60,
+      "text": "In the earliest human history, whatever is authentic is universal.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 60,
+      "end": 68.66,
+      "text": "universal, and whatever is universal is anonymous. In such cases there is always some central man",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 68.66,
+      "end": 74.96000000000001,
+      "text": "who had first the trouble of collecting them, and afterwards the fame of creating them. He had the",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 74.96000000000001,
+      "end": 81.939999,
+      "text": "fame, and on the whole he earned the fame. There must have been something great and human, something",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 81.939999,
+      "end": 89.519999,
+      "text": "of the human future and the human past in such a man, even if he only used it to rob the past or",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 89.519999,
+      "end": 91.96000000000001,
+      "text": "deceive the future.",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 91.96000000000001,
+      "end": 93.399998,
+      "text": "The story of Arthur",
+      "check": false
+    }
+  ],
+  "cues": 16,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "62xkHTPtAUsaDDCRuLqwCeqKn8qTx5XUSgodoJUYWQVRt76Uhr4XHFogBdpfhvrBq2gTwknYy839xPmJhi34XShS",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 4118,
+  "at": "2026-11-08T13:58:30.874Z"
+}

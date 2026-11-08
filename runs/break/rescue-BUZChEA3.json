@@ -1,0 +1,13 @@
+{
+  "id": "rescue-BUZChEA3",
+  "network": "devnet",
+  "channel": "BUZChEA3tfj851nX5v4zwMuLUE8wQn3528w9rsUZakRB",
+  "depositAtomic": "10000",
+  "elapsedSeconds": 910,
+  "signatures": {
+    "request_close": "3zsvKHY75WrvfGY1pE5V5TYg9aRXDMSFEuFQFGnhyeEpzC1hNknHcpv4nayozfwZyYtVU2gXmWZSMwcdjCp3SC6k",
+    "seal": "3ZjjQZBBSNNKpYhtZ51VMA3yNGW1nT4xakPioJCWfYGaDTEQRw4x62YDLXEu2w7M9vUX5tEFQf9cyNqYsge7grN6",
+    "withdraw": "49muyVN7qJFihfcJYdvCTjursvywL46qsyPMLze8PcCrpZxuDSPo9pBgcLcqk87NfEgJ1k2cgjQKd6KfpttMA8Uf"
+  },
+  "at": "2026-11-08T14:03:28.334Z"
+}

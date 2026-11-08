@@ -10,12 +10,15 @@ export function needsCheck(s: Pick<Segment, "avgLogprob" | "noSpeechProb">): boo
   return (s.avgLogprob !== undefined && s.avgLogprob < CHECK_LOGPROB) || (s.noSpeechProb !== undefined && s.noSpeechProb > CHECK_NO_SPEECH);
 }
 
+/** House style: model output shown in the UI carries no en or em dashes. */
+export const plainDashes = (t: string) => t.replace(/[\u2013\u2014]/g, "-");
+
 export function cuesFromChunks(chunks: { index: number; ok: boolean; segments: Segment[] }[], chunkSeconds = 60): Cue[] {
   const out: Cue[] = [];
   for (const c of [...chunks].sort((a, b) => a.index - b.index)) {
     if (!c.ok) continue;
     for (const s of c.segments) {
-      const text = s.text.trim();
+      const text = plainDashes(s.text.trim());
       if (!text) continue;
       const off = c.index * chunkSeconds;
       out.push({ id: out.length + 1, start: off + s.start, end: off + Math.max(s.end, s.start + 0.2), text, check: needsCheck(s) });

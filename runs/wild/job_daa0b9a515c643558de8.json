@@ -1,0 +1,161 @@
+{
+  "id": "job_daa0b9a515c643558de8",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/a_christmas_miscellany_2018_1807_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 7.2799997,
+      "text": "Number one of A Christmas Miscellany 2018. This is a LibriVox recording. All LibriVox",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 7.2799997,
+      "end": 12.16,
+      "text": "recordings are in the public domain. For more information or to volunteer, please visit",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 12.16,
+      "end": 19.08,
+      "text": "LibriVox.org. Recording by David Wales. A Christmas Miscellany 2018 by Various.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 19.48,
+      "end": 24.26,
+      "text": "Number one. A Christmas of Long Ago by Lucy Maud Montgomery.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 24.26,
+      "end": 31.16,
+      "text": "\"'Hurrah!' cried Ted jubilantly. \"'Christmas will be here in a week. I wish it came every month.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 31.5,
+      "end": 36.52,
+      "text": "\"'Christmas will be extra nice this year, because Grandma is with us,' said Alice,",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 36.66,
+      "end": 41.46,
+      "text": "with a loving glance at the old lady with the silvery hair and bright brown eyes,",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 41.62,
+      "end": 47.9,
+      "text": "who was knitting by the fire. Grandma smiled. \"'This will be only the second Christmas of my",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 47.9,
+      "end": 53.72,
+      "text": "life that I have spent away from my own home,' she said. The first one was sixty years ago,",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 53.72,
+      "end": 55.999996,
+      "text": "children when I was a little girl of ten",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 55.999996,
+      "end": 57.94,
+      "text": "and went with my three brothers to",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 57.94,
+      "end": 59.999996,
+      "text": "spend Christmas with our grandfather and",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 60,
+      "end": 66.44,
+      "text": "grandmother. We had a delightful drive, but it was a very different Christmas from your Christmas of",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 66.44,
+      "end": 73.099999,
+      "text": "today. We did not have your dozens of beautiful and expensive presents, nor your wonderful trees",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 73.099999,
+      "end": 79.16,
+      "text": "and decorations. Still, we thought our Christmas at Grandfather's just about right. Tell us about",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 79.16,
+      "end": 84.74,
+      "text": "it, pleaded the children, who loved to hear Grandma talk of those faraway years when she was a little",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 84.74,
+      "end": 85.74,
+      "text": "girl.",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 85.74,
+      "end": 89.86,
+      "text": "When I came here last week, I came on the train,\" said Grandma,",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 89.86,
+      "end": 93.46000000000001,
+      "text": "but in those days there were no railroads near where we lived.",
+      "check": false
+    }
+  ],
+  "cues": 19,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "4cqTPdopmXC7VipxDgpsaYnt4oFu7FnkWBchKdP6CsTsXJVdYcia9KQNcQd3RJJNN4qh6h5qSqU27z487icjJvhZ",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3625,
+  "at": "2026-11-08T13:59:16.261Z"
+}

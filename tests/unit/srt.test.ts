@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { cuesFromChunks, toSrt, toVtt, needsCheck } from "@/lib/srt";
+import { cuesFromChunks, toSrt, toVtt, needsCheck, plainDashes } from "@/lib/srt";
 import { deliveredRule, isAllowedAudioUrl, transcribeChunks } from "@/lib/transcribe/groq";
 
 describe("srt and vtt", () => {
@@ -23,6 +23,14 @@ describe("srt and vtt", () => {
     expect(needsCheck({ avgLogprob: -0.8 })).toBe(false);
     expect(needsCheck({ noSpeechProb: 0.51 })).toBe(true);
     expect(needsCheck({})).toBe(false);
+  });
+});
+
+describe("caption text", () => {
+  it("replaces en and em dashes so no dash reaches the UI", () => {
+    expect(plainDashes("leaf\u2014 and \u2013 more")).toBe("leaf- and - more");
+    const cues = cuesFromChunks([{ index: 0, ok: true, segments: [{ start: 0, end: 1, text: "rhubarb leaf\u2014" }] }]);
+    expect(cues[0].text).toBe("rhubarb leaf-");
   });
 });
 

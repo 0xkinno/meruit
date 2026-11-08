@@ -1,0 +1,168 @@
+{
+  "id": "job_e4bc7f8374fa41a9a368",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/adventuresofbillytopsail_2505_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 2.5,
+      "text": "The Adventures of Billy Topsail.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 3,
+      "end": 4.7799997,
+      "text": "This is a LibriVox recording.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 5.44,
+      "end": 8.08,
+      "text": "All LibriVox recordings are in the public domain.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 8.679999,
+      "end": 13.54,
+      "text": "For more information or to volunteer, please visit LibriVox.org.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 14.0199995,
+      "end": 15.54,
+      "text": "Read by Stacey M.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 16.039999,
+      "end": 19.16,
+      "text": "The Adventures of Billy Topsail by Norman Duncan.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 19.84,
+      "end": 21.56,
+      "text": "To the boy who reads this book.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 22.16,
+      "end": 28.24,
+      "text": "You must not be surprised because The Adventures of Billy Topsail and a few of his friends fill this book.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 28.24,
+      "end": 33.9,
+      "text": "If all the adventures of these real boys were written, the record would fill many books.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 34.54,
+      "end": 36.079998,
+      "text": "This is not hard to explain.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 36.8,
+      "end": 44.2,
+      "text": "The British colony of Newfoundland lies to the north of the Gulf of St. Lawrence and to the east of the Canadian Labrador.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 44.84,
+      "end": 49.6,
+      "text": "It is so situated that the inhabitants may not escape adventures.",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 50.3,
+      "end": 54.1,
+      "text": "On the map, it looks bleak and far away and inhospitable.",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 54.859997,
+      "end": 59,
+      "text": "A lonely island outlying in the stormy water of the Atlantic.",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 59.719997,
+      "end": 60,
+      "text": "Indeed.",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 60,
+      "end": 68.08,
+      "text": "it is all that. The interior is a vast wilderness, a waste place. The folk are fishermen all.",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 68.8,
+      "end": 75.03999999999999,
+      "text": "They live on the coast, in little harbors, remote, widely scattered, not connected by roads.",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 75.559999,
+      "end": 81.84,
+      "text": "Communication is only by way of the sea. They are hospitable, fearless, tender, simple,",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 82.3,
+      "end": 88.359999,
+      "text": "willing for toil, and surely little else can be said of a people. Long, long ago,",
+      "check": false
+    },
+    {
+      "id": 20,
+      "start": 88.359999,
+      "end": 93.46000000000001,
+      "text": "their forebears first strayed up that forbidding shore in chase of the",
+      "check": false
+    }
+  ],
+  "cues": 20,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3zMPXh9cZkvR4FaNg3jbV13ZWh3uiLT9dRZJim3s4HyCy8hLSHbEcpFedzMGtRVgPzei4qdnzAPz2fuVMCvjd89P",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 4261,
+  "at": "2026-11-08T14:00:08.952Z"
+}

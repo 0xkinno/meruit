@@ -1,0 +1,140 @@
+{
+  "id": "job_fdc3b980531b490c85bc",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/2maccabees_2005_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 3.4199998,
+      "text": "Chapters 1-5 of the Second Book of Maccabees.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 30,
+      "end": 33.46,
+      "text": "and to do his will with a good courage and a willing mind,",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 33.68,
+      "end": 36.46,
+      "text": "and open your hearts in his law and commandments,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 36.98,
+      "end": 39.54,
+      "text": "and send you peace, and hear your prayers,",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 39.96,
+      "end": 43.579998,
+      "text": "and be at one with you, and never forsake you in time of trouble.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 44.22,
+      "end": 47.239998,
+      "text": "And now we be here praying for you.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 48.16,
+      "end": 50.26,
+      "text": "What time was Demetrius reigned?",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 50.94,
+      "end": 53,
+      "text": "In the hundred threescore and ninth year.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 53.5,
+      "end": 56.76,
+      "text": "We the Jews wrote unto you in the extremity of trouble",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 56.76,
+      "end": 59.399998,
+      "text": "that came upon us in those years.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 60,
+      "end": 65.4,
+      "text": "the time that Jason and his company revolted from the Holy Land and Kingdom, and burned the porch,",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 65.52,
+      "end": 71.84,
+      "text": "and shed innocent blood. Then we prayed unto the Lord, and were heard. We offered also sacrifices",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 71.84,
+      "end": 77.82,
+      "text": "and fine flour, and lighted the lamps, and set forth the loaves. And now see that ye keep the",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 77.82,
+      "end": 84.279999,
+      "text": "Feast of Tabernacles in the month of Kaslu. In the hundred fourscore and eighth year, the people that",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 84.279999,
+      "end": 87.939999,
+      "text": "were at Jerusalem and in Judea, and the council, and Judas,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 88.48,
+      "end": 93.239998,
+      "text": "sent greetings and health unto Aristobulus, King Ptolemaeus' master.",
+      "check": false
+    }
+  ],
+  "cues": 16,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3fZxGs6HjTZFVL9gHo9dpRRUcRNw4QrDGpubYiEXynYhRRaj3bGEaajC2eCGye2HaRZTPXmCUzGRQRwTWub9Gr7j",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3250,
+  "at": "2026-11-08T13:58:37.441Z"
+}

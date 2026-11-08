@@ -1,0 +1,126 @@
+{
+  "id": "job_aacf876bbb184f31a282",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/a_thanksgiving_dream_1912.poem_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 6.64,
+      "text": "A Thanksgiving Dream by Joseph Crosby Lincoln, read for LibriVox.org by Anita Sloma Martinez.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 7.58,
+      "end": 14.759999,
+      "text": "I'm pretty nearly certain that t'was about two weeks ago. It might be more, or perhaps t'was less,",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 14.88,
+      "end": 20.039999,
+      "text": "but anyhow, I know, t'was on the night I ate the four big saucers of ice cream,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 20.539999,
+      "end": 27.199999,
+      "text": "that I dreamed just the horriblest, most awful, worstest dream. I dreamed that t'was Thanksgiving,",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 27.199999,
+      "end": 42.399998,
+      "text": "and I saw our table laid with every kind of goody that I guess was ever made, with turkey and with pudding and with everything, but, gee, it was dreadful, because they was alive, and set and looked at me.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 43.14,
+      "end": 48.219997,
+      "text": "And then a great big gobbler that was on a platter there, he stood up on his drumsticks",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 48.219997,
+      "end": 55.159996,
+      "text": "and he says, You boy, take care, for if Thanksgiving Day you taste my dark meat or my white, I'll",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 55.159996,
+      "end": 59.999996,
+      "text": "creep up to your bedroom in the middle of the night, I'll throw off all the blankets, and I'll",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 60,
+      "end": 66.12,
+      "text": "pull away the sheet. I'll prance and dance upon you with my prickly tickly feet. I'll kick you,",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 66.22,
+      "end": 72.4,
+      "text": "and I'll pick you, and I'll screech. Remember me. Beware, my boy. Take care, my boy, that gobbler",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 72.4,
+      "end": 79.88,
+      "text": "says, says he. And then a fat plum pudding, kinder grunted like, and said, I'm round and hot and",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 79.88,
+      "end": 86.099998,
+      "text": "steaming, and I'm heavier than lead. And if you dare to eat me, boy, upon Thanksgiving day,",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 86.099998,
+      "end": 90.38,
+      "text": "I'll come at night and tease you in a frightful sort of way",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 90.38,
+      "end": 93.46000000000001,
+      "text": "I'll thump you and I'll bump you and I'll jump up high",
+      "check": false
+    }
+  ],
+  "cues": 14,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "527AUa1wmUsVK9jXo6KtPKkGdKVZF32wW9QtaAh81x4udrNMBK8V6bDNJvZEduEVZ1zwUo6y5DpA7ugFVZe5ybK5",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3039,
+  "at": "2026-11-08T13:59:31.831Z"
+}

@@ -11,4 +11,4 @@ jobs:
         env:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
-          curl -fsS -X POST -H "authorization: Bearer ${CRON_SECRET}" https://meruit.vercel.app/api/cron/sweep
+          curl -fsS -X POST -H "authorization: Bearer ${CRON_SECRET}" https://meruit-delta.vercel.app/api/cron/sweep

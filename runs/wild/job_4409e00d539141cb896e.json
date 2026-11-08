@@ -1,0 +1,175 @@
+{
+  "id": "job_4409e00d539141cb896e",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/a_pin_1612.poem_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 3.9199998,
+      "text": "A PEN by Ella Wheeler Wilcox",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 3.9199998,
+      "end": 7.72,
+      "text": "Read for LibriVox.org by Brusca Chuck",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 7.72,
+      "end": 13.36,
+      "text": "Oh, I know a certain lady who is reckoned with the good,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 13.799999,
+      "end": 17.68,
+      "text": "Yet she fills me with more terror than a raging lion would.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 18.22,
+      "end": 21.96,
+      "text": "The little chills run up and down my spine whene'er we meet,",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 22.4,
+      "end": 26.859999,
+      "text": "Though she seems a gentle creature, and she's very trim and neat,",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 26.859999,
+      "end": 31.199999,
+      "text": "And she has a thousand virtues, and not one acknowledged sin.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 31.56,
+      "end": 35.5,
+      "text": "But she is the sort of person you could liken to a pin.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 36.14,
+      "end": 40.719997,
+      "text": "And she pricks you, and she sticks you, in a way that can't be said.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 41.179996,
+      "end": 46.219997,
+      "text": "If you seek for what has hurt you, why, you cannot find the head.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 46.98,
+      "end": 51.079998,
+      "text": "But she fills you with discomfort and exasperating pain.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 51.48,
+      "end": 55.16,
+      "text": "If anybody asks you why, you really can't explain.",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 55.16,
+      "end": 60,
+      "text": "A pin is such a tiny thing, of that there is no doubt.",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 60,
+      "end": 64.94,
+      "text": "Yet when it's sticking in your flesh, you're wretched till it's out.",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 65.83999969999999,
+      "end": 67.6,
+      "text": "She is wonderfully observing.",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 67.94,
+      "end": 71.74,
+      "text": "When she meets a pretty girl, she is always sure to tell her,",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 71.96000000000001,
+      "end": 77.859999,
+      "text": "If her hair is out of curl, and she is so sympathetic to her friend who's much admired.",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 78.24,
+      "end": 83.039999,
+      "text": "She is often heard remarking, Dear, you look so worn and tired.",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 83.74,
+      "end": 89.439999,
+      "text": "And she is an honest critic, for on yesterday she eyed the new dress I was airing,",
+      "check": false
+    },
+    {
+      "id": 20,
+      "start": 89.439999,
+      "end": 91.56,
+      "text": "with a woman's natural pride.",
+      "check": false
+    },
+    {
+      "id": 21,
+      "start": 91.91999799999999,
+      "end": 92.78,
+      "text": "And she said,",
+      "check": false
+    }
+  ],
+  "cues": 21,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3j3HHZpVwWxqwzsAySn6fGBzAiEEYHxjpC4uaFUmHmh8M5QqdH65pxK2PGaWawxUHiobRmDY694PiVLxHeqyUpR2",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 2848,
+  "at": "2026-11-08T14:00:26.657Z"
+}

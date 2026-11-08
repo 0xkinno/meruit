@@ -1,0 +1,175 @@
+{
+  "id": "job_7d4115e6a41b4bb8a43f",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/aballadofdreamland_2605.poem_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 8.58,
+      "text": "A Ballad of Dreamland by Algernon Charles Swinburne. Read for libraryvox.org by Hana Aziz.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 9.86,
+      "end": 13.82,
+      "text": "12 May 2026 Kuala Lumpur, Malaysia",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 13.82,
+      "end": 24.779999,
+      "text": "I hid my heart in a nest of roses, Out of the sun's way, hidden apart,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 24.779999,
+      "end": 29.239998,
+      "text": "In a softer bed than the soft white snows is",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 29.239998,
+      "end": 33.02,
+      "text": "Under the roses I hid my heart",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 33.02,
+      "end": 35.64,
+      "text": "Why would it sleep not?",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 36.039997,
+      "end": 37.359997,
+      "text": "Why should it start",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 37.359997,
+      "end": 40.739998,
+      "text": "When never a leaf of the rose tree stirred?",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 41.579998,
+      "end": 45.14,
+      "text": "What made sleep flutter his wings and part?",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 45.78,
+      "end": 48.739998,
+      "text": "Only the song of a secret bird",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 48.739998,
+      "end": 52.739998,
+      "text": "Lie still, I said",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 52.739998,
+      "end": 54.64,
+      "text": "For the wind's wing closes",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 55.48,
+      "end": 59.04,
+      "text": "And mild leaves muffle the keen sun start.",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 59.38,
+      "end": 60,
+      "text": "Lies.",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 60,
+      "end": 63.74,
+      "text": "Lies still, for the wind on the warm seas dozes,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 64.48,
+      "end": 67.8199997,
+      "text": "And the wind is unquieter yet than thou art.",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 69.179999,
+      "end": 72.799999,
+      "text": "Does a thought in thee still as a thorn's wound smart?",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 73.559999,
+      "end": 77.1,
+      "text": "Does the fang still fret thee of hope deferred?",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 77.72,
+      "end": 81.46000000000001,
+      "text": "What bids the lips of thy sleep despart?",
+      "check": false
+    },
+    {
+      "id": 20,
+      "start": 81.84,
+      "end": 85.4,
+      "text": "Only the song of a secret bird.",
+      "check": false
+    },
+    {
+      "id": 21,
+      "start": 85.4,
+      "end": 93.46000000000001,
+      "text": "THE GREEN LAND'S NAME THAT A CHARM ENCLOSES, IT NEVER WAS READY.",
+      "check": false
+    }
+  ],
+  "cues": 21,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "48xJxQ1qxyY42Wp9NQSbBcxC7kW4ocbjrQFffWvt2kdKCMWbPmY3CFKTpZdaQg1x2DtBCkG8VGXCvjE3dRX5Egeh",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 2903,
+  "at": "2026-11-08T13:58:57.784Z"
+}

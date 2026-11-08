@@ -1,0 +1,119 @@
+{
+  "id": "job_5b8a9bc87f724ebd9508",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/a_to_zed_1910_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 28.68,
+      "text": "A stands for Ape,",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 28.68,
+      "end": 33.06,
+      "text": "sitting high in a tree where he is knitting a sweater for me.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 34.66,
+      "end": 37.96,
+      "text": "B stands for Bruin, the great clumsy bear,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 38.16,
+      "end": 40.92,
+      "text": "climbs to a treetop if honey be there.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 43.14,
+      "end": 45.84,
+      "text": "C stands for Camel, who loves the hot climb,",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 46.3,
+      "end": 49.26,
+      "text": "goes without drinking ten days at a time.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 51.18,
+      "end": 54.26,
+      "text": "D stands for Deer, the most graceful of all,",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 54.26,
+      "end": 57.34,
+      "text": "see how he jumps o'er the old waterfall.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 58.68,
+      "end": 60,
+      "text": "is",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 60,
+      "end": 68.32,
+      "text": "stands for elephant, with a small eye, eats almost everything, trumpets when dry. F stands for fox,",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 68.46000000000001,
+      "end": 76.96000000000001,
+      "text": "with a large bushy tail. Dogs like to chase him o'er hill and o'er dale. G stands for gorilla,",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 77.44,
+      "end": 85.98,
+      "text": "enormously strong. When hunters see him, they don't tarry long. H stands for hippo, who stands",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 85.98,
+      "end": 93.46000000000001,
+      "text": "in the Nile, wears a loose skin and an expansive smile. I stands for",
+      "check": false
+    }
+  ],
+  "cues": 13,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "n3FRuDNPSYU7BvVSQK1Gf2eYpfKEh1oRRgSSM2NHFxZfw53A83Q7vgTdMmRAQFdkCF3e23oQmBxSFHXGg7L9Lbx",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3018,
+  "at": "2026-11-08T13:59:56.695Z"
+}

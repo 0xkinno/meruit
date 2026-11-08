@@ -1,0 +1,22 @@
+{
+  "id": "B9",
+  "network": "mainnet",
+  "at": "2026-11-08T13:59:33.754Z",
+  "title": "salt grinding to bump 255",
+  "result": "1 of 1 SDK-opened channels were not at bump 255 for both addresses; grinding found a salt at 255 for both in 4 tries",
+  "method": "bumps recomputed from real channel accounts; saving is the documented cost model, not a measured before/after of the same instruction",
+  "channels": [
+    {
+      "channel": "G52PicTYHL5V16whbGWJSwRtmMeapgUwPWYfBwfXUK7m",
+      "salt": "7856152342838411052",
+      "channelBump": 254,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    }
+  ],
+  "grindExample": {
+    "tries": 4
+  },
+  "note": "The x402 SDK client chooses the salt itself, so Meruit cannot grind the salt of the opens it sends through the SDK. A measured with/without comparison needs Meruit to build its own open."
+}

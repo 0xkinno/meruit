@@ -1,0 +1,112 @@
+{
+  "id": "job_04304feb780442549e31",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/absoluteevil_2608_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 1.26,
+      "text": "Section 1.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 17.26,
+      "end": 19.779999,
+      "text": "Chapter 1.",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 20.4,
+      "end": 27.14,
+      "text": "I was halfway between twenty and thirty when I joined the Pleasence's houseboat party on their adventure to Thirteen Mile Beach.",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 27.9,
+      "end": 33.16,
+      "text": "Nobody, no society woman at any rate, had been there before, and we called ourselves pioneers.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 34.04,
+      "end": 36.92,
+      "text": "What made it our objective was the tale of its being haunted.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 37.7,
+      "end": 41.379997,
+      "text": "Haunted houses were a fashionable subject of polite investigation at that period,",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 41.78,
+      "end": 45.44,
+      "text": "and to test out a haunted island was an enterprise even more engaging.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 45.879997,
+      "end": 52.199997,
+      "text": "Our route lay along that chain of sounds, or inland seas, which extend from Chesapeake to below Hatteras.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 52.839996,
+      "end": 58.239998,
+      "text": "The island was one of those long, narrow sandbars that form outlying buttresses against Atlantic storms.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 58.94,
+      "end": 59.999996,
+      "text": "That, apart from the nightstands,",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 60,
+      "end": 78.859999,
+      "text": "imagined was all that any of us knew about it at starting and even legend did not inform us by whom it was haunted or why two years after our expedition i was led by circumstances cheaply subjective to repeat the trip this time alone it is of this last occasion that i am to tell you",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 78.859999,
+      "end": 93.46000000000001,
+      "text": "but first i must say a little more about our pioneering chapter two the houseboat belonged to the pleasances very nice middle-aged philadelphia people or quaker stock were reconciled to the world while still retaining between",
+      "check": false
+    }
+  ],
+  "cues": 12,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3UNXEKX9Qc65kzHUvcEArx3nSSAqb3LVGiysCAJa7k8A9MoCnFfNfwQi3BpqvcZHsQoczqL5Dmrup7AmvW95hdWk",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3404,
+  "at": "2026-11-08T14:00:15.103Z"
+}

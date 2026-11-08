@@ -14,7 +14,7 @@ https://github.com/0xkinno/meruit
 pending
 
 ## Live Demo
-https://meruit.vercel.app and /judge
+https://meruit-delta.vercel.app and /judge
 
 ## Demo Video
 pending

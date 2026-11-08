@@ -1,0 +1,140 @@
+{
+  "id": "job_b755a080a4914128b9df",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/aces_up_1805_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 18.32,
+      "text": "CHAPTER I. PART A.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 20.46,
+      "end": 22.02,
+      "text": "THE NEW INSTRUCTOR",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 22.02,
+      "end": 29.119999,
+      "text": "Tex Yancey, called the flying fool by his comrades in the blankth pursuit squadron of the American",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 29.119999,
+      "end": 35.739998,
+      "text": "expeditionary force, entered the mess hall with lips pressed into a thin, mirthless grin that",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 35.739998,
+      "end": 40,
+      "text": "seemed entirely inappropriate in one who was thirty minutes late to mess and must therefore",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 40,
+      "end": 45.32,
+      "text": "make out with what was left. The other members of the squadron had finished their meal and were",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 45.32,
+      "end": 52.76,
+      "text": "now engaged in the usual after-dinner practice of spinning some tall yarns. Yancy stalked slowly to",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 52.76,
+      "end": 57.019997,
+      "text": "his place at the long table, but instead of seating himself stood with hands thrust deep",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 57.02,
+      "end": 57.84,
+      "text": "into his pockets,",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 58.38,
+      "end": 60,
+      "text": "and with his long thin legs spread",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 60,
+      "end": 65.16,
+      "text": "wide apart. For a full minute he stood there, seeming to be mildly interested in the tale that",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 65.16,
+      "end": 71.5,
+      "text": "Hank Porter was telling. But those who knew Tex, as did the members of this squadron, knew that the",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 71.5,
+      "end": 76.38,
+      "text": "cynical smile on his thin lips was but the forerunner of some mirthless thing from which",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 76.38,
+      "end": 82.18,
+      "text": "only the flying fool would be able to wring a laugh. His was such a grotesque sense of humor.",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 82.66,
+      "end": 88.82,
+      "text": "A highly impractical practical joke was his idea of a riotous time. Someone in the squadron,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 88.82,
+      "end": 93.46000000000001,
+      "text": "who had once felt the sting of one of his pranks had called him a fool, and another member",
+      "check": false
+    }
+  ],
+  "cues": 16,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "HLRvkXZhWTKuhqRZaCLxSgfNKzAqHj4UPgCq7QYczyQxe9ukbXJSvjNFt6AntowexBo5toErVaVaGyv2ib9Ab6t",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 2780,
+  "at": "2026-11-08T13:59:10.020Z"
+}

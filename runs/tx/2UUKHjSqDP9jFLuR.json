@@ -1,0 +1,24 @@
+{
+  "signature": "2UUKHjSqDP9jFLuR74BB2qhoD6BcEpfLZytDDB3zNa6cdkDvLeE9dGU1Q6NNye2ZZcYvdnE9fEmQk85fy1XXHUhF",
+  "network": "mainnet",
+  "slot": 466939944,
+  "blockTime": 1794146237,
+  "err": null,
+  "instructionCount": 2,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "reclaim"
+    },
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "reclaim"
+    }
+  ],
+  "serializedBytes": 264,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 634,
+  "feeLamports": 5001,
+  "accountCount": 4,
+  "usesLookupTables": false
+}

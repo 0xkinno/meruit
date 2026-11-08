@@ -1,0 +1,154 @@
+{
+  "id": "job_898f288bcdfc445fa06a",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/30ghoststories_1909_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 24.46,
+      "text": "STORY ONE",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 24.46,
+      "end": 25.88,
+      "text": "THE FILLAID HAND",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 25.88,
+      "end": 27.64,
+      "text": "by Guida Malpassant",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 27.64,
+      "end": 35.34,
+      "text": "One evening, about eight months ago, I met with some college comrades at the lodgings of our friend Lewis R.",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 35.66,
+      "end": 42.559998,
+      "text": "We drank punch and smoked, talked of literature and art, made jokes like any other company of young men.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 43.46,
+      "end": 49.1,
+      "text": "Suddenly the door flew open, and one who had been my friend since boyhood burst in like a hurricane.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 49.86,
+      "end": 52.039997,
+      "text": "Guess where I come from, he cried.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 52.92,
+      "end": 55.539997,
+      "text": "I bet on the Maybill, responded one.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 55.98,
+      "end": 56.76,
+      "text": "No, said another.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 57.1,
+      "end": 57.94,
+      "text": "You're too gay.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 58.48,
+      "end": 60,
+      "text": "You come from borrowing money.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 60,
+      "end": 63.3,
+      "text": "from bearing a rich uncle, or from pawning your watch.",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 63.78,
+      "end": 68.74,
+      "text": "You're getting sober, cried a third, and as you scented the punch in Louis's room,",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 69.03999999999999,
+      "end": 70.86,
+      "text": "you came up here to get drunk again.",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 71.639999,
+      "end": 77.66,
+      "text": "You're all wrong, he replied. I come from P in Normandy, where I have spent eight days,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 77.92,
+      "end": 83.38,
+      "text": "and whence I have brought one of my friends, a great criminal, whom I ask permission to present",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 83.38,
+      "end": 89.939999,
+      "text": "to you. With these words he drew from his pocket a long, black hand, from which the skin had been",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 89.939999,
+      "end": 92.899998,
+      "text": "stripped. It had been severed at the wrist.",
+      "check": false
+    }
+  ],
+  "cues": 18,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "4ipAM1Ta7WjC5ZiYyyFdf7f4NgNWjniPQCEtdpABSQUAFCs3HSR4MKUSn5dwz3m5kJAGz46BRh3jTEjDwfF8UHkX",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3242,
+  "at": "2026-11-08T14:00:21.106Z"
+}

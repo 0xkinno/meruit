@@ -2,7 +2,7 @@
 
 # MERUIT
 
-[![Live](https://img.shields.io/badge/live-meruit.vercel.app-5F27C4)](https://meruit.vercel.app) [![CI](https://github.com/0xkinno/meruit/actions/workflows/ci.yml/badge.svg)](https://github.com/0xkinno/meruit/actions/workflows/ci.yml) [![Licence](https://img.shields.io/badge/licence-MIT-171128)](#licence)
+[![Live](https://img.shields.io/badge/live-meruit--delta.vercel.app-5F27C4)](https://meruit-delta.vercel.app) [![CI](https://github.com/0xkinno/meruit/actions/workflows/ci.yml/badge.svg)](https://github.com/0xkinno/meruit/actions/workflows/ci.yml) [![Licence](https://img.shields.io/badge/licence-MIT-171128)](#licence)
 
 **Pay for the minutes you got: subtitles charged on Solana only for what was delivered, topped up from any chain.**
 
@@ -10,23 +10,23 @@
 
 Ifeoma Nwosu (a fictional freelance subtitler in Enugu) has a 12 minute interview due at 08:00 and a card that foreign billing rejects. She approves one ceiling per job in her own wallet, gets captions over her video, and is charged only for the minutes delivered. The rest returns in the same settlement, and she can take it back from her wallet alone if Meruit disappears.
 
-> **Status, plainly.** The code, UI and checks below are built and tested. No paid job has run on chain yet: the wallets are unfunded and Groq, Aurora, Redis and Blob are not configured. Every "measured" section therefore says so. See [PROGRESS.md](PROGRESS.md).
+> **Status, plainly.** The paid flow has run for real on Solana mainnet and devnet, with signatures in [FINDINGS.md](FINDINGS.md): a 12 minute job, the partial-delivery refund, and the buyer taking money back alone after the seller process was killed. The deployed site cannot run jobs yet because its server secrets and Redis are not set on Vercel. See [PROGRESS.md](PROGRESS.md).
 
 | | |
 |---|---|
-| Live app | https://meruit.vercel.app (after first deploy) |
+| Live app | https://meruit-delta.vercel.app (pages live; paid jobs need the Vercel secrets, see ENV_SETUP.md) |
 | For judges | [/judge](app/judge/page.tsx), [JUDGE.md](JUDGE.md) |
 | Demo video | not recorded yet |
 | Slides | [DECK.md](DECK.md), not rendered yet |
 | Repo | https://github.com/0xkinno/meruit |
 | Tracks | Best Consumer App on Solana; Best Use of x402 on Solana; Aurora Intents: Bring any-chain liquidity to Solana |
-| Reality rung | code and local 402 only. Mainnet with capped funds is the target, not yet reached |
+| Reality rung | mainnet with capped funds, by script and by a local server. Through the deployed UI: not yet |
 
 | Studio | Tab | Proof | Get my money back |
 |---|---|---|---|
 | ![Studio](docs/screens/studio-desktop.png) | ![Tab](docs/screens/tab-desktop.png) | ![Proof](docs/screens/proof-desktop.png) | ![Rescue](docs/screens/rescue-desktop.png) |
 
-These are page layouts with no job data, because no job has run.
+These are page layouts. The Studio, receipt and deposit screens show captured data only once a job is run through the deployed UI, which has not happened yet.
 
 ## The problem
 It is 22:10 in Enugu. A client in Berlin sent an interview due at 08:00. The transcription tool wants a monthly card subscription for a job she does twice a month. Her naira card is declined for international web payments. She holds USDT on Tron.
@@ -100,7 +100,19 @@ sequenceDiagram
 ```
 
 ## Where the money goes
-No signatures are recorded yet. When runs exist this table is filled by `scripts/record-tx.ts` (instructions, bytes of 1,232, compute units, signature). See `runs/tx/` and [PROOF.md](PROOF.md).
+Real signatures from [`runs/tx/`](runs/tx) (bytes of the 1,232 limit, compute units). Full table with every row in [FINDINGS.md](FINDINGS.md).
+
+| Path | Network | Instructions | Bytes | Compute units | Signature |
+|---|---|---|---|---|---|
+| Open | mainnet | open, memo | 755 | 39,840 | `2kVkHAAq...` |
+| Settle $0.12, distribute | mainnet | Ed25519 check, settleAndSeal, distribute | 800 | 17,326 | `5Gxz1E5T...` |
+| Settle $0.09 and return $0.03 (B1) | mainnet | same | 800 | not recorded | `hoTcdYTp...` |
+| Buyer asks to close (B2) | mainnet | requestClose | not recorded | 271 | `5ytoGRdu...` |
+| Buyer takes money back (B2) | mainnet | withdrawPayer | not recorded | 6,680 | `34KBXANT...` |
+| Fee payer closes a sealed channel | mainnet | distribute | 561 | 15,901 | `2JPUDf1P...` |
+| Reclaim rent for two channels | mainnet | reclaim x2 | 264 | 634 | `2UUKHjSq...` |
+
+Reality rung: mainnet with capped funds (public cap $0.25 per job). Rent float per job is about 0.00197 SOL and was returned in full (B8).
 
 ## How Solana powers it
 payment-channels (`CHNLx...`, live on mainnet and devnet per [PLATFORM_PROBE.md](PLATFORM_PROBE.md)) holds the ceiling in escrow. Instructions used through the SDK: `open`, `settle_and_seal`, `distribute`; by the buyer: `request_close`, `seal`, `withdraw_payer`; by the sweeper: seal and `reclaim` through the SDK's rent cleanup. Salt grinding to bump 255 is implemented ([lib/channels/salt.ts](lib/channels/salt.ts)); its compute-unit saving is not yet measured.
@@ -129,10 +141,18 @@ Deposits (persistent address, with a labelled single-use fallback because persis
 | Short deposit | own screen, returned to sender | `lib/aurora/status.ts` |
 
 ## Measured
-Nothing yet. `docs/FACTS.json` records 0 jobs. Wild set, both error directions, counterfactual with real runs, forced exit and cost per minute are pending runs. The counterfactual on `/proof` is computed from the meter code, not from a run.
+From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `runs/` (25 jobs: 23 devnet, 2 mainnet).
+- Overcharges: **0** of 25. Undercharges in the wild set: **0**.
+- Wild set: 19 of 20 pre-listed clips completed, on devnet only; one clip could not be decoded and is reported as a miss. Clips are about 93 seconds, not the 120 the list says (addendum in [`data/wild/SOURCES.md`](data/wild/SOURCES.md)).
+- Cues marked "check": 0.0%. The threshold never fired on clean audiobook speech, so it is untested on hard audio.
+- Both error directions: money taken for undelivered seconds is 0 in every run. Delivered seconds not charged: none observed.
+- Forced exit: B2 completed on mainnet in 915 s (production delay) and on devnet in 70 s (shortened delay), zero loss.
+- Same 12 minute clip with 3 of 12 parts failing (B1): $0.09 charged on both networks. An `exact` prepay of the ceiling would have cost $0.12 for the same 9 minutes ([`/proof`](app/proof/page.tsx), computed from the meter code).
+- Aurora: live exit Solana to Base in 1.6 minutes; short deposit refunded after 8.0 minutes with a refund fee of about 20% of the amount (B6).
+- Not measured: deposit latency from Tron and Base (B7), cost per transcribed minute, a double-settle test (B3).
 
 ## What we learned
-One finding so far, from documentation and not yet measured: a payment-channel `open` is valid for 1,500 slots, so it must not be pre-signed inside a cross-chain execution; bridge first, open after arrival. Details and the pre-registered questions are in [FINDINGS.md](FINDINGS.md) and [FRICTION_REPORT.md](FRICTION_REPORT.md).
+Two findings about the payment layer: a handler error is refunded automatically by the x402 server, but a refused settlement override leaves the deposit escrowed until the buyer or a sweeper closes it, so the buyer's escape hatch and the sweeper both matter. And a payment-channel `open` is valid for only 1,500 slots (B4 confirms the refusal), so it must not be pre-signed inside a cross-chain execution: bridge first, open after arrival. That second point is a design rule from the documentation; the bridge latency that would break it (B7) has not been measured. Details are in [FINDINGS.md](FINDINGS.md) and [FRICTION_REPORT.md](FRICTION_REPORT.md).
 
 ## Risk
 See [RISK.md](RISK.md). USDC has a freeze authority on both networks (checked), so a frozen escrow could block a refund until thawed. That is the asset's own risk.
@@ -140,10 +160,10 @@ See [RISK.md](RISK.md). USDC has a freeze authority on both networks (checked), 
 ## What is live, substituted, designed
 | Tier | Items |
 |---|---|
-| Live (has run against the real service) | payment-channels program presence on both networks; the `upto` 402 challenge locally; x402.org `/supported` |
-| Code written, not yet run | self-facilitated settlement, escape hatch, sweeper, Groq transcription, Blob upload, Aurora Deposits and Swap API, salt grinding |
-| Substituted | single-use Aurora address when persistent creation is refused; in-memory store only for local tests, reported by `/api/status` |
-| Designed | Intents Connect, confidential top-up toggle, judge pocket, `batch-settlement` (not used) |
+| Live (has run against the real service) | self-facilitated `upto` on mainnet and devnet; buyer escape hatch; rent reclaim and distribute; Groq transcription; Aurora token list, persistent addresses, quotes, live exit and refund case |
+| Code written, not yet run | the same flows through the browser wallet on the deployed site; Redis storage on Upstash; the scheduled sweeper; Aurora deposit from Tron or Base; confidential top-up |
+| Substituted | in-memory store for local runs only, reported by `/api/status`; the demo payout wallet is a test key until `MERUIT_PAY_TO` is set to a real wallet |
+| Designed | Intents Connect, judge pocket, `batch-settlement` (not used) |
 
 ## Judging criteria map
 | Track | Criterion | Where |
@@ -167,10 +187,10 @@ npm install
 npm run keys        # writes .env.local with fresh wallets; prints public keys only
 npm run dev
 ```
-Set the keys in `.env.example`. For local runs without Redis set `MERUIT_STORE=memory`. `NEXT_PUBLIC_NETWORK=devnet` selects devnet; it is read at build time.
+Where each key goes is in [ENV_SETUP.md](ENV_SETUP.md); `.env.example` stays blank. For local runs without Redis set `MERUIT_STORE=memory`. `NEXT_PUBLIC_NETWORK=devnet` selects devnet; it is read at build time.
 
 ## Docs index
-[TASK.md](TASK.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [EVIDENCE.md](EVIDENCE.md), [PROOF.md](PROOF.md), [FINDINGS.md](FINDINGS.md), [FRICTION_REPORT.md](FRICTION_REPORT.md), [SDK_SURFACE.md](SDK_SURFACE.md), [RISK.md](RISK.md), [DESIGN.md](DESIGN.md), [JUDGE.md](JUDGE.md).
+[ENV_SETUP.md](ENV_SETUP.md), [TASK.md](TASK.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [EVIDENCE.md](EVIDENCE.md), [PROOF.md](PROOF.md), [FINDINGS.md](FINDINGS.md), [FRICTION_REPORT.md](FRICTION_REPORT.md), [SDK_SURFACE.md](SDK_SURFACE.md), [RISK.md](RISK.md), [DESIGN.md](DESIGN.md), [JUDGE.md](JUDGE.md).
 
 ## Disclosures
 AI assistants were used to write code and documents. Ifeoma Nwosu is fictional. The demo seller is operated by the builder. Groq Whisper is the demo seller's upstream model, not a sponsor product. No synthetic tour voice is shipped.

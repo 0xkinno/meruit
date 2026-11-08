@@ -1,0 +1,112 @@
+{
+  "id": "job_2f088bdda77a4a88b438",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/abraham_lincoln_walks_librivox.trim.mp3",
+  "declaredSeconds": 94,
+  "cap": "15667",
+  "charge": "15666",
+  "refund": "1",
+  "deliveredSeconds": 94,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 7.96,
+      "text": "Abraham Lincoln Walks at Midnight in Springfield, Illinois",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 7.96,
+      "end": 9.76,
+      "text": "by Vachael Lindsay",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 9.76,
+      "end": 16.58,
+      "text": "Read for LibriVox.org for President's Day 2007 by Alan Davis Drake",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 16.58,
+      "end": 25.539999,
+      "text": "It is portentous and a thing of state that here at midnight in our little town",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 25.539999,
+      "end": 32.94,
+      "text": "A mourning figure walks and will not rest, near the old courthouse pacing up and down.",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 34,
+      "end": 40.46,
+      "text": "Or by his homestead, or in shadowed yards, he lingers where his children used to play.",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 41.26,
+      "end": 48.42,
+      "text": "Or through the market, on the well-worn stones, he stalks until the dawn stars burn away.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 48.42,
+      "end": 60,
+      "text": "A bronzed lank man, his suit of ancient black, a famous high top hat and plain worn shawl, make him the quaint great fiends.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 60,
+      "end": 68.22,
+      "text": "figure that men love, the prairie lawyer, master of us all. He cannot sleep upon this hillside now.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 68.98,
+      "end": 78.58,
+      "text": "He is among us, as in times before. And we who toss and lie awake for long, breathe deep and start",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 78.58,
+      "end": 86.279999,
+      "text": "to see him pass the door. His head is bowed. He thinks of men and kings.",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 86.279999,
+      "end": 93.66,
+      "text": "Yea, when the sick world cries, How can he sleep? Too many peasants fight",
+      "check": false
+    }
+  ],
+  "cues": 12,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "3Rkczct82teRcjAsQAKm95r4yTXBrwAetA3gxu6AeWu9zWQ85eayRjQe3qq3uRYrPshvi7QnMAWooQCc7K5NqD7r",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15666",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3015,
+  "at": "2026-11-08T14:00:01.929Z"
+}

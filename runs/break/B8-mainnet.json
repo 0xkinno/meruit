@@ -1,0 +1,22 @@
+{
+  "id": "B8",
+  "network": "mainnet",
+  "at": "2026-11-08T13:58:01.529Z",
+  "title": "rent float per job and its return",
+  "result": "About 1.97M lamports (0.00197 SOL) of channel rent is fronted per completed job and returned in full by one batched reclaim transaction.",
+  "method": "fee payer balance read from chain at each step",
+  "measurements": {
+    "feePayerBeforeFirstJob": 10000000,
+    "feePayerAfterFirstJob": 8029278,
+    "floatFirstJobLamports": 1970722,
+    "feePayerAfterTwoJobs": 6058556,
+    "feePayerBeforeReclaim": 2609395,
+    "feePayerAfterReclaim": 6505834,
+    "reclaimedLamportsForTwoChannels": 3896439,
+    "channelsInReclaim": 2
+  },
+  "note": "The balance before reclaim also includes the open escrow of the B2 channel started in between. The first-job float includes two 5,000 lamport signature fees.",
+  "signatures": {
+    "reclaim": "2UUKHjSqDP9jFLuR74BB2qhoD6BcEpfLZytDDB3zNa6cdkDvLeE9dGU1Q6NNye2ZZcYvdnE9fEmQk85fy1XXHUhF"
+  }
+}

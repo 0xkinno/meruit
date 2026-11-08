@@ -1,0 +1,69 @@
+{
+  "id": "aurora-exit",
+  "network": "mainnet",
+  "at": "2026-11-08T14:04:12.719Z",
+  "title": "exit Solana USDC to Base USDC through the Swap API",
+  "quotedAtomic": "500000",
+  "sentAtomic": "500000",
+  "recipient": "Base 0x927a59ec0e83aeff4988ea3a646b035cf495aa8f",
+  "refundTo": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF",
+  "quote": {
+    "amountIn": "0.5",
+    "amountOut": "0.497448"
+  },
+  "depositSignature": "uFvb9SNV3Tba5Sq7xzrELd9Hk1w8xzyQ6NhHbT5t9SWzyLspVs45sPrMG6QGfQtrXoAg9rq6oHuRgDKNi5MyeMB",
+  "finalStatus": "SUCCESS",
+  "minutes": 1.6,
+  "timeline": [
+    {
+      "at": "2026-11-08T14:02:39.757Z",
+      "status": "PENDING_DEPOSIT"
+    },
+    {
+      "at": "2026-11-08T14:03:51.965Z",
+      "status": "PROCESSING"
+    },
+    {
+      "at": "2026-11-08T14:04:12.495Z",
+      "status": "SUCCESS"
+    }
+  ],
+  "swapDetails": {
+    "intentHashes": [
+      "AmkrjcyBmqnf5yws8nEHf8GCFDw76x1YXELQVev9wJe1",
+      "4Vie8BxGKsdazzZVB9jLskapLe6iGzBahneTWaeyiW9V"
+    ],
+    "nearTxHashes": [
+      "6kva6GQnEGeU4zPHB2hYM94VwDird5S7RqVdcXHUgmgh",
+      "AmcaydtjYYtz4s8Wmtgh1gqLZZsEMTUk18wCNTgaZFci",
+      "Hav2nNZRax5831aPjSGeQGyt1CeMQGSt1t9ao7meTyUx",
+      "D4fv8x1sEsr7jSEJu1rMtprKxhdukuRSgMQDbXhRMygo"
+    ],
+    "amountIn": "500000",
+    "amountInFormatted": "0.5",
+    "amountInUsd": "0.499790500000",
+    "amountOut": "497448",
+    "amountOutFormatted": "0.497448",
+    "amountOutUsd": "0.497239569288",
+    "slippage": 0,
+    "originChainTxHashes": [
+      {
+        "hash": "uFvb9SNV3Tba5Sq7xzrELd9Hk1w8xzyQ6NhHbT5t9SWzyLspVs45sPrMG6QGfQtrXoAg9rq6oHuRgDKNi5MyeMB",
+        "explorerUrl": ""
+      }
+    ],
+    "destinationChainTxHashes": [
+      {
+        "hash": "0x78c5e32d925bb8cc32b3d9c7b4e38df3475308e0b518c03cf0f97745b0386ec3",
+        "explorerUrl": ""
+      }
+    ],
+    "refundedAmount": "0",
+    "refundedAmountFormatted": "0",
+    "refundedAmountUsd": "0",
+    "refundReason": null,
+    "depositedAmount": "500000",
+    "depositedAmountFormatted": "0.5",
+    "depositedAmountUsd": "0.499790500000"
+  }
+}

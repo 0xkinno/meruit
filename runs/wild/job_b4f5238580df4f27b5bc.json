@@ -1,0 +1,147 @@
+{
+  "id": "job_b4f5238580df4f27b5bc",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/116thinfrance_2605_librivox.trim.mp3",
+  "declaredSeconds": 93,
+  "cap": "15500",
+  "charge": "15500",
+  "refund": "0",
+  "deliveredSeconds": 93,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 5.1,
+      "text": "PREFACE AND INTRODUCTION OF THE 116TH BATTALION IN FRANCE",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 5.1,
+      "end": 21.98,
+      "text": "THE 116TH BATTALION IN FRANCE",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 21.98,
+      "end": 24.18,
+      "text": "BY E.P.S. ALLEN",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 24.18,
+      "end": 25.859999,
+      "text": "PREFACE",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 25.859999,
+      "end": 33.12,
+      "text": "with the assistance of the official war diary and the proud memory of two-year service with the 116th",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 33.12,
+      "end": 39.16,
+      "text": "battalion cef in france the writer has compiled this small book for all ex-members of the battalion",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 39.16,
+      "end": 44.64,
+      "text": "with the hope that they may find somewhere within its pages the reminiscence of days spent together",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 44.64,
+      "end": 51.76,
+      "text": "battles fought and friendships made and for the parents relatives and friends whose loved ones fell",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 51.76,
+      "end": 54,
+      "text": "whilst fighting in the ranks of the battalion",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 54,
+      "end": 56.699997,
+      "text": "as a token of remembrance and sympathy.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 57.739998,
+      "end": 58.359997,
+      "text": "The Adjutant",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 60,
+      "end": 65.98,
+      "text": "Introduction. There were very few, if any, Canadian militia regiments that succeeded in",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 65.98,
+      "end": 70.53999999999999,
+      "text": "keeping their identity in France throughout the Great War. The reasons for this were,",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 71.03999999999999,
+      "end": 75.599999,
+      "text": "firstly, the recruiting system, by means of which men were gathered into the battalions of the",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 75.599999,
+      "end": 80.84,
+      "text": "expeditionary force through the different militia regiments, the majority of the overseas battalions",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 80.84,
+      "end": 88.119999,
+      "text": "being formed by drafts from three, four, five, and sometimes more different regiments. Secondly,",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 88.119999,
+      "end": 93.46000000000001,
+      "text": "the method of reinforcement which distributed officers and men to battalions in france",
+      "check": false
+    }
+  ],
+  "cues": 17,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "59qmtLshWHXMNx4TGqArJY3j9LBCyqBoWXJPC5TttiF4HViSTBoQEE7oruRikYoMyJNoSYTZtd45Ak7U4xi6zRef",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15500",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 2811,
+  "at": "2026-11-08T13:59:04.558Z"
+}

@@ -1,0 +1,222 @@
+{
+  "id": "B9",
+  "network": "devnet",
+  "at": "2026-11-08T14:06:27.279Z",
+  "title": "salt grinding to bump 255",
+  "result": "22 of 26 SDK-opened channels were not at bump 255 for both addresses; grinding found a salt at 255 for both in 4 tries",
+  "method": "bumps recomputed from real channel accounts; saving is the documented cost model, not a measured before/after of the same instruction",
+  "channels": [
+    {
+      "channel": "J3Z6tTYRqSEBvzQG63HgjwQvpqNwsLwJ7paj7xRvJMjK",
+      "salt": "18093316208282617587",
+      "channelBump": 255,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "C25tNqicAHbFCE1kEepvKdSZdER9wd78ssKqkPWBpeTE",
+      "salt": "8704006570263739548",
+      "channelBump": 252,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 4500
+    },
+    {
+      "channel": "6EfTfdSsFCYYGLaT1N3b7o4ZwJ4zLN9yNeqW5DFJKNDK",
+      "salt": "17771865177128628116",
+      "channelBump": 255,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 0
+    },
+    {
+      "channel": "74DKreaTqZxuV2YjiKtq47MRZZk9ZbSb4cHrfuxC2ahw",
+      "salt": "910315624248838993",
+      "channelBump": 255,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "Hg4GTFV5kDkvA7sGFnHxefcKTQYoJinDY8dxeXSyxpkW",
+      "salt": "2423116392939756647",
+      "channelBump": 255,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 1500
+    },
+    {
+      "channel": "7P6ZzisnhRojzBAKvLpL8akzeMcpeYsFnFKQQM8pgNQz",
+      "salt": "735564896323693839",
+      "channelBump": 255,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 0
+    },
+    {
+      "channel": "ASXKrMgcfGSiMB7DWRkqwbUQyLRd16THegFE5Xu5kcCz",
+      "salt": "8968259552362884181",
+      "channelBump": 253,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "4UuZ66Mqc51XuD1UuDjkePi5V63RgAzz3Lo3o2YbAmjB",
+      "salt": "11071231231847671480",
+      "channelBump": 255,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "JBBcmG7ZV145UUrwhmggVj2HtxofxoctZUKXe7YRaUDQ",
+      "salt": "2340096229244890993",
+      "channelBump": 254,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 4500
+    },
+    {
+      "channel": "Cv13LfjbZMNdxNmegtnn2tfeQAkrWPsHu6x7hzBtDGmL",
+      "salt": "5904808609019924510",
+      "channelBump": 254,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "Ccev45ogXu1Eeu4uubjrzrMXvKb9Fo4JX79XvQUbZ5QN",
+      "salt": "3894961752439114782",
+      "channelBump": 253,
+      "escrowBump": 252,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 7500
+    },
+    {
+      "channel": "3z86WWoJioHAufYMvdGxcP3SRQKqzKqELY9RJCwPh4jU",
+      "salt": "17861503829926479655",
+      "channelBump": 254,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 1500
+    },
+    {
+      "channel": "9tnRgbH6o9jkYftum4Vvfh9AZ22bdU3exxn5io8TVXEK",
+      "salt": "12282631214596735934",
+      "channelBump": 255,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 1500
+    },
+    {
+      "channel": "ctAHdxpmA7AmxEkCDmhReVSpAGhfPkQha7WdqYesbz1",
+      "salt": "2493010372342382198",
+      "channelBump": 255,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 0
+    },
+    {
+      "channel": "Gn6yw1fF8rT8qpYfzLVSBdBnoQccURS82vgQBAxtK6rF",
+      "salt": "12699631218116351502",
+      "channelBump": 255,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 0
+    },
+    {
+      "channel": "3xFVrRcCT7ejKfZmMw2qDdVenbPBFh5XxCLe8zvmoCs5",
+      "salt": "2129472107781680826",
+      "channelBump": 255,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "4hr8MGgo5jy5h8N4EHF1LUskMwCDEpqtjHw8JZRZQ8PF",
+      "salt": "10172897914686516981",
+      "channelBump": 253,
+      "escrowBump": 255,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "76maCeVAwLwp1jYqae7BDAAKWuwLjP5KmEC29ZGhmrzE",
+      "salt": "18141002740200902505",
+      "channelBump": 254,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 4500
+    },
+    {
+      "channel": "HEUyBWSrk4V9773RRVYxdDUNuJgAiE6HtELEpeKaTarq",
+      "salt": "5558216578213292585",
+      "channelBump": 254,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 4500
+    },
+    {
+      "channel": "729K65kbNegPXJTjkKZHUGZAnYE1wsBbGFcpmcLmFTke",
+      "salt": "1912169126832596051",
+      "channelBump": 255,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 1500
+    },
+    {
+      "channel": "4i1xLeVxBNwvN9QC9gSkBiRSxAYgAY8KHiq5WqF7dPmm",
+      "salt": "542141231694674205",
+      "channelBump": 255,
+      "escrowBump": 252,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 4500
+    },
+    {
+      "channel": "7T8xjSrfV4K2ftFtJtUns4vbEXxYFMezA1nSBsxhKZzV",
+      "salt": "6592472802258937188",
+      "channelBump": 250,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 9000
+    },
+    {
+      "channel": "BUZChEA3tfj851nX5v4zwMuLUE8wQn3528w9rsUZakRB",
+      "salt": "8437417991205688084",
+      "channelBump": 254,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "FhJAUeawHMofWrKjFbqX3NCo5yiS9q1G8Z5SVivLZP5r",
+      "salt": "8073510730614566977",
+      "channelBump": 255,
+      "escrowBump": 253,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 3000
+    },
+    {
+      "channel": "5kwNbEkKMAb89iPCYz4JsrXbP2zdkkfSCansEchABGzn",
+      "salt": "10696500753434670086",
+      "channelBump": 255,
+      "escrowBump": 251,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 6000
+    },
+    {
+      "channel": "E351iWGYX25qmdDGmhZ8muLqMLDX3xx2Di9d7Z2xrNYH",
+      "salt": "10388850080649959601",
+      "channelBump": 255,
+      "escrowBump": 254,
+      "derivedMatchesAccount": true,
+      "estimatedCuSavedPerInstruction": 1500
+    }
+  ],
+  "grindExample": {
+    "tries": 4
+  },
+  "note": "The x402 SDK client chooses the salt itself, so Meruit cannot grind the salt of the opens it sends through the SDK. A measured with/without comparison needs Meruit to build its own open."
+}

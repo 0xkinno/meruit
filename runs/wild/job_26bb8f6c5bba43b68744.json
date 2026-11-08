@@ -1,0 +1,189 @@
+{
+  "id": "job_26bb8f6c5bba43b68744",
+  "kind": "wild",
+  "wild": true,
+  "network": "devnet",
+  "status": 200,
+  "clip": "runs/raw/adventureclub_2610_librivox.trim.mp3",
+  "declaredSeconds": 94,
+  "cap": "15667",
+  "charge": "15666",
+  "refund": "1",
+  "deliveredSeconds": 94,
+  "failedChunks": [],
+  "cueList": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 18.72,
+      "text": "CHAPTER I.",
+      "check": false
+    },
+    {
+      "id": 2,
+      "start": 18.72,
+      "end": 22.8,
+      "text": "STEVE BRINGS THE NEWS",
+      "check": false
+    },
+    {
+      "id": 3,
+      "start": 22.8,
+      "end": 27.88,
+      "text": "Steve Chapman turned from Chapel Street into the quieter thoroughfare, metaphorically speaking,",
+      "check": false
+    },
+    {
+      "id": 4,
+      "start": 27.88,
+      "end": 32.86,
+      "text": "two wheels, bounded up the steps of the fourth house in the row, took the first flight of",
+      "check": false
+    },
+    {
+      "id": 5,
+      "start": 32.86,
+      "end": 38.219997,
+      "text": "stairs on high, raced along the corridor, skidded a bit at the last portal on the right,",
+      "check": false
+    },
+    {
+      "id": 6,
+      "start": 38.34,
+      "end": 43.739998,
+      "text": "and finally, setting all brakes, came to a standstill in the center of the floor, while",
+      "check": false
+    },
+    {
+      "id": 7,
+      "start": 43.739998,
+      "end": 48.42,
+      "text": "as the door swung back against the wall, every picture in the study jarred askew.",
+      "check": false
+    },
+    {
+      "id": 8,
+      "start": 49.34,
+      "end": 51.64,
+      "text": "War's begun, he announced breathlessly.",
+      "check": false
+    },
+    {
+      "id": 9,
+      "start": 52.14,
+      "end": 53.6,
+      "text": "President Wilson has signed.",
+      "check": false
+    },
+    {
+      "id": 10,
+      "start": 54,
+      "end": 55.32,
+      "text": "We're in it at last, Joe.",
+      "check": false
+    },
+    {
+      "id": 11,
+      "start": 55.32,
+      "end": 60,
+      "text": "Joe Ingersoll regarded his roommate calmly across the desk...",
+      "check": false
+    },
+    {
+      "id": 12,
+      "start": 60,
+      "end": 62.26,
+      "text": "one hand holding open the book he had been studying.",
+      "check": false
+    },
+    {
+      "id": 13,
+      "start": 62.98,
+      "end": 65.96,
+      "text": "But why wreck the premises? he asked mildly.",
+      "check": false
+    },
+    {
+      "id": 14,
+      "start": 66.44,
+      "end": 68.94,
+      "text": "What do you think you are, the German army in Belgium?",
+      "check": false
+    },
+    {
+      "id": 15,
+      "start": 70.16,
+      "end": 72.98,
+      "text": "Steve, subsiding against the back of the Morris chair,",
+      "check": false
+    },
+    {
+      "id": 16,
+      "start": 73.42,
+      "end": 76.359999,
+      "text": "strove to regain his breath and wither the other with a glance,",
+      "check": false
+    },
+    {
+      "id": 17,
+      "start": 76.68,
+      "end": 78.72,
+      "text": "a not particularly successful effort.",
+      "check": false
+    },
+    {
+      "id": 18,
+      "start": 79.56,
+      "end": 81.3,
+      "text": "You make me tired, he declared.",
+      "check": false
+    },
+    {
+      "id": 19,
+      "start": 81.69999899999999,
+      "end": 83.84,
+      "text": "Where's your patriotism, you block of wood?",
+      "check": false
+    },
+    {
+      "id": 20,
+      "start": 83.84,
+      "end": 87.56,
+      "text": "I nearly break my neck to get the joyful news to you,",
+      "check": false
+    },
+    {
+      "id": 21,
+      "start": 87.56,
+      "end": 90.439999,
+      "text": "and you sit there like... like...",
+      "check": false
+    },
+    {
+      "id": 22,
+      "start": 90.439999,
+      "end": 91.74,
+      "text": "Calm yourself, Stephen.",
+      "check": false
+    },
+    {
+      "id": 23,
+      "start": 92.28,
+      "end": 93.52000000000001,
+      "text": "I've known it for at least...",
+      "check": false
+    }
+  ],
+  "cues": 23,
+  "checkCues": 0,
+  "sabotage": "off",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "55fNcmAHAxDDtwi3evnAudE4WakJ4PGhnF8RDdPhJ45otkV8DzqfkY925pdKqvT32roK5UdeGKjpiAy3qKpyVJDf",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "15666",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "latencyMs": 3287,
+  "at": "2026-11-08T13:58:44.028Z"
+}

@@ -1,0 +1,20 @@
+{
+  "signature": "2JPUDf1Pz4ySknXfE7wYbb41Y4xmg9eZGeqGqnR5xMGgPZR7DgLsNEWqtSKeqNSEwTsuMkEvkTrVgtXGBp5EFtt9",
+  "network": "mainnet",
+  "slot": 466943316,
+  "blockTime": 1794146959,
+  "err": null,
+  "instructionCount": 1,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "distribute"
+    }
+  ],
+  "serializedBytes": 561,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 15901,
+  "feeLamports": 5001,
+  "accountCount": 12,
+  "usesLookupTables": false
+}
