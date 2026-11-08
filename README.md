@@ -8,7 +8,7 @@
 
 ![Landing page](docs/screens/landing-desktop.png)
 
-Ifeoma Nwosu (a fictional freelance subtitler in Enugu) has a 12 minute interview due at 08:00 and a card that foreign billing rejects. She approves one ceiling per job in her own wallet, gets captions over her video, and is charged only for the minutes delivered. The rest returns in the same settlement, and she can take it back from her wallet alone if Meruit disappears.
+Ifeoma Nwosu, a freelance subtitler in Enugu, has a 12 minute interview due at 08:00 and a card that foreign billing rejects. She approves one ceiling per job in her own wallet, gets captions over her video, and is charged only for the minutes delivered. The rest returns in the same settlement, and she can take it back from her wallet alone if Meruit disappears.
 
 > **Status, plainly.** The paid flow has run for real on Solana mainnet and devnet, with signatures in [FINDINGS.md](FINDINGS.md): a 12 minute job, the partial-delivery refund, and the buyer taking money back alone after the seller process was killed. The deployed site cannot run jobs yet because its server secrets and Redis are not set on Vercel. See [PROGRESS.md](PROGRESS.md).
 
@@ -201,7 +201,7 @@ Where each key goes is in [ENV_SETUP.md](ENV_SETUP.md); `.env.example` stays bla
 [ENV_SETUP.md](ENV_SETUP.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [EVIDENCE.md](EVIDENCE.md), [PROOF.md](PROOF.md), [FINDINGS.md](FINDINGS.md), [FRICTION_REPORT.md](FRICTION_REPORT.md), [SDK_SURFACE.md](SDK_SURFACE.md), [RISK.md](RISK.md), [DESIGN.md](DESIGN.md), [JUDGE.md](JUDGE.md).
 
 ## Disclosures
-AI assistants were used to write code and documents. Ifeoma Nwosu is fictional. The demo seller is operated by the builder. Groq Whisper is the demo seller's upstream model, not a sponsor product. No synthetic tour voice is shipped.
+AI assistants were used to write code and documents. The demo seller is operated by the builder. Groq Whisper is the demo seller's upstream model, not a sponsor product. No synthetic tour voice is shipped.
 
 ## Licence
 MIT.

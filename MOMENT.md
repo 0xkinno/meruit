@@ -1,6 +1,6 @@
 # MOMENT.md
 
-Ifeoma Nwosu is a fictional person (labelled so everywhere). 27, freelance subtitler in Enugu. Clients in Berlin and London send interviews; she returns English `.srt` files.
+Ifeoma Nwosu is the persona. 27, freelance subtitler in Enugu. Clients in Berlin and London send interviews; she returns English `.srt` files.
 
 Thursday, 22:10. A Berlin client sends a 12 minute interview due at 08:00. The transcription tool wants a monthly card subscription for a job she does twice a month. Her naira card is declined for international web payments. She has 41 USDT on Tron from her last client. The job pays $35.
 

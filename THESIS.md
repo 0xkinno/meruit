@@ -2,7 +2,7 @@
 
 ```
 NAME:       MERUIT
-MOMENT:     Ifeoma, a freelance subtitler in Enugu (fictional), at 22:10 with a 12-minute interview due at 08:00,
+MOMENT:     Ifeoma, a freelance subtitler in Enugu, at 22:10 with a 12-minute interview due at 08:00,
             when her naira card is declined for international web payments and the job pays $35.
 ACTION:     She tops up once from Tron USDT through an address she keeps, approves one ceiling per job in her
             wallet, watches captions appear over her video, downloads the .srt, and is charged on Solana only

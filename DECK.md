@@ -2,7 +2,7 @@
 
 Eight slides, README order. Rendered slides are not made yet. Use only numbers that exist in `docs/FACTS.json` at render time.
 
-1. The moment: 22:10 in Enugu, card declined (fictional persona).
+1. The moment: 22:10 in Enugu, card declined.
 2. The product: pay for the minutes you got.
 3. How a job moves: ceiling signed, captions delivered, change returned.
 4. Money from any chain: one address per chain, powered by Aurora Intents.

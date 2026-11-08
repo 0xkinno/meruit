@@ -52,7 +52,7 @@ export default function Home() {
 
       <section className="py-16" aria-labelledby="moment-h">
         <Reveal><Label n="01">The moment</Label><h2 id="moment-h" className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Ten past ten in Enugu.</h2>
-          <p className="small-caps mt-2 text-sm text-graphite">Ifeoma Nwosu is a fictional person</p></Reveal>
+          <p className="small-caps mt-2 text-sm text-graphite">Ifeoma Nwosu, freelance subtitler, Enugu</p></Reveal>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {MOMENTS.map((m, i) => (
             <Reveal key={m.t} delay={i * 0.08}>

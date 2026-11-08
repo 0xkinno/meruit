@@ -18,7 +18,7 @@ export function Footer() {
           <li><a className="inline-flex h-11 items-center text-ink underline-offset-4 hover:underline" href={REPO} target="_blank" rel="noreferrer">Repository</a></li>
         </ul>
         <p className="text-xs leading-relaxed text-graphite">
-          Ifeoma Nwosu is a fictional person. The demo seller is operated by the builder. Groq Whisper is the demo seller&apos;s upstream model, not a sponsor product.
+          The demo seller is operated by the builder. Groq Whisper is the demo seller&apos;s upstream model, not a sponsor product.
           Spoken tour audio, where present, is synthetic. Live spending is capped at $0.25 per job and $1 per wallet per day. USDC has a freeze authority; see the risk notes. MIT licence.
         </p>
       </div>
