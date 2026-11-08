@@ -9,11 +9,11 @@ const PROGRAM = "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX";
 const NAMES: Record<number, string> = { 1: "open", 2: "settle", 3: "topUp", 4: "settleAndSeal", 5: "requestClose", 6: "seal", 7: "distribute", 8: "withdrawPayer", 9: "reclaim" };
 
 export async function recordTx(sig: string, out = "runs/tx") {
-  const r = await fetch(rpcUrl(), { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "getTransaction", params: [sig, { maxSupportedTransactionVersion: 0, encoding: "base64", commitment: "confirmed" }] }) });
+  const r = await fetch(rpcUrl(), { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "getTransaction", params: [sig, { maxSupportedTransactionVersion: 1, encoding: "base64", commitment: "confirmed" }] }) });
   const j = (await r.json()) as { result?: any; error?: unknown };
   if (!j.result) throw new Error(`transaction not found: ${JSON.stringify(j.error ?? null)}`);
   const raw = Buffer.from(j.result.transaction[0], "base64");
-  const parsed = await (await fetch(rpcUrl(), { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 2, method: "getTransaction", params: [sig, { maxSupportedTransactionVersion: 0, encoding: "json", commitment: "confirmed" }] }) })).json() as { result: any };
+  const parsed = await (await fetch(rpcUrl(), { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 2, method: "getTransaction", params: [sig, { maxSupportedTransactionVersion: 1, encoding: "json", commitment: "confirmed" }] }) })).json() as { result: any };
   const msg = parsed.result.transaction.message;
   const keys: string[] = [...msg.accountKeys, ...(parsed.result.meta?.loadedAddresses?.writable ?? []), ...(parsed.result.meta?.loadedAddresses?.readonly ?? [])];
   const base58 = (await import("@scure/base")).base58;

@@ -1,0 +1,24 @@
+{
+  "signature": "2Zkn6gsabyq2EE7bSR7kmLo66ThtNsh8XbPmmXeQmHh6TCyw2bsvX42C7d5YybrnXjmq2b8Awgr4BDc6SBTTN8g9",
+  "network": "devnet",
+  "slot": 520037138,
+  "blockTime": 1794144784,
+  "err": null,
+  "instructionCount": 2,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "settleAndSeal"
+    },
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "distribute"
+    }
+  ],
+  "serializedBytes": 602,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 28255,
+  "feeLamports": 5001,
+  "accountCount": 13,
+  "usesLookupTables": false
+}
