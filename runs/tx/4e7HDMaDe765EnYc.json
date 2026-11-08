@@ -1,0 +1,20 @@
+{
+  "signature": "4e7HDMaDe765EnYcsSB6ryMAfx8C3gx6WrnCutu136HDECQ5iDCT1Cu9L99WKoAHpQ9GDSh4pBEasM3ZZwbxmTB5",
+  "network": "devnet",
+  "slot": 520038771,
+  "blockTime": 1794145174,
+  "err": null,
+  "instructionCount": 1,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "withdrawPayer"
+    }
+  ],
+  "serializedBytes": 338,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 12680,
+  "feeLamports": 5000,
+  "accountCount": 7,
+  "usesLookupTables": false
+}

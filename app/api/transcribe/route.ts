@@ -32,10 +32,12 @@ async function handler(req: NextRequest) {
   await jobs.transition(jobId, "approved", { actor: "buyer" }).catch(() => undefined);
   await jobs.transition(jobId, "opened", { actor: "seller" }).catch(() => undefined);
 
-  // B2: the seller goes quiet after open. No settle happens (status 503 stops withX402 from settling).
-  if (sab.vanish) {
+  // B2: the seller dies after open. The process exits without answering and without settling, which is what a
+  // crashed or killed seller looks like to the buyer. Never in production. (A handler that merely returns an
+  // error status is refunded automatically by the SDK, which is a separate, recorded behaviour.)
+  if (sab.vanish && process.env.VERCEL_ENV !== "production") {
     await jobs.transition(jobId, "seller_silent", { actor: "seller", note: "sabotage:vanish", sabotage: label });
-    return json({ error: "seller_unavailable", jobId }, 503);
+    process.exit(1);
   }
   const sum = chunks.reduce((s, c) => s + (Number.isInteger(c.seconds) ? c.seconds : 0), 0);
   if (chunks.length === 0 || sum > declared) return json({ error: "chunks_exceed_declared_length" }, 400);

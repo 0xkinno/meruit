@@ -35,12 +35,13 @@ async function b1(base: string) {
 async function b2(base: string) {
   const buyer = await createKeyPairSignerFromBytes(base58.decode(need("MERUIT_BUYER_TEST_KEY")));
   const t0 = Date.now();
-  const r = await runJob({ clip: "hero", base, out: "runs/break/raw", sabotage: "vanish", label: "B2" });
+  // The server process exits after the open lands, so the request fails at the socket. That is the point.
+  const r = await runJob({ clip: "hero", base, out: "runs/break/raw", sabotage: "vanish", label: "B2" }).catch((e) => { console.log(`seller died as intended: ${(e as Error).message}`); return null; });
   const rpc = rpcFor(rpcUrl());
   const sigs: Record<string, string> = {};
   const channels = (await findChannelsByPayer(rpc, buyer.address)).filter((c) => c.status !== "distributed");
   const ch = channels[0];
-  if (!ch) { save("B2", { title: "seller vanishes after open", result: "NO CHANNEL FOUND: the open did not land", raw: r?.status }); return; }
+  if (!ch) { save("B2", { title: "seller vanishes after open", result: "NO CHANNEL FOUND: the open did not land", raw: r ? r.status : "connection lost" }); return; }
   for (let guard = 0; guard < 6; guard++) {
     const v = await readChannel(rpc, ch.id);
     const step = nextEscapeStep(v, Math.floor(Date.now() / 1000));

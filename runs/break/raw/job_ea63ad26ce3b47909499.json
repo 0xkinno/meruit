@@ -1,0 +1,26 @@
+{
+  "id": "job_ea63ad26ce3b47909499",
+  "kind": "B2",
+  "wild": false,
+  "network": "devnet",
+  "status": 503,
+  "clip": "hero",
+  "declaredSeconds": 720,
+  "cap": "120000",
+  "cues": 0,
+  "checkCues": 0,
+  "sabotage": "vanish",
+  "paymentResponse": {
+    "success": true,
+    "transaction": "9f75e5x4sdMntARe7RcrCzcBWyAte4yftPZMSEpAFAJMDqv8A7KabeWS3TzVhZ49g7NSizHxUTn8f8Qno9HL4Ry",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "0",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "error": {
+    "error": "seller_unavailable",
+    "jobId": "job_ea63ad26ce3b47909499"
+  },
+  "latencyMs": 2945,
+  "at": "2026-11-08T13:37:27.628Z"
+}

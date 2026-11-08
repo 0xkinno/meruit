@@ -1,0 +1,13 @@
+{
+  "id": "B4",
+  "network": "devnet",
+  "at": "2026-11-08T13:40:01.839Z",
+  "title": "open with open_slot 1,600 slots in the past",
+  "result": "refused with 2003 OpenSlotOutOfWindow",
+  "openSlot": "520037279",
+  "currentSlot": "520038879",
+  "err": "{\"InstructionError\":[\"0\",{\"Custom\":\"2003\"}]}",
+  "expected": "custom program error 2003 (0x7d3) OpenSlotOutOfWindow",
+  "logs": "Program CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX invoke [1]\nProgram CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX consumed 719 of 200000 compute units\nProgram CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX failed: custom program error: 0x7d3",
+  "method": "simulateTransaction, nothing broadcast"
+}

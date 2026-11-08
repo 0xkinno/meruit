@@ -1,0 +1,20 @@
+{
+  "signature": "429WzKJRKJ9y329QiaWzrBAJ6Vd2C86hQZxwDu3W6HqShpegcLYjaxk7cGfkod4rzkJmLRgQbzeVeYR5TSzSAzKP",
+  "network": "devnet",
+  "slot": 520038499,
+  "blockTime": 1794145110,
+  "err": null,
+  "instructionCount": 1,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "requestClose"
+    }
+  ],
+  "serializedBytes": 206,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 271,
+  "feeLamports": 5000,
+  "accountCount": 3,
+  "usesLookupTables": false
+}

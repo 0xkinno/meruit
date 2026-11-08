@@ -1,0 +1,20 @@
+{
+  "signature": "5DRVgMM4jN54CDDDTdHgguKW2PMQt5qExtrPvxXPJMDvPrR4ZNUtU6bkjQm7UHEY6vRsUwEXkunNU1wnFYiHtvQA",
+  "network": "devnet",
+  "slot": 520038764,
+  "blockTime": 1794145173,
+  "err": null,
+  "instructionCount": 1,
+  "instructions": [
+    {
+      "program": "CHNLxYvVA28MJP9PrFuDXccuoGXAx7jBacfLEkahyGsX",
+      "name": "seal"
+    }
+  ],
+  "serializedBytes": 205,
+  "limitBytes": 1232,
+  "computeUnitsConsumed": 243,
+  "feeLamports": 5000,
+  "accountCount": 3,
+  "usesLookupTables": false
+}

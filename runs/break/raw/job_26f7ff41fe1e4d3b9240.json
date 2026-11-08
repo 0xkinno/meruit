@@ -1,0 +1,23 @@
+{
+  "id": "job_26f7ff41fe1e4d3b9240",
+  "kind": "job",
+  "wild": false,
+  "network": "devnet",
+  "status": 402,
+  "clip": "short",
+  "declaredSeconds": 60,
+  "cap": "10000",
+  "cues": 0,
+  "checkCues": 0,
+  "sabotage": "overcharge",
+  "paymentResponse": {
+    "success": false,
+    "errorReason": "Settlement override amount \"10001\" resolves to 10001 atomic units, which exceeds the authorized maximum of 10000 in PaymentRequirements.",
+    "errorMessage": "Settlement override amount \"10001\" resolves to 10001 atomic units, which exceeds the authorized maximum of 10000 in PaymentRequirements.",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "transaction": ""
+  },
+  "error": {},
+  "latencyMs": 1910,
+  "at": "2026-11-08T13:40:22.321Z"
+}
