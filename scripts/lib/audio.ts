@@ -13,6 +13,16 @@ export function decodeClip(path: string): { chunks: { index: number; seconds: nu
 }
 
 export async function hostChunks(jobId: string, chunks: { index: number; wav: Uint8Array; seconds: number }[]): Promise<{ urls: { url: string; seconds: number }[]; close: () => void }> {
+  // Against a deployed site: upload through that site's own /api/blob/upload route, exactly as the browser does.
+  if (process.env.MERUIT_UPLOAD_VIA) {
+    const { upload } = await import("@vercel/blob/client");
+    const urls: { url: string; seconds: number }[] = [];
+    for (const c of chunks) {
+      const b = await upload(`chunks/${jobId}/${c.index}.wav`, new Blob([c.wav as BlobPart], { type: "audio/wav" }), { access: "public", handleUploadUrl: `${process.env.MERUIT_UPLOAD_VIA.replace(/\/$/, "")}/api/blob/upload`, contentType: "audio/wav" });
+      urls.push({ url: b.url, seconds: c.seconds });
+    }
+    return { urls, close: () => undefined };
+  }
   if (process.env.BLOB_READ_WRITE_TOKEN) {
     const { put } = await import("@vercel/blob");
     const urls: { url: string; seconds: number }[] = [];
