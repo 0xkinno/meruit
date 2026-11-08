@@ -58,18 +58,24 @@ class UpstashKV implements KV {
   async ping() { return (await this.r.ping()) === "PONG"; }
 }
 
+// The local in-memory store lives on globalThis so route handlers and server components share one instance in `next dev`
+// (Redis is shared by construction in production).
+const g = globalThis as unknown as { __meruitMemoryKV?: KV };
 let kv: KV | null = null;
+const redisUrl = () => process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+const redisToken = () => process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+
 export function backendName(): "upstash" | "memory" | "unconfigured" {
-  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) return "upstash";
+  if (redisUrl() && redisToken()) return "upstash";
   // Explicit opt-in for local development and tests only. /api/status reports it. Never set in production.
   return process.env.NODE_ENV === "test" || process.env.MERUIT_STORE === "memory" ? "memory" : "unconfigured";
 }
 export function getKV(): KV {
   if (kv) return kv;
   const b = backendName();
-  if (b === "upstash") kv = new UpstashKV(new Redis({ url: process.env.KV_REST_API_URL!, token: process.env.KV_REST_API_TOKEN! }));
-  else if (b === "memory") kv = new MemoryKV();
-  else throw new Error("store_unconfigured: set KV_REST_API_URL and KV_REST_API_TOKEN");
+  if (b === "upstash") kv = new UpstashKV(new Redis({ url: redisUrl()!, token: redisToken()! }));
+  else if (b === "memory") kv = g.__meruitMemoryKV ??= new MemoryKV();
+  else throw new Error("store_unconfigured: connect Upstash Redis (KV_REST_API_URL and KV_REST_API_TOKEN)");
   return kv;
 }
 export function __setKVForTests(k: KV | null) { kv = k; }

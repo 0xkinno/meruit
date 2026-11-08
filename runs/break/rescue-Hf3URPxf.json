@@ -1,0 +1,13 @@
+{
+  "id": "rescue-Hf3URPxf",
+  "network": "devnet",
+  "channel": "Hf3URPxfZRLMz2LdDN4WG7PyHUPfwc4Xgqn4YzcmQc35",
+  "depositAtomic": "10000",
+  "elapsedSeconds": 67,
+  "signatures": {
+    "request_close": "5QEikR7fPtogK9c9iUyMFX62aqEks1Nz8MtMWexCvcg6yj8Kk4zWXmjLxq2t9on9G7uugUu7F1PL2dD6ncZdJ7EK",
+    "seal": "3844GYCReDVYixGpWRJNUyCkpKd7qAy6FUfr4Zdi8TRLVto3FdMyJSrdQCbU1g1HPMt9ZTNuYeHfofjqBiQWnnYt",
+    "withdraw": "3R5UGbpjuaX5YsP8GVAVY4ne6LcSM6gNYAFmMUSgHGiER8A6tcWVqAQHew7mHsnKjkueyCUMQBZnmELvzKKQxky7"
+  },
+  "at": "2026-11-08T14:41:49.492Z"
+}

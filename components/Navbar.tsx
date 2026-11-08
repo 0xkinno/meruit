@@ -68,7 +68,7 @@ export function Navbar() {
   const isApp = ["/studio", "/tab", "/rescue"].some((p) => path.startsWith(p));
   return (
     <header className="sticky top-3 z-40 mx-auto w-[calc(100%-32px)] max-w-6xl">
-      <nav aria-label="Main" className="flex h-16 items-center justify-between rounded-capsule border border-ink/20 bg-vellum/80 px-3 shadow-[0_0_24px_rgba(181,124,255,0.35)] backdrop-blur-md sm:px-4">
+      <nav aria-label="Main" className="flex h-16 items-center justify-between rounded-capsule border border-ink/20 bg-vellum/95 px-3 shadow-[0_0_24px_rgba(181,124,255,0.35)] backdrop-blur-md sm:px-4">
         <Link href="/" className="flex h-11 items-center gap-2 text-ink" aria-label="Meruit home">
           <Mark /> <Wordmark />
         </Link>

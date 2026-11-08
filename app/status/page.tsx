@@ -17,12 +17,12 @@ export default async function Status() {
       <GlowCard className="mt-8 p-4 sm:p-6">
         <ul className="divide-y hairline">
           {probes.map((p) => (
-            <li key={p.name} className="grid gap-1 py-3 sm:grid-cols-[220px_90px_1fr_auto] sm:items-center">
-              <span className="font-mono text-sm">{p.name}</span>
+            <li key={p.name} className="grid gap-x-4 gap-y-1 py-3 sm:grid-cols-[minmax(0,300px)_88px_minmax(0,1fr)_auto] sm:items-center">
+              <span className="min-w-0 break-words font-mono text-sm">{p.name}</span>
               <span className={`inline-flex w-fit rounded-full border px-2 py-0.5 font-mono text-xs ${p.ok === true ? "border-mint bg-mint/30" : p.ok === false ? "border-ember bg-ember/10 text-ember-ink" : "border-ink/30 text-graphite"}`}>
                 {p.ok === true ? "ok" : p.ok === false ? "problem" : "not set"}
               </span>
-              <span className="text-sm text-graphite">{p.detail}</span>
+              <span className="min-w-0 break-words text-sm text-graphite">{p.detail}</span>
               <span className="font-mono text-xs text-graphite">{p.ms}ms, {p.at.slice(11, 19)}Z</span>
             </li>
           ))}

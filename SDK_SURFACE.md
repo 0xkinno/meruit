@@ -7,11 +7,11 @@
 | x402 v2 `upto` server scheme | `@x402/svm` 2.30.0 `upto/server` | `lib/x402/server.ts:58` | yes | yes: mainnet and devnet jobs, see FINDINGS.md |
 | x402 self-facilitator (`upto`) | `@x402/core` 2.30.0, `@x402/svm` `upto/facilitator` | `lib/x402/server.ts:44`, `:48` | yes | yes: mainnet and devnet (open, settle, distribute) |
 | Paid route with per-request ceiling and settlement override | `@x402/next` 2.30.0 `withX402`, `setSettlementOverrides` | `app/api/transcribe/route.ts:78`, `:54` | yes | yes: 25 jobs |
-| Browser `upto` client with wallet signer | `@x402/svm` `upto/client`, `@x402/fetch` | `lib/x402/client.ts:16` | yes | scripts use the same scheme (`scripts/run-job.ts`); the browser path is not yet run through a wallet |
+| Browser `upto` client with wallet signer | `@x402/svm` `upto/client`, `@x402/fetch` | `lib/x402/client.ts:16` | yes | yes: scripts, and a real browser with a Wallet Standard test wallet on devnet (`tests/e2e/paid-flow.spec.ts`); not yet Phantom |
 | payment-channels `open`, `settle_and_seal`, `distribute` | program `CHNLx...` via the SDK | inside `@x402/svm` | via SDK | yes: `runs/tx/` |
 | payment-channels `requestClose`, `seal`, `withdrawPayer` | vendored generated client (MIT, `lib/channels/generated/`) | `lib/channels/escape.ts:77`, `:80`, `:83` | yes | yes: B2 on mainnet and devnet |
 | Channel discovery by payer from chain | vendored generated client | `lib/channels/discover.ts:11` | yes, layout offset unit-tested | yes: used by B2, B9 and `scripts/rescue.ts` |
-| Salt grinding to bump 255 | program docs (CU note) | `lib/channels/salt.ts:27` | yes, unit-tested | bumps of real channels measured; the SDK picks its own salt, so no with/without CU comparison (B9) |
+| Salt grinding to bump 255 | program docs (CU note) | `lib/channels/salt.ts:27` | yes, unit-tested | yes: same `open` sent with and without a ground salt, 31,565 vs 55,565 CU on devnet (B9) |
 | Rent cleanup and abandoned-channel sweep | `UptoSvmRentCleanupManager` | `app/api/cron/sweep/route.ts:30` | yes | reclaim, distribute and discovery run by hand on mainnet; the scheduled run has not happened |
 | Durable channel storage | `PaymentChannelStorage` interface | `lib/x402/redisChannelStorage.ts` | yes, unit-tested on an in-memory KV | not yet on Upstash (not provisioned) |
 | Aurora Intents Deposits (persistent address) | REST `intents-api.aurora.dev` | `lib/aurora/deposits.ts:13` | yes | address issued for Tron and EVM (probe); no live deposit made |

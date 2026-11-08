@@ -1,3 +1,4 @@
+// `double_settle` has no server switch: it is exercised by replaying one signed payment under a second job id (scripts/run-break.ts B3).
 // MERUIT_SABOTAGE: a comma list of deliberate failures used by the break campaign (B1 to B5).
 // Empty in production. On preview deployments a signed header may set it per request.
 import { createHmac, timingSafeEqual } from "node:crypto";

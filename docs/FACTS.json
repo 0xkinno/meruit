@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-08T14:16:18.904Z",
+  "generatedAt": "2026-11-08T14:49:10.996Z",
   "network": "devnet and mainnet",
   "byNetwork": {
     "devnet": 23,
-    "mainnet": 2
+    "mainnet": 3
   },
-  "jobs": 25,
+  "jobs": 26,
   "overcharges": 0,
   "returnedUsd": "0.08",
-  "forcedExits": 3,
+  "forcedExits": 5,
   "wild": {
     "jobs": 19,
     "overchargeCount": 0,

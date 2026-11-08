@@ -118,10 +118,10 @@ export default function Home() {
         <Reveal><Label n="05">Proof</Label><h2 id="proof-h" className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Numbers come from real runs.</h2></Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            ["Jobs recorded", FACTS.jobs ? String(FACTS.jobs) : "none yet"],
+            ["Jobs recorded", String(FACTS.jobs)],
             ["Overcharges", FACTS.overcharges === null ? "not measured" : String(FACTS.overcharges)],
             ["Returned to buyers", FACTS.returnedUsd === null ? "not measured" : `$${FACTS.returnedUsd}`],
-            ["Forced exits completed", FACTS.forcedExits ? String(FACTS.forcedExits) : "none yet"],
+            ["Forced exits completed", String(FACTS.forcedExits)],
           ].map(([k, v], i) => (
             <Reveal key={k} delay={i * 0.06}><GlowCard className="h-full p-5"><p className="label-mono">{k}</p><p className="mt-2 font-display text-3xl font-semibold" data-testid="fact-tile">{v}</p></GlowCard></Reveal>
           ))}

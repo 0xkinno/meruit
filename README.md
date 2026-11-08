@@ -141,15 +141,18 @@ Deposits (persistent address, with a labelled single-use fallback because persis
 | Short deposit | own screen, returned to sender | `lib/aurora/status.ts` |
 
 ## Measured
-From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `runs/` (25 jobs: 23 devnet, 2 mainnet).
-- Overcharges: **0** of 25. Undercharges in the wild set: **0**.
+From [`docs/FACTS.json`](docs/FACTS.json), written by `scripts/facts.ts` from `runs/` (26 jobs: 23 devnet, 3 mainnet).
+- Overcharges: **0** of 26. Undercharges in the wild set: **0**.
 - Wild set: 19 of 20 pre-listed clips completed, on devnet only; one clip could not be decoded and is reported as a miss. Clips are about 93 seconds, not the 120 the list says (addendum in [`data/wild/SOURCES.md`](data/wild/SOURCES.md)).
 - Cues marked "check": 0.0%. The threshold never fired on clean audiobook speech, so it is untested on hard audio.
 - Both error directions: money taken for undelivered seconds is 0 in every run. Delivered seconds not charged: none observed.
 - Forced exit: B2 completed on mainnet in 915 s (production delay) and on devnet in 70 s (shortened delay), zero loss.
 - Same 12 minute clip with 3 of 12 parts failing (B1): $0.09 charged on both networks. An `exact` prepay of the ceiling would have cost $0.12 for the same 9 minutes ([`/proof`](app/proof/page.tsx), computed from the meter code).
 - Aurora: live exit Solana to Base in 1.6 minutes; short deposit refunded after 8.0 minutes with a refund fee of about 20% of the amount (B6).
-- Not measured: deposit latency from Tron and Base (B7), cost per transcribed minute, a double-settle test (B3).
+- B3: the same signed payment sent twice was refused the second time with `invalid_upto_svm_channel_already_open`, under a different job id so our own job guard was not the cause.
+- B9: the same `open` instruction costs **31,565** compute units with a ground salt and **55,565** without (devnet, one pair), more than the 13,500 the docs' model predicts.
+- Browser run on devnet with a test wallet: approval dialog, signature, captions, `.srt`, receipt, and both reject paths. The signature header carried the same amount the dialog showed.
+- Not measured: deposit latency from Tron and Base (B7), cost per transcribed minute.
 
 ## What we learned
 Two findings about the payment layer: a handler error is refunded automatically by the x402 server, but a refused settlement override leaves the deposit escrowed until the buyer or a sweeper closes it, so the buyer's escape hatch and the sweeper both matter. And a payment-channel `open` is valid for only 1,500 slots (B4 confirms the refusal), so it must not be pre-signed inside a cross-chain execution: bridge first, open after arrival. That second point is a design rule from the documentation; the bridge latency that would break it (B7) has not been measured. Details are in [FINDINGS.md](FINDINGS.md) and [FRICTION_REPORT.md](FRICTION_REPORT.md).
@@ -161,7 +164,7 @@ See [RISK.md](RISK.md). USDC has a freeze authority on both networks (checked), 
 | Tier | Items |
 |---|---|
 | Live (has run against the real service) | self-facilitated `upto` on mainnet and devnet; buyer escape hatch; rent reclaim and distribute; Groq transcription; Aurora token list, persistent addresses, quotes, live exit and refund case |
-| Code written, not yet run | the same flows through the browser wallet on the deployed site; Redis storage on Upstash; the scheduled sweeper; Aurora deposit from Tron or Base; confidential top-up |
+| Code written, not yet run | the paid flow through Phantom on the deployed site (it ran in a browser on devnet with a test wallet); Redis storage on Upstash; the scheduled sweeper; Aurora deposit from Tron or Base; confidential top-up |
 | Substituted | in-memory store for local runs only, reported by `/api/status`; the demo payout wallet is a test key until `MERUIT_PAY_TO` is set to a real wallet |
 | Designed | Intents Connect, judge pocket, `batch-settlement` (not used) |
 
@@ -190,7 +193,7 @@ npm run dev
 Where each key goes is in [ENV_SETUP.md](ENV_SETUP.md); `.env.example` stays blank. For local runs without Redis set `MERUIT_STORE=memory`. `NEXT_PUBLIC_NETWORK=devnet` selects devnet; it is read at build time.
 
 ## Docs index
-[ENV_SETUP.md](ENV_SETUP.md), [TASK.md](TASK.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [EVIDENCE.md](EVIDENCE.md), [PROOF.md](PROOF.md), [FINDINGS.md](FINDINGS.md), [FRICTION_REPORT.md](FRICTION_REPORT.md), [SDK_SURFACE.md](SDK_SURFACE.md), [RISK.md](RISK.md), [DESIGN.md](DESIGN.md), [JUDGE.md](JUDGE.md).
+[ENV_SETUP.md](ENV_SETUP.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [EVIDENCE.md](EVIDENCE.md), [PROOF.md](PROOF.md), [FINDINGS.md](FINDINGS.md), [FRICTION_REPORT.md](FRICTION_REPORT.md), [SDK_SURFACE.md](SDK_SURFACE.md), [RISK.md](RISK.md), [DESIGN.md](DESIGN.md), [JUDGE.md](JUDGE.md).
 
 ## Disclosures
 AI assistants were used to write code and documents. Ifeoma Nwosu is fictional. The demo seller is operated by the builder. Groq Whisper is the demo seller's upstream model, not a sponsor product. No synthetic tour voice is shipped.

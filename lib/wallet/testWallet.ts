@@ -2,7 +2,7 @@
 // builds (see components/WalletProvider.tsx). It follows the same code path as Phantom. Never in production.
 import { registerWallet } from "@wallet-standard/wallet";
 import { base58 } from "@scure/base";
-import { createKeyPairSignerFromBytes, createKeyPairFromBytes, getTransactionDecoder, getTransactionEncoder, signTransaction } from "@solana/kit";
+import { createKeyPairSignerFromBytes, createKeyPairFromBytes, getTransactionDecoder, getTransactionEncoder, partiallySignTransaction } from "@solana/kit";
 import type { Wallet, WalletAccount } from "@wallet-standard/base";
 
 let registered = false;
@@ -38,7 +38,7 @@ export async function registerTestWallet(secretB58: string, opts: { rejectNext?:
           const out = [];
           for (const i of inputs) {
             const tx = getTransactionDecoder().decode(i.transaction);
-            const signed = await signTransaction([keyPair], tx);
+            const signed = await partiallySignTransaction([keyPair], tx);
             out.push({ signedTransaction: new Uint8Array(getTransactionEncoder().encode(signed)) });
           }
           return out;

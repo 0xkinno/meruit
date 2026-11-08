@@ -58,6 +58,30 @@ for (const vp of VIEWPORTS) {
         if (vp.width < 1024) expect(boxes.gap, "32 px above scene on small screens").toBeGreaterThanOrEqual(32);
       }
 
+      // No two sibling boxes in a status row or a tile may overlap (the earlier layout let a long name run under its badge).
+      const overlaps = await page.evaluate(() => {
+        const bad: string[] = [];
+        document.querySelectorAll("main li").forEach((li) => {
+          const kids = Array.from(li.children).filter((k) => (k as HTMLElement).offsetWidth > 0) as HTMLElement[];
+          for (let i = 0; i < kids.length; i++) for (let j = i + 1; j < kids.length; j++) {
+            const a = kids[i].getBoundingClientRect(), b = kids[j].getBoundingClientRect();
+            const w = Math.min(a.right, b.right) - Math.max(a.left, b.left), h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+            if (w > 2 && h > 2) bad.push(`${(kids[i].textContent ?? "").trim().slice(0, 20)} / ${(kids[j].textContent ?? "").trim().slice(0, 20)}`);
+          }
+        });
+        return bad;
+      });
+      expect(overlaps, "overlapping boxes").toEqual([]);
+
+      if (path === "/judge") {
+        await expect(page.getByTestId("recorded-run")).toBeVisible();
+        await expect(page.getByTestId("now-caption")).not.toHaveText("");
+      }
+      if (path === "/proof") {
+        const tiles = await page.getByTestId("proof-tile").allTextContents();
+        expect(tiles.slice(0, 4), "overcharges shown as a number").toContain("0");
+      }
+
       expect(await smallTargets(page), "tap targets under 44 px").toEqual([]);
 
       const axe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();

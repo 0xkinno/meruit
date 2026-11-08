@@ -1,0 +1,13 @@
+{
+  "id": "rescue-S7PGaro8",
+  "network": "devnet",
+  "channel": "S7PGaro8YEPw3vrGQZi1hPtam4pdSFAHMC8gsyFsBwc",
+  "depositAtomic": "10000",
+  "elapsedSeconds": 67,
+  "signatures": {
+    "request_close": "3QrSvarMyyjc5Qf12UFmrVRcCVGHQssvBdr15pQYimH48Fm9AFeWwsV5gKtzcHj9aH8dR8YYf7CXo2CC1w5srtA8",
+    "seal": "4f2TTjTHKZ7h5PbYYyR6KNhXrthRvdR4F8AqwxB8Ym2CxTViPTZvHej63CduGXA54vYq4PpQrGhBretd8LJFrpgs",
+    "withdraw": "4k5RfhC1hgy2vsoxABSUywhveJivRmV2ayk7aUfyXmNXebAEKU681pugddWBVtVSWDzuu94zKS6TrSxwYLk54FKW"
+  },
+  "at": "2026-11-08T14:42:56.349Z"
+}

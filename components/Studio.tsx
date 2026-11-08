@@ -69,6 +69,13 @@ export function Studio() {
       const uploaded: { url: string; seconds: number }[] = [];
       for (const c of chunks) {
         setProgress(`Uploading part ${c.index + 1} of ${chunks.length}`);
+        if (process.env.NEXT_PUBLIC_DEV_INLINE_AUDIO === "1") {
+          // Local development and browser tests only: no Blob store needed. The server accepts data URLs only when MERUIT_DEV_AUDIO=1 outside production.
+          let bin = "";
+          for (let i = 0; i < c.wav.length; i += 0x8000) bin += String.fromCharCode(...c.wav.subarray(i, i + 0x8000));
+          uploaded.push({ url: `data:audio/wav;base64,${btoa(bin)}`, seconds: c.seconds });
+          continue;
+        }
         const b = await upload(`chunks/${jobId}/${c.index}.wav`, new Blob([c.wav as BlobPart], { type: "audio/wav" }), { access: "public", handleUploadUrl: "/api/blob/upload", contentType: "audio/wav" });
         uploaded.push({ url: b.url, seconds: c.seconds });
       }
@@ -125,7 +132,7 @@ export function Studio() {
           <GlowCard className="p-4 sm:p-5">
             <div className="relative overflow-hidden rounded-xl border border-ink/30 bg-ink">
               {sample.video && !file ? (
-                <video ref={(n) => { media.current = n; }} src={sample.video} controls playsInline preload="metadata" className="aspect-video w-full" onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)} data-testid="player" />
+                <video ref={(n) => { media.current = n; }} src={sample.video} poster="/samples/hero-12min-poster.jpg" controls playsInline preload="metadata" className="aspect-video w-full" onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)} data-testid="player" />
               ) : (
                 <div className="flex aspect-video w-full flex-col items-center justify-end bg-gradient-to-b from-ink to-[#2a1d4a] p-4">
                   <audio ref={(n) => { media.current = n; }} src={file ? URL.createObjectURL(file) : sample.file} controls preload="metadata" className="w-full" onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)} data-testid="player" />

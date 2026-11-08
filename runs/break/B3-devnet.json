@@ -1,0 +1,26 @@
+{
+  "id": "B3",
+  "network": "devnet",
+  "at": "2026-11-08T14:39:51.663Z",
+  "title": "the same signed payment sent twice",
+  "result": "first request 200 (paid and delivered); the replay was refused with HTTP 402",
+  "firstStatus": 200,
+  "replayStatus": 402,
+  "firstPaymentResponse": {
+    "success": true,
+    "transaction": "2zoW5BBFfQxMQBjC8DJ9sKzHp8AGCefp8cvN8wNB7nVwijVCLFDnT2YmJc4PFBvg5job6cqrC7PiVzx8aoRPUBgw",
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "amount": "10000",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "replayPaymentResponse": {
+    "success": false,
+    "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "transaction": "",
+    "errorReason": "invalid_upto_svm_channel_already_open",
+    "payer": "2nzqHcYzmi1PPjAbpzKfyaMvP1Y4x2zCzDfMCt3f5uAF"
+  },
+  "replayBody": "{}",
+  "firstBody": "{\"jobId\":\"job_8ed2c4ecd0ef4364a1e0\",\"results\":[{\"index\":0,\"ok\":true,\"seconds\":60,\"segments\":[{\"start\":0,\"end\":7.3399997,",
+  "note": "the replay used a different job id, so the refusal is not our job guard"
+}

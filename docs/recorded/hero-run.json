@@ -1,6 +1,6 @@
 {
- "recordedAt": "2026-11-08T13:49:51.807Z",
- "network": "devnet",
+ "recordedAt": "2026-11-08T14:38:57.824Z",
+ "network": "mainnet",
  "video": "/samples/hero-12min.mp4",
  "cues": [
   {
@@ -1115,12 +1115,145 @@
    "end": 660,
    "text": "\"'Of all delectable islands,'",
    "check": false
+  },
+  {
+   "id": 160,
+   "start": 660,
+   "end": 662.74,
+   "text": "the Neverland is the snuggest and most compact.",
+   "check": false
+  },
+  {
+   "id": 161,
+   "start": 663.6799998,
+   "end": 665.24,
+   "text": "Not large and sprawly, you know,",
+   "check": false
+  },
+  {
+   "id": 162,
+   "start": 665.3599997,
+   "end": 667.8799996,
+   "text": "with tedious distances between one adventure and another,",
+   "check": false
+  },
+  {
+   "id": 163,
+   "start": 668.16,
+   "end": 669.42,
+   "text": "but nicely crammed.",
+   "check": false
+  },
+  {
+   "id": 164,
+   "start": 670.74,
+   "end": 673.48,
+   "text": "When you play at it by day with the chairs and the tablecloth,",
+   "check": false
+  },
+  {
+   "id": 165,
+   "start": 673.799999,
+   "end": 675.179999,
+   "text": "it is not in the least alarming,",
+   "check": false
+  },
+  {
+   "id": 166,
+   "start": 675.78,
+   "end": 677.64,
+   "text": "but in the two minutes before you go to sleep,",
+   "check": false
+  },
+  {
+   "id": 167,
+   "start": 678.06,
+   "end": 679.619999,
+   "text": "it becomes very nearly real.",
+   "check": false
+  },
+  {
+   "id": 168,
+   "start": 680.56,
+   "end": 682.039999,
+   "text": "That is why there are nightlights.",
+   "check": false
+  },
+  {
+   "id": 169,
+   "start": 684.22,
+   "end": 686.599998,
+   "text": "Occasionally, in her travels through her children's mines,",
+   "check": false
+  },
+  {
+   "id": 170,
+   "start": 686.88,
+   "end": 689.48,
+   "text": "Mrs. Darling found things she could not understand.",
+   "check": false
+  },
+  {
+   "id": 171,
+   "start": 690,
+   "end": 693.28,
+   "text": "and of these, quite the most perplexing was the word Peter.",
+   "check": false
+  },
+  {
+   "id": 172,
+   "start": 694.56,
+   "end": 698.74,
+   "text": "She knew of no Peter, and yet he was here and there in John and Michael's minds,",
+   "check": false
+  },
+  {
+   "id": 173,
+   "start": 699.18,
+   "end": 701.6,
+   "text": "while Wendy's began to be scrawled all over with him.",
+   "check": false
+  },
+  {
+   "id": 174,
+   "start": 702.66,
+   "end": 705.64,
+   "text": "The name stood out in bolder letters than any of the other words,",
+   "check": false
+  },
+  {
+   "id": 175,
+   "start": 706,
+   "end": 709.86,
+   "text": "and as Mrs. Darling gazed, she felt that it had an oddly cocky appearance.",
+   "check": false
+  },
+  {
+   "id": 176,
+   "start": 711.54,
+   "end": 714.6,
+   "text": "Yes, he is rather cocky, Wendy admitted with regret.",
+   "check": false
+  },
+  {
+   "id": 177,
+   "start": 715.059998,
+   "end": 716.42,
+   "text": "Her mother had been questioning her.",
+   "check": false
+  },
+  {
+   "id": 178,
+   "start": 717.54,
+   "end": 719.04,
+   "text": "But who is he, my pet?",
+   "check": false
   }
  ],
  "cap": "120000",
- "charge": "110000",
- "refund": "10000",
+ "charge": "120000",
+ "refund": "0",
  "signatures": {
-  "settle": "4662jfdhFfd7b5mi6kKVtj51Z2yyYZQiMwykNYA4bR3653tC2Pdpu8ZPeLKeAA1NgBNDgLUZSEA1ro6oALp6gyhK"
+  "settle": "2kbDAMhUPD6BbtXV4wgaa1dybVbrnayRmmjfdPDm8JCjk4PK2uLCnrx37qwa5AxnqVH9Fsg7sJw5vW5wGgaWYFoN"
  }
 }

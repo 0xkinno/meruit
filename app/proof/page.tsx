@@ -31,8 +31,9 @@ export default function Proof() {
   const cap = capForSeconds(720, 10000n, 250000n);
   const charge = settleAmount(540, cap, 10000n);
   const rows = breaks();
+  // null means "not measured". Zero is a real measurement and is shown as 0.
   const tile = (k: string, v: string | number | null, none = "not measured") => (
-    <GlowCard className="p-5"><p className="label-mono">{k}</p><p className="mt-2 font-display text-3xl font-semibold" data-testid="proof-tile">{v === null || v === 0 ? none : String(v)}</p></GlowCard>
+    <GlowCard className="p-5"><p className="label-mono">{k}</p><p className="mt-2 font-display text-3xl font-semibold" data-testid="proof-tile">{v === null ? none : String(v)}</p></GlowCard>
   );
   return (
     <main id="main" className="pb-8 pt-10" data-testid="proof">
@@ -41,14 +42,14 @@ export default function Proof() {
       <p className="mt-3 max-w-2xl text-graphite">Numbers are read from <code className="font-mono text-sm">docs/FACTS.json</code>, written by scripts from recorded runs. Where nothing was run yet, the tile says so. Last generated: {FACTS.generatedAt ?? "never"}.</p>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {tile("Jobs", FACTS.jobs, "none yet")}
+        {tile("Jobs", FACTS.jobs)}
         {tile("Overcharges", FACTS.overcharges)}
         {tile("Returned to buyers", FACTS.returnedUsd === null ? null : `$${FACTS.returnedUsd}`)}
-        {tile("Forced exits", FACTS.forcedExits, "none yet")}
-        {tile("Wild set jobs", FACTS.wild.jobs, "none yet")}
+        {tile("Forced exits", FACTS.forcedExits)}
+        {tile("Wild set jobs", FACTS.wild.jobs)}
         {tile("Undercharges", FACTS.wild.undercharges)}
         {tile("Check cue rate", FACTS.wild.checkCueRate)}
-        {tile("Median deposit minutes", FACTS.deposits.medianMinutes)}
+        {tile("Median deposit minutes", FACTS.deposits.medianMinutes, "needs live deposits")}
       </div>
 
       <GlowCard className="mt-10 p-6">

@@ -1,0 +1,28 @@
+{
+  "id": "B9",
+  "network": "devnet",
+  "at": "2026-11-08T14:40:28.692Z",
+  "title": "salt grinding to bump 255, same open instruction sent twice",
+  "result": "ground salt: 31565 CU; non-ground salt (bumps 253/248): 55565 CU; difference 24000 CU; documented model predicts 13500 CU",
+  "ground": {
+    "label": "ground (255/255)",
+    "salt": "1794148825055",
+    "channelBump": 255,
+    "escrowBump": 255,
+    "computeUnits": 31565,
+    "signature": "2pPQYzTXBt2EXC3TtB5vzfwP98d2YMocFEoRPnpdqjiw7sgoErzyYaxV3MiHr78CfZbrfoxmJD34iKiukq5W5AZF",
+    "channel": "S7PGaro8YEPw3vrGQZi1hPtam4pdSFAHMC8gsyFsBwc"
+  },
+  "plain": {
+    "label": "not ground",
+    "salt": "1794148826768",
+    "channelBump": 253,
+    "escrowBump": 248,
+    "computeUnits": 55565,
+    "signature": "5r8ZP7aZMrHnJsJreTUJbxjR44enPb4owtSWEbRVhWLLqHvRShD9WRgaFFutdLtxECUkEYxRKtceSfW1w379CM4K",
+    "channel": "Hf3URPxfZRLMz2LdDN4WG7PyHUPfwc4Xgqn4YzcmQc35"
+  },
+  "differenceCu": 24000,
+  "modelPredictedCu": 13500,
+  "note": "single pair of transactions, not a distribution; CU can also vary with account state. Recover the two 10,000 atomic deposits with scripts/rescue.ts."
+}
