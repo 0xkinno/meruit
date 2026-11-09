@@ -17,7 +17,7 @@ Ifeoma Nwosu, a freelance subtitler in Enugu, has a 12 minute interview due at 0
 | Live app | https://meruit-delta.vercel.app |
 | For judges | [/judge](app/judge/page.tsx), [JUDGE.md](JUDGE.md) |
 | Demo video | [YouTube, 2:50](https://youtu.be/QSZdNRk4EfM) (synthetic voice-over) |
-| Slides | 8 slide pitch deck, submitted with the entry |
+| Slides | [Pitch deck, 8 slides](https://docs.google.com/presentation/d/1K7uWgBT0g8UIkax8sOr9mUj8IpXDziLd/edit?usp=sharing) |
 | Repo | https://github.com/0xkinno/meruit |
 | Tracks | Best Consumer App on Solana; Best Use of x402 on Solana; Aurora Intents: Bring any-chain liquidity to Solana |
 | Reality rung | mainnet with capped funds, including a job through the deployed site. Through Phantom in the browser: not yet |

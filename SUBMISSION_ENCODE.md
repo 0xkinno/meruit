@@ -11,7 +11,7 @@ Live versus designed: see the README table. As of this draft no paid job has run
 https://github.com/0xkinno/meruit
 
 ## Slides
-pending
+https://docs.google.com/presentation/d/1K7uWgBT0g8UIkax8sOr9mUj8IpXDziLd/edit?usp=sharing
 
 ## Live Demo
 https://meruit-delta.vercel.app and /judge
