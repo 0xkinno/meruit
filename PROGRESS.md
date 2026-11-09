@@ -22,7 +22,7 @@ Updated 2026-11-08. Every commit is authored by `0xkinno`. Repository: https://g
 - B7: one Base point (Connect, 1.77 minutes). A Tron point and a distribution need USDT plus TRX on Tron and more USDC on Base. The Base wallet `0x927a59ec0e83aeff4988ea3a646b035cf495aa8f` now holds no USDC and almost no ETH.
 - No live deposit through a persistent address (Tron or Base) and no confidential top-up, for the same reason: no funds left on those chains.
 - The paid flow through Phantom in a real browser (it ran with a test wallet on devnet and by script on mainnet).
-- Not started: video, rendered deck, red-team rounds, Phase 8 and 9 (`batch-settlement`, MCP), judge pocket, `RULES_EXTRACT.md` verbatim, lane-check searches, founder note approval.
+- Done: demo video (https://youtu.be/QSZdNRk4EfM, 2:50) and an 8 slide pitch deck. Not started: red-team rounds, Phase 8 and 9 (`batch-settlement`, MCP), judge pocket, `RULES_EXTRACT.md` verbatim, lane-check searches, founder note approval.
 
 ## Self-scores (1 to 5, honest, today)
 | Criterion | Score | Why |

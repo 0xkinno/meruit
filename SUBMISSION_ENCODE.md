@@ -17,4 +17,4 @@ pending
 https://meruit-delta.vercel.app and /judge
 
 ## Demo Video
-pending
+https://youtu.be/QSZdNRk4EfM
